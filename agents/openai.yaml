@@ -1,0 +1,3 @@
+display_name: FICC Researcher
+short_description: Fixed-income research routing and analysis framework for rates, credit, convertibles, institutions, offshore bonds, ABS, REITs, and derivatives.
+default_prompt: Use FICC Researcher to analyze this fixed-income question. Route the request to the relevant playbooks, identify required data, incorporate any user-provided or connector-returned data with source and timestamp, distinguish broker framework evidence from current market data, and produce an auditable research draft with risks and follow-up indicators.

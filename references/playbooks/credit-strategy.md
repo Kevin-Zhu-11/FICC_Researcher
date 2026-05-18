@@ -1,0 +1,78 @@
+# Credit Strategy
+
+## Scope
+
+Use this playbook for credit bonds, credit spreads, asset shortage, rating frameworks, spread compression, credit beta, credit selection, downgrade/default risk, and low-spread investment strategy. City investment bonds, financial credit bonds, and ABS have dedicated playbooks and should only be routed here for common credit logic.
+
+## When To Use
+
+- The question mentions 信用债, 信用利差, 资产荒, 信用下沉, 评级, 违约, 展期, 产业债, 城投, 二永债, or 票息.
+- The user asks how to earn return when spreads are low.
+- The user needs a framework for credit risk, valuation, and investor-demand interaction.
+
+## Required Inputs
+
+- Market: credit spread by rating, sector, tenor, issuer type, liquidity bucket.
+- Issuance: net financing, cancellation, maturity wall, refinancing availability.
+- Risk: rating actions, default or extension events, financial statements, cash-flow pressure.
+- Valuation: treasury curve, policy-bank curve, benchmark spread, liquidity premium.
+- Demand: wealth management, funds, bank book, insurance, product flows.
+- Instrument: bond terms, guarantee, collateral, put/call, covenants, subordination.
+
+## Framework
+
+Credit return is a combination of coupon, spread change, liquidity premium, and credit event risk. In a low-spread environment, the question is not only "can spreads compress further" but also:
+
+```text
+spread level
++ issuer fundamental cushion
++ liquidity and investor demand
++ refinancing and policy support
++ portfolio drawdown tolerance
+-> whether coupon pickup compensates credit and liquidity risk
+```
+
+City investment, financial credit, and sector-specific credit require specialized extensions. This playbook handles the common layer: spread valuation, risk screening, and strategy selection.
+
+## Analysis Steps
+
+1. Define the credit universe: rating, sector, tenor, issuer type, liquidity, and eligible instruments.
+2. Separate return objective: coupon carry, spread compression, credit beta, relative value, or event-driven repair.
+3. Check valuation: current spread percentile, spread versus historical and peer groups, liquidity premium.
+4. Check fundamentals: cash flow, leverage, refinancing, ownership, support, and risk events.
+5. Check technicals: issuance, maturities, wealth/fund demand, redemption risk, and dealer liquidity.
+6. Choose strategy: stay high grade, selective sinking, short-duration carry, sector rotation, barbell, or avoid.
+7. Document risks and data gaps before making any current-market conclusion.
+
+## Output Template
+
+```text
+使用 playbook: credit-strategy
+信用问题归类:
+估值与利差:
+主体/品种基本面:
+机构需求与流动性:
+策略选择:
+需要的数据:
+风险与反例:
+```
+
+## Risk Checks
+
+- Do not use rating alone as a credit-risk conclusion.
+- Do not recommend credit sinking when spread compensation and liquidity are both weak.
+- Check whether low spreads reflect asset shortage rather than improved issuer fundamentals.
+- Check whether wealth or fund redemption pressure could widen spreads suddenly.
+- For city investment, financial credit, ABS, or REITs details, route to the specialized playbooks.
+
+## Source Reports
+
+- `cicc-credit-strategy-low-spread-2025`
+- `huatai-credit-bond-framework-2025`
+- `cicc-city-investment-bonds-2025`
+- `cicc-financial-credit-bonds-2025`
+- `huatai-institution-behavior-2025`
+
+## Search Keywords
+
+信用债, 信用利差, 资产荒, 信用下沉, 评级, 违约, 展期, 产业债, 城投, 二永债, 票息, 信用策略

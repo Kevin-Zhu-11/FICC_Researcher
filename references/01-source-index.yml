@@ -1,0 +1,339 @@
+- id: cicc-fixed-income-plus-fund-framework-2025
+  institution: CICC
+  title: 三问固收+：为什么、怎么选、怎么看？
+  source_file: references/source-reports/【中金固收·重磅推荐】三问固收+：为什么、怎么选、怎么看？——中金固收2025年债市宝典系列之固收+基金分析框架_2056241906783559680.md
+  primary_playbooks:
+    - wealth-management-funds
+    - bond-strategy
+  keywords:
+    - 固收+
+    - 基金
+    - 产品筛选
+    - 风险收益
+    - 组合配置
+  source_role: framework
+
+- id: cicc-credit-strategy-low-spread-2025
+  institution: CICC
+  title: 低利差环境下的信用债投资策略
+  source_file: references/source-reports/【中金固收·重磅推荐】低利差环境下的信用债投资策略——中金固收2025年债市宝典系列_2056243967294119936.md
+  primary_playbooks:
+    - credit-strategy
+    - institution-behavior
+  keywords:
+    - 信用利差
+    - 资产荒
+    - 信用下沉
+    - 票息
+    - 信用策略
+  source_role: framework
+
+- id: cicc-low-rate-macro-bond-pricing-2025
+  institution: CICC
+  title: 低利率下的宏观分析与债券定价
+  source_file: references/source-reports/【中金固收·重磅推荐】低利率下的宏观分析与债券定价_2056243916224270336.md
+  primary_playbooks:
+    - rates-macro
+    - bond-strategy
+  keywords:
+    - 低利率
+    - 宏观分析
+    - 债券定价
+    - 财政
+    - 工业链条
+  source_role: framework
+
+- id: cicc-low-rate-investor-behavior-2025
+  institution: CICC
+  title: 低利率时代下的投资者行为和业务机会
+  source_file: references/source-reports/【中金固收·重磅推荐】低利率时代下的投资者行为和业务机会——中金固收2025年债市宝典系列_2056241109819662336.md
+  primary_playbooks:
+    - institution-behavior
+    - bond-strategy
+  keywords:
+    - 低利率
+    - 投资者行为
+    - 机构配置
+    - 业务机会
+    - 负债约束
+  source_role: framework
+
+- id: cicc-offshore-credit-usd-dim-sum-2025
+  institution: CICC
+  title: 信用海外掘金：中资美元债与点心债市场和分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】信用海外掘金——中金固收2025年债市宝典系列之中资美元债&点心债市场和分析框架_2056241837103583232.md
+  primary_playbooks:
+    - offshore-global-rates
+    - credit-strategy
+  keywords:
+    - 中资美元债
+    - 点心债
+    - 离岸信用
+    - 汇率
+    - 境外融资
+  source_role: framework
+
+- id: cicc-bond-principles-strategy-2025
+  institution: CICC
+  title: 债券分析的原理与策略
+  source_file: references/source-reports/【中金固收·重磅推荐】债券分析的原理与策略——中金固收2025年债市宝典系列_2056241724339720192.md
+  primary_playbooks:
+    - rates-macro
+    - bond-strategy
+    - institution-behavior
+  keywords:
+    - 债券分析
+    - 收益率曲线
+    - 资金面
+    - 供需关系
+    - 投资者行为
+  source_role: framework
+
+- id: cicc-wealth-management-net-value-2025
+  institution: CICC
+  title: 全面净值化下理财发展新趋势和跟踪应对
+  source_file: references/source-reports/【中金固收·重磅推荐】全面净值化下理财发展新趋势和跟踪应对——中金固收2025年债市宝典系列_2056242055089954816.md
+  primary_playbooks:
+    - wealth-management-funds
+    - institution-behavior
+  keywords:
+    - 银行理财
+    - 净值化
+    - 赎回
+    - 资产配置
+    - 产品转型
+  source_role: framework
+
+- id: cicc-interest-rate-derivatives-2025
+  institution: CICC
+  title: 利率衍生品：日益活跃的交易工具
+  source_file: references/source-reports/【中金固收·重磅推荐】利率衍生品：日益活跃的交易工具——中金固收2025年债市宝典系列_2056242218638446592.md
+  primary_playbooks:
+    - derivatives
+    - rates-macro
+  keywords:
+    - 利率衍生品
+    - 国债期货
+    - 利率互换
+    - 基差
+    - 套保
+  source_role: framework
+
+- id: cicc-ficc-ai-agent-path-2025
+  institution: CICC
+  title: 固收+智能体的基础与路径
+  source_file: references/source-reports/【中金固收·重磅推荐】固收+智能体的基础与路径——中金固收2025年债市宝典系列之固收+策略框架_2056243855432032256.md
+  primary_playbooks:
+    - quant-ai-research
+    - wealth-management-funds
+  keywords:
+    - 固收+
+    - 智能体
+    - AI投研
+    - 策略框架
+    - 自动化
+  source_role: framework
+
+- id: cicc-city-investment-bonds-2025
+  institution: CICC
+  title: 城投债分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】城投债分析框架——中金固收2025年债市宝典系列_2056241524359499776.md
+  primary_playbooks:
+    - city-investment-bonds
+    - credit-strategy
+  keywords:
+    - 城投债
+    - 化债
+    - 区域利差
+    - 财政实力
+    - 隐性债务
+  source_role: framework
+
+- id: cicc-financial-credit-bonds-2025
+  institution: CICC
+  title: 大金融信用债分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】大金融信用债分析框架——中金固收2025年债市宝典系列_2056243723516973056.md
+  primary_playbooks:
+    - financial-credit
+    - credit-strategy
+  keywords:
+    - 大金融
+    - 二永债
+    - 银行资本债
+    - 券商债
+    - 保险债
+  source_role: framework
+
+- id: cicc-public-reits-strategy-2025
+  institution: CICC
+  title: 当稳定产生波动：公募REITs策略分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】当稳定产生波动——中金固收2025年债市宝典系列之公募REITs策略分析框架_2056244035644497920.md
+  primary_playbooks:
+    - abs-reits
+  keywords:
+    - 公募REITs
+    - 底层资产
+    - 现金流
+    - 估值
+    - 波动
+  source_role: framework
+
+- id: cicc-hybrid-assets-framework-2025
+  institution: CICC
+  title: 混合型资产框架：可交债、定转、优先股、混合票据、结存及雪球
+  source_file: references/source-reports/【中金固收·重磅推荐】混合型资产框架：可交债_定转_优先股_混合票据_结存及雪球——中金固收2025年债市宝典系列_2056243053397221376.md
+  primary_playbooks:
+    - convertible-hybrid
+  keywords:
+    - 混合型资产
+    - 可交债
+    - 优先股
+    - 混合票据
+    - 雪球
+  source_role: framework
+
+- id: cicc-convertible-bonds-framework-2025
+  institution: CICC
+  title: 混沌的天平：转债分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】混沌的天平——中金固收2025年债市宝典系列之转债分析框架_2056243789195583488.md
+  primary_playbooks:
+    - convertible-hybrid
+  keywords:
+    - 可转债
+    - 平价
+    - 转股溢价率
+    - 债底
+    - 条款博弈
+  source_role: framework
+
+- id: cicc-offshore-rmb-bonds-2025
+  institution: CICC
+  title: 离岸人民币债券：人民币国际化的连接通道
+  source_file: references/source-reports/【中金固收·重磅推荐】离岸人民币债券——人民币国际化的连接通道_2056242345688113152.md
+  primary_playbooks:
+    - offshore-global-rates
+  keywords:
+    - 离岸人民币债
+    - 人民币国际化
+    - 点心债
+    - 跨境融资
+    - 汇率
+  source_role: framework
+
+- id: cicc-us-treasuries-framework-2025
+  institution: CICC
+  title: 美债市场格局变迁及分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】美债市场格局变迁及分析框架——中金固收2025年债市宝典系列_2056242142960619520.md
+  primary_playbooks:
+    - offshore-global-rates
+    - rates-macro
+  keywords:
+    - 美债
+    - 美国国债
+    - 全球利率
+    - 美联储
+    - 期限溢价
+  source_role: framework
+
+- id: cicc-abs-framework-2025
+  institution: CICC
+  title: 韧性与低波的协同：ABS分析框架
+  source_file: references/source-reports/【中金固收·重磅推荐】韧性与低波的协同——中金固收2025年债市宝典系列之ABS分析框架_2056241973678510080.md
+  primary_playbooks:
+    - abs-reits
+  keywords:
+    - ABS
+    - 资产证券化
+    - 现金流
+    - 分层
+    - 底层资产
+  source_role: framework
+
+- id: huatai-quant-ai-ficc-2025
+  institution: Huatai
+  title: 2025版 固收量化与AI投研应用指南
+  source_file: references/source-reports/【华泰固收】2025版_固收量化与AI投研应用指南_2056243591069241344.md
+  primary_playbooks:
+    - quant-ai-research
+  keywords:
+    - 固收量化
+    - AI投研
+    - 因子
+    - 监控
+    - 自动化
+  source_role: framework
+
+- id: huatai-convertible-framework-2025
+  institution: Huatai
+  title: 2025版可转债分析框架
+  source_file: references/source-reports/【华泰固收】2025版可转债分析框架_0801_2056243515882147840.md
+  primary_playbooks:
+    - convertible-hybrid
+  keywords:
+    - 可转债
+    - 平价
+    - 转股溢价率
+    - 债底
+    - 择券
+  source_role: framework
+
+- id: huatai-credit-bond-framework-2025
+  institution: Huatai
+  title: 信用债分析框架
+  source_file: references/source-reports/【华泰固收】_信用债分析框架-250814_V3_2056243663530041344.md
+  primary_playbooks:
+    - credit-strategy
+  keywords:
+    - 信用债
+    - 信用风险
+    - 信用利差
+    - 评级
+    - 品种演化
+  source_role: framework
+
+- id: huatai-bond-market-framework-2025
+  institution: Huatai
+  title: 债市分析框架 2025
+  source_file: references/source-reports/【华泰固收】债市分析框架_2025_2056243325062291456.md
+  primary_playbooks:
+    - rates-macro
+    - bond-strategy
+    - institution-behavior
+  keywords:
+    - 债市分析
+    - IS-LM
+    - 利率
+    - 资金面
+    - 供需
+  source_role: framework
+
+- id: huatai-asset-allocation-framework-2025
+  institution: Huatai
+  title: 大类资产配置培训框架
+  source_file: references/source-reports/【华泰固收】大类资产配置培训框架_2025_v1_2056243462622879744.md
+  primary_playbooks:
+    - rates-macro
+    - bond-strategy
+  keywords:
+    - 大类资产配置
+    - 宏观周期
+    - 股债商品
+    - 风险偏好
+    - 配置框架
+  source_role: framework
+
+- id: huatai-institution-behavior-2025
+  institution: Huatai
+  title: 机构行为 2025版
+  source_file: references/source-reports/【华泰固收】机构行为-2025版V5_2056243380913643520.md
+  primary_playbooks:
+    - institution-behavior
+    - rates-macro
+    - credit-strategy
+  keywords:
+    - 机构行为
+    - 商业银行
+    - 保险
+    - 银行理财
+    - 公募基金
+  source_role: framework

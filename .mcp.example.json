@@ -1,0 +1,20 @@
+{
+  "mcpServers": {
+    "tushare": {
+      "type": "stdio-or-http",
+      "description": "Tushare connector. Store TUSHARE_TOKEN outside git and return source, as_of, retrieved_at, fields, and limitations."
+    },
+    "ifind": {
+      "type": "stdio-or-http",
+      "description": "iFinD finance data connector. Configure user credentials outside git."
+    },
+    "wind-local": {
+      "type": "local",
+      "description": "Local Wind bridge or exported Wind data reader. Do not store terminal credentials in this repository."
+    },
+    "bond-database": {
+      "type": "local",
+      "description": "Local bond database for curves, spreads, issuers, ratings, holdings, NAV, and transactions."
+    }
+  }
+}
