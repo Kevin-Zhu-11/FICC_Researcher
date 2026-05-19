@@ -4,6 +4,8 @@
 
 FICC Researcher should specify required fields and interpret verified data. MCP servers and external tools should fetch data and return source, timestamp, fields, and limitations. Keep connector configuration outside playbooks.
 
+For field-level data needs, source priority, and provider limitations, read `references/09-data-interface-catalog.md`.
+
 ## Connector Matrix
 
 | Connector | Best use | Not enough for |
@@ -17,6 +19,8 @@ FICC Researcher should specify required fields and interpret verified data. MCP 
 ## Tushare
 
 Use Tushare when a token and package or MCP server are configured outside git. Require the connector to return the interface name, parameters, retrieval timestamp, row count, fields, and limitations. Treat Tushare as a useful public structured-data source, not as a complete China bond database.
+
+Tushare may appear in this repository as an optional connector example through Python SDK, MCP, or an installed data skill. Do not make FICC playbooks depend on a specific tool name such as `tushareMcp`; require the analysis agent to convert the returned data into the data packet contract before using it.
 
 ### OpenClaw Registration Note
 

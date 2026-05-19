@@ -59,9 +59,13 @@ FICC_Researcher/
 │   ├── 03-data-integration-policy.md
 │   ├── 04-mcp-connectors.md         # MCP connector boundaries and examples
 │   ├── 05-cross-platform-usage.md   # Codex/OpenClaw/Claude usage notes
+│   ├── 09-data-interface-catalog.md # Field-level data needs and connector boundaries
+│   ├── 10-workflow-entrypoints.md   # Portable command-like research workflows
+│   ├── 11-research-decision-chains.md
 │   ├── playbooks/                   # Core research playbooks
 │   ├── evidence-cards/              # Compressed source-evidence cards
 │   └── chart-notes/                 # Chart and image-url notes
+├── evals/                            # Smoke prompts and expected output contracts
 └── scripts/                         # Validation and indexing helpers
 ```
 
@@ -72,6 +76,8 @@ For substantial fixed-income analysis, the agent should follow this path:
 ```text
 SKILL.md
 -> references/00-routing.md
+-> references/10-workflow-entrypoints.md when the user asks for a repeatable report
+-> references/09-data-interface-catalog.md when current or historical data is required
 -> one to three relevant playbooks
 -> data-source policy
 -> data-integration policy if user data or MCP data is available
@@ -125,6 +131,10 @@ It is meant to work with external data providers such as:
 
 The FICC skill tells the agent what data is needed and how to reason with it. Connectors provide the data.
 
+Provider names in this repository are optional data-source examples, not endorsements, sublicenses, guarantees of coverage, or official partnerships. Users must configure their own credentials and comply with each provider's terms. Do not paste real token values into `.mcp.example.json`, README, playbooks, eval prompts, or test logs.
+
+Use `references/09-data-interface-catalog.md` for field-level data needs and provider boundaries. For example, Tushare can be useful for selected macro datasets such as social-financing aggregates and money supply where permission allows, while professional bond curves, credit spreads, institution flows, and issuer-risk datasets often require Wind, iFinD, ChinaBond, CFETS, SHCH, a local database, or user-provided exports.
+
 ## Source Report Boundary
 
 The original broker-report Markdown files are intentionally not included in this GitHub repository.
@@ -154,6 +164,7 @@ Run these from the repo root:
 python .\scripts\build_source_index.py
 python .\scripts\validate_source_refs.py
 python .\scripts\validate_skill_links.py
+python .\scripts\validate_eval_cases.py
 python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
 ```
 
@@ -161,6 +172,7 @@ Expected behavior:
 
 - Public clone: source index and source-id references can be validated without report originals.
 - Local research workspace: if `references/source-reports/*.md` exists, scripts also check that local source files align with the index.
+- Eval prompts: `evals/smoke-prompts.yml` defines cross-agent smoke cases, and `evals/expected-output-contracts.yml` defines the minimum output blocks each workflow should satisfy.
 
 ## Status
 

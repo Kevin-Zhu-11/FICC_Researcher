@@ -41,7 +41,9 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 4. Analyze curve opportunity by segment: short-end funding anchor, belly rolldown, long-end duration beta.
 5. Compare rates versus credit: whether spread pickup compensates liquidity and credit risk.
 6. Evaluate supply-demand balance and likely marginal buyer.
-7. Translate into a portfolio action, scenario trigger, and stop condition with `references/06-portfolio-action-policy.md`.
+7. Use `references/09-data-interface-catalog.md` to identify required curve, funding, spread, supply, and portfolio fields.
+8. Use `references/11-research-decision-chains.md` when the strategy depends on macro release, funding, fiscal supply, or institution behavior.
+9. Translate into a portfolio action, scenario trigger, and stop condition with `references/06-portfolio-action-policy.md`.
 
 ## Output Template
 
@@ -63,6 +65,7 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 - Do not treat carry as free return when redemption, liquidity, or mark-to-market pressure is high.
 - Do not use spread pickup without issuer, rating, liquidity, and concentration checks.
 - Check whether curve steepness comes from supply pressure rather than attractive rolldown.
+- Do not state current curve, funding, spread, or portfolio metrics without a data packet or user-provided data.
 - Distinguish trading book mark-to-market risk from hold-to-maturity accounting.
 - Always state what happens if the rate view is wrong: loss channel, trigger, and de-risking action.
 

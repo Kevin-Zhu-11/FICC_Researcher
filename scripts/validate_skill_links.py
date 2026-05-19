@@ -5,6 +5,7 @@
 - require_file: 检查必需文件存在
 - count_markdown: 统计指定目录下 Markdown 文件数量
 - require_playbooks: 检查 12 个核心 playbook 是否存在
+- require_eval_files: 检查 03B smoke prompt 和输出契约文件存在
 - main: 输出校验结果并用退出码表示是否通过
 依赖关系:
 - pathlib
@@ -37,8 +38,14 @@ REQUIRED_FILES = [
     "references/06-portfolio-action-policy.md",
     "references/07-macro-indicator-glossary.md",
     "references/08-policy-reaction-function.md",
+    "references/09-data-interface-catalog.md",
+    "references/10-workflow-entrypoints.md",
+    "references/11-research-decision-chains.md",
     "references/chart-notes/key-framework-charts.md",
     "references/chart-notes/image-url-index.yml",
+    "evals/smoke-prompts.yml",
+    "evals/expected-output-contracts.yml",
+    "scripts/validate_eval_cases.py",
 ]
 
 

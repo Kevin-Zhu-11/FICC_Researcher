@@ -3,6 +3,7 @@
 This file defines how FICC Researcher combines the research framework with user-provided data, MCP data, local databases, Tushare, iFinD, Wind, and WebSearch.
 
 For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
+For field-level data needs and connector-source mapping, read `references/09-data-interface-catalog.md`.
 
 ## Core Principle
 
@@ -82,10 +83,11 @@ Use this output block:
 When an MCP or connector is available:
 
 1. Use the playbook to define fields first; do not query blindly.
-2. Prefer narrow, auditable queries over broad dumps.
-3. Request time range, frequency, field names, source, and retrieval timestamp.
-4. Check empty results, stale data, duplicated keys, and unit mismatches.
-5. Summarize the connector result before using it in conclusions.
+2. Use `references/09-data-interface-catalog.md` to identify preferred sources and connector limitations.
+3. Prefer narrow, auditable queries over broad dumps.
+4. Request time range, frequency, field names, source, and retrieval timestamp.
+5. Check empty results, stale data, duplicated keys, and unit mismatches.
+6. Summarize the connector result before using it in conclusions.
 
 Connector results should be cited as data facts, for example:
 

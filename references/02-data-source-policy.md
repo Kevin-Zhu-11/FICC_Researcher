@@ -4,6 +4,7 @@ This policy controls how FICC Researcher uses live data, broker frameworks, MCP 
 
 For combining uploaded files, connector results, and playbooks in one answer, also read `references/03-data-integration-policy.md`.
 For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
+For field-level connector mapping and missing-data implications, read `references/09-data-interface-catalog.md`.
 
 ## Data Source Priority
 
@@ -21,6 +22,7 @@ For connector setup templates and boundaries, read `references/04-mcp-connectors
 
 - Keep connector configuration centralized, not scattered across playbooks.
 - Playbooks should specify required fields, frequency, time range, and use.
+- Field-level source mapping belongs in `references/09-data-interface-catalog.md`, not inside individual playbooks.
 - Connector outputs should be passed into analysis as explicit data packets, not hidden context.
 - This repository must not store real credentials, tokens, API keys, account IDs, private service URLs, or production database strings.
 - If an MCP connector is unavailable, downgrade to a missing-data block and explain what cannot be concluded.

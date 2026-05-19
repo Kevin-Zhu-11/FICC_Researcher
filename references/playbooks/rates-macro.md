@@ -64,8 +64,10 @@ The four circulation channels are:
 5. Check long-end driver next: nominal growth expectation, fiscal supply, insurance and bank demand, term premium.
 6. Compare curve segments: bull flattening, bull steepening, bear flattening, bear steepening.
 7. For macro data releases, map the indicator with `references/07-macro-indicator-glossary.md` and evaluate the policy reaction function in `references/08-policy-reaction-function.md`.
-8. If a single-month value is derived from cumulative data, show `current cumulative - previous cumulative = single-month estimate` and state rounding limits.
-9. If data is missing, stop at the mechanism and produce the missing-data block.
+8. Use `references/09-data-interface-catalog.md` for field-level data requirements and source priority.
+9. If the question spans policy, funding, supply, curve, and portfolio action, use `references/11-research-decision-chains.md`.
+10. If a single-month value is derived from cumulative data, show `current cumulative - previous cumulative = single-month estimate` and state rounding limits.
+11. If data is missing, stop at the mechanism and produce the missing-data block.
 
 ## Output Template
 

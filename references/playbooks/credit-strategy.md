@@ -41,8 +41,10 @@ City investment, financial credit, and sector-specific credit require specialize
 3. Check valuation: current spread percentile, spread versus historical and peer groups, liquidity premium.
 4. Check fundamentals: cash flow, leverage, refinancing, ownership, support, and risk events.
 5. Check technicals: issuance, maturities, wealth/fund demand, redemption risk, and dealer liquidity.
-6. Choose strategy: stay high grade, selective sinking, short-duration carry, sector rotation, barbell, or avoid.
-7. Document risks and data gaps before making any current-market conclusion.
+6. Use `references/09-data-interface-catalog.md` to identify required spread, issuer, issuance, rating, liquidity, and institution-demand data.
+7. Use `references/11-research-decision-chains.md` for the credit-spread-to-allocation chain.
+8. Choose strategy: stay high grade, selective sinking, short-duration carry, sector rotation, barbell, or avoid.
+9. Document risks and data gaps before making any current-market conclusion.
 
 ## Output Template
 
@@ -62,6 +64,8 @@ City investment, financial credit, and sector-specific credit require specialize
 - Do not use rating alone as a credit-risk conclusion.
 - Do not recommend credit sinking when spread compensation and liquidity are both weak.
 - Check whether low spreads reflect asset shortage rather than improved issuer fundamentals.
+- Do not treat policy support or asset shortage as proof that weak issuers are safe.
+- Do not treat coupon carry as risk-free return.
 - Check whether wealth or fund redemption pressure could widen spreads suddenly.
 - For city investment, financial credit, ABS, or REITs details, route to the specialized playbooks.
 

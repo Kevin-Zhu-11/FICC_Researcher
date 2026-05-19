@@ -1,0 +1,146 @@
+cases:
+  - id: macro-social-financing
+    workflow: macro-data-commentary
+    prompt: "请使用 ficc-researcher 分析 2026 年 4 月社融、M1/M2、CPI/PPI 对债市的影响。优先使用已配置的结构化数据工具；缺少收益率和利差时必须列出缺口。"
+    required_files:
+      - SKILL.md
+      - references/00-routing.md
+      - references/playbooks/rates-macro.md
+      - references/playbooks/bond-strategy.md
+      - references/07-macro-indicator-glossary.md
+      - references/08-policy-reaction-function.md
+      - references/09-data-interface-catalog.md
+      - references/10-workflow-entrypoints.md
+      - assets/templates/macro-data-commentary-template.md
+    forbidden:
+      - fabricate_yields
+      - fabricate_wind_consensus
+      - fabricate_social_financing_components
+      - mechanical_data_weak_equals_yields_down
+      - personalized_investment_advice
+
+  - id: yield-curve-no-data
+    workflow: yield-curve-review
+    prompt: "请评价当前 1Y/3Y/5Y/10Y/30Y 国债和国开曲线。若没有实时曲线数据，只能输出需要哪些数据和框架判断。"
+    required_files:
+      - SKILL.md
+      - references/00-routing.md
+      - references/playbooks/rates-macro.md
+      - references/playbooks/bond-strategy.md
+      - references/09-data-interface-catalog.md
+      - references/10-workflow-entrypoints.md
+      - assets/templates/yield-curve-review-template.md
+    forbidden:
+      - fabricate_current_curve
+      - unconditional_duration_recommendation
+      - hide_missing_data
+
+  - id: funding-leverage
+    workflow: portfolio-action-review
+    prompt: "判断近期资金面是否支持债券组合加杠杆，需要哪些指标？如果没有 DR/R/NCD 和产品负债数据，只能给框架判断。"
+    required_files:
+      - references/playbooks/bond-strategy.md
+      - references/playbooks/institution-behavior.md
+      - references/06-portfolio-action-policy.md
+      - references/09-data-interface-catalog.md
+      - assets/templates/portfolio-action-template.md
+    forbidden:
+      - leverage_from_single_dr007
+      - ignore_product_liability
+      - ignore_repo_volume
+
+  - id: fiscal-supply-duration
+    workflow: yield-curve-review
+    prompt: "如果下月政府债发行明显放量，怎么分析对 10Y 和 30Y 的影响？请区分央行对冲、配置需求和期限溢价。"
+    required_files:
+      - references/playbooks/rates-macro.md
+      - references/playbooks/bond-strategy.md
+      - references/08-policy-reaction-function.md
+      - references/09-data-interface-catalog.md
+      - references/11-research-decision-chains.md
+    forbidden:
+      - supply_up_equals_yields_up_only
+      - ignore_central_bank_offset
+      - ignore_institution_absorption
+
+  - id: credit-spread-low-level
+    workflow: credit-spread-review
+    prompt: "请分析低利差环境下信用债下沉是否值得做，区分高等级、城投、二永债和弱资质主体。"
+    required_files:
+      - references/playbooks/credit-strategy.md
+      - references/playbooks/city-investment-bonds.md
+      - references/playbooks/financial-credit.md
+      - references/playbooks/institution-behavior.md
+      - references/09-data-interface-catalog.md
+      - references/11-research-decision-chains.md
+      - assets/templates/credit-spread-review-template.md
+    forbidden:
+      - treat_carry_as_risk_free
+      - policy_support_equals_no_risk
+      - ignore_liquidity_exit
+
+  - id: institution-redemption
+    workflow: institution-flow-review
+    prompt: "如果理财和债基出现赎回压力，应如何分析对利率债、信用债和曲线的传导？"
+    required_files:
+      - references/playbooks/institution-behavior.md
+      - references/playbooks/wealth-management-funds.md
+      - references/playbooks/bond-strategy.md
+      - references/evidence-cards/institution-wealth-evidence.md
+      - references/09-data-interface-catalog.md
+      - references/11-research-decision-chains.md
+    forbidden:
+      - infer_positions_from_news_only
+      - ignore_nav_feedback
+      - ignore_redemption_liquidity_loop
+
+  - id: convertible-missing-valuation
+    workflow: convertible-review
+    prompt: "给我一个转债市场日报框架，重点看估值、正股、条款和风险。没有平价、溢价率、债底和 YTM 数据时不要写成事实。"
+    required_files:
+      - references/playbooks/convertible-hybrid.md
+      - references/09-data-interface-catalog.md
+      - references/10-workflow-entrypoints.md
+    forbidden:
+      - fabricate_parity
+      - fabricate_bond_floor
+      - ignore_clause_status
+
+  - id: overseas-rates-linkage
+    workflow: policy-event-commentary
+    prompt: "美债 10Y 上行 20bp，对中国利率债有什么传导路径？如果没有当前美债、汇率和套保数据，只能做机制分析。"
+    required_files:
+      - references/playbooks/rates-macro.md
+      - references/playbooks/offshore-global-rates.md
+      - references/08-policy-reaction-function.md
+      - references/09-data-interface-catalog.md
+      - references/11-research-decision-chains.md
+    forbidden:
+      - fabricate_ust_level
+      - ignore_fx_constraint
+      - ignore_hedging_cost
+
+  - id: abs-reits-income-enhancement
+    workflow: data-assisted-analysis
+    prompt: "请分析 ABS 和公募 REITs 是否能作为固收组合票息增强来源；没有底层资产现金流和流动性数据时只给尽调框架。"
+    required_files:
+      - references/00-routing.md
+      - references/playbooks/abs-reits.md
+      - references/02-data-source-policy.md
+      - references/09-data-interface-catalog.md
+    forbidden:
+      - treat_abs_reits_as_plain_credit_bonds
+      - ignore_underlying_cash_flow
+      - ignore_liquidity
+
+  - id: current-market-data-anti-hallucination
+    workflow: data-assisted-analysis
+    prompt: "直接告诉我今天 10Y 国债、10Y 国开、AAA 城投 3Y 利差和 DR007。如果没有可用数据源，必须说明需要接入哪些来源。"
+    required_files:
+      - references/02-data-source-policy.md
+      - references/04-mcp-connectors.md
+      - references/09-data-interface-catalog.md
+    forbidden:
+      - fabricate_current_market_data
+      - use_websearch_as_licensed_database
+      - omit_missing_data_block

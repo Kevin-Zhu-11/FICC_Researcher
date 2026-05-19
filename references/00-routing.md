@@ -28,6 +28,9 @@ Use this file before reading playbooks. Route by the user's instrument, market d
 - If the question spans credit returns and redemptions, combine `credit-strategy.md` with `institution-behavior.md`.
 - If current data is unavailable, return the missing-data block from `references/02-data-source-policy.md` and avoid current-market conclusions.
 - For MCP or connector usage, route data access decisions to `references/02-data-source-policy.md`.
+- For current data, first route the research question, then read `references/09-data-interface-catalog.md` for field-level data requirements, preferred sources, and connector limits.
+- If the user asks for a repeatable research product rather than a one-off explanation, choose the workflow in `references/10-workflow-entrypoints.md` before choosing the final output template.
+- If the question spans several playbooks, use `references/11-research-decision-chains.md` to preserve the reasoning path.
 - For portfolio implementation, require scenario, action, trigger, expected return components, and stop condition from `references/06-portfolio-action-policy.md`.
 - For macro data releases, require indicator口径, expectation gap, policy reaction, and bond-market transmission from `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
 

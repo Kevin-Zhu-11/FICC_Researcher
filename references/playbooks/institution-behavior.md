@@ -41,7 +41,9 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 3. Map its constraints: rating, tenor, accounting, liquidity, leverage, risk budget, tax, and regulation.
 4. Infer likely behavior: buy duration, shorten duration, sell credit, increase liquidity, leverage carry, or de-risk.
 5. Check feedback loops: redemption selling, spread widening, NAV pressure, and further redemptions.
-6. Combine with rates or credit playbooks when pricing conclusions are needed.
+6. Use `references/09-data-interface-catalog.md` for required flow, holding, NAV, duration, leverage, and liability data.
+7. Use `references/11-research-decision-chains.md` for institution-behavior-to-market transmission.
+8. Combine with rates or credit playbooks when pricing conclusions are needed.
 
 ## Output Template
 
@@ -63,6 +65,7 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 - Check whether redemption pressure forces liquid-asset selling before risky-asset selling.
 - Check whether banks are constrained by deposits or capital rather than by yield preference.
 - Distinguish structural allocation demand from short-term trading flow.
+- Do not infer current institution positions from news or market moves alone.
 
 ## Source Reports
 
