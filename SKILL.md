@@ -27,7 +27,9 @@ Use this skill for fixed-income and FICC research tasks that need broker-framewo
 6. If current data is needed, apply `references/02-data-source-policy.md` before drawing conclusions.
 7. If the user uploads data or an MCP/connector returns data, normalize it with `references/03-data-integration-policy.md`.
 8. For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
-9. Produce an auditable research draft with assumptions, data gaps, risk checks, and follow-up indicators.
+9. For portfolio-action questions, use `references/06-portfolio-action-policy.md`.
+10. For macro data releases, use `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
+11. Produce an auditable research draft with assumptions, data gaps, risk checks, and follow-up indicators.
 
 ## Data Source Priority
 
@@ -65,6 +67,7 @@ Every substantial answer should include:
 - Missing data: fields, recommended source, time range, frequency, and use.
 - Risks and counterexamples.
 - Follow-up indicators or monitoring checklist.
+- Portfolio action block when the user asks for duration, curve, leverage, credit allocation, or risk triggers.
 
 For reusable output formats, use `assets/templates/` when producing reports or handoff drafts.
 

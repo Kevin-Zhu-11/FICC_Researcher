@@ -1,10 +1,10 @@
 """
 文件路径: scripts/extract_image_urls.py
-文件作用: 从源报告 Markdown 中抽取图片 URL，生成图表 URL 索引。
+文件作用: 从源报告 Markdown 中递归抽取图片 URL，生成图表 URL 索引。
 主要内容:
 - extract_urls_from_text: 抽取 Markdown 图片和原始 http(s) 图片链接
 - yaml_quote: 输出安全的 YAML 字符串
-- main: 扫描 23 篇源报告并写入 references/chart-notes/image-url-index.yml
+- main: 扫描源报告并写入 references/chart-notes/image-url-index.yml
 依赖关系:
 - pathlib
 - re
@@ -24,6 +24,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "references" / "source-reports"
 OUTPUT_FILE = ROOT / "references" / "chart-notes" / "image-url-index.yml"
+EXPECTED_SOURCE_COUNT = 25
 
 
 MARKDOWN_IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((https?://[^)\s]+)\)")
@@ -60,7 +61,7 @@ def extract_urls_from_text(text: str) -> list[tuple[str, str]]:
 
 
 def main() -> int:
-    source_files = sorted(SOURCE_DIR.glob("*.md"))
+    source_files = sorted(SOURCE_DIR.rglob("*.md"))
     rows: list[tuple[str, str, str]] = []
     for source_file in source_files:
         text = source_file.read_text(encoding="utf-8", errors="replace")
@@ -87,8 +88,8 @@ def main() -> int:
     print(f"source_reports_count={len(source_files)}")
     print(f"image_urls_count={len(rows)}")
     print(f"output={repo_path(OUTPUT_FILE)}")
-    if len(source_files) != 23:
-        print("error: expected source_reports_count=23")
+    if len(source_files) != EXPECTED_SOURCE_COUNT:
+        print(f"error: expected source_reports_count={EXPECTED_SOURCE_COUNT}")
         return 1
     if not rows:
         print("error: expected at least one image URL")

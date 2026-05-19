@@ -34,6 +34,9 @@ REQUIRED_FILES = [
     "references/03-data-integration-policy.md",
     "references/04-mcp-connectors.md",
     "references/05-cross-platform-usage.md",
+    "references/06-portfolio-action-policy.md",
+    "references/07-macro-indicator-glossary.md",
+    "references/08-policy-reaction-function.md",
     "references/chart-notes/key-framework-charts.md",
     "references/chart-notes/image-url-index.yml",
 ]
@@ -65,7 +68,7 @@ def require_file(relative_path: str) -> bool:
 
 
 def count_markdown(relative_dir: str) -> int:
-    return len(list((ROOT / relative_dir).glob("*.md")))
+    return len(list((ROOT / relative_dir).rglob("*.md")))
 
 
 def require_playbooks() -> bool:
@@ -95,22 +98,22 @@ def main() -> int:
     passed = require_playbooks() and passed
 
     evidence_cards_count = count_markdown("references/evidence-cards")
-    if evidence_cards_count >= 6:
-        print("ok: evidence_cards_count>=6")
+    if evidence_cards_count >= 7:
+        print("ok: evidence_cards_count>=7")
     else:
         print(f"error: evidence_cards_count={evidence_cards_count}")
         passed = False
 
     templates_count = count_markdown("assets/templates")
-    if templates_count >= 3:
-        print("ok: templates_count>=3")
+    if templates_count >= 9:
+        print("ok: templates_count>=9")
     else:
         print(f"error: templates_count={templates_count}")
         passed = False
 
     source_reports_count = count_markdown("references/source-reports")
-    if source_reports_count == 23:
-        print("ok: private_source_reports_count=23")
+    if source_reports_count == 25:
+        print("ok: private_source_reports_count=25")
     else:
         print(f"info: private_source_reports_count={source_reports_count}")
         print("info: source report originals are optional and ignored for public GitHub pushes")

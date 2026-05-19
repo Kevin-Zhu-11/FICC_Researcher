@@ -6,4 +6,5 @@ outputs/
 tmp/
 .tmp*/
 *.log
-references/source-reports/*.md
+references/source-reports/**
+!references/source-reports/.gitkeep

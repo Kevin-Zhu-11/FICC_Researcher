@@ -20,6 +20,7 @@ Use this playbook for rates direction, yield-curve shape, macro-policy transmiss
 - Supply: treasury issuance, local-government-bond issuance, policy-bank supply, maturity distribution.
 - External: USD/CNH, DXY, UST yields, FX policy constraints.
 - Market: CGB and CDB yield curves, curve slope, term premium proxy, futures basis if relevant.
+- Data release context: actual value, consensus expectation, previous value, revision, base effect, seasonal effect, and market pricing before release.
 
 ## Framework
 
@@ -35,6 +36,25 @@ growth / inflation / policy / fiscal supply / funding / FX
 
 In a low-rate environment, do not mechanically apply "growth up = yields up" or "inflation down = yields down". CICC's low-rate framework emphasizes that fiscal behavior, industrial-chain pricing, risk appetite, and institutional liability constraints can dominate traditional macro variables. Huatai's debt-market framework also pushes the analyst to map macro theory into observable rates, supply, and investor behavior.
 
+For China macro data releases, add the Huatai fundamental-analysis map:
+
+```text
+economic temperature and cycle season
+-> demand / supply / price / policy / market-pricing map
+-> four economic circulation channels
+-> leading / coincident / lagging indicator layer
+-> expectation gap and priced-in level
+-> policy reaction function
+-> rates, curve, credit, and institution-behavior transmission
+```
+
+The four circulation channels are:
+
+- Employment, income, and consumption.
+- Manufacturing price signal, profit, investment, and capacity.
+- Property sales, price, land, new starts, and investment.
+- External demand, exports, production chain, and exchange-rate pressure.
+
 ## Analysis Steps
 
 1. Classify the question: level, slope, volatility, short-end funding, long-end duration, or macro regime.
@@ -43,7 +63,9 @@ In a low-rate environment, do not mechanically apply "growth up = yields up" or 
 4. Check short-end anchor first: repo, NCD, policy rate, and bank balance-sheet pressure.
 5. Check long-end driver next: nominal growth expectation, fiscal supply, insurance and bank demand, term premium.
 6. Compare curve segments: bull flattening, bull steepening, bear flattening, bear steepening.
-7. If data is missing, stop at the mechanism and produce the missing-data block.
+7. For macro data releases, map the indicator with `references/07-macro-indicator-glossary.md` and evaluate the policy reaction function in `references/08-policy-reaction-function.md`.
+8. If a single-month value is derived from cumulative data, show `current cumulative - previous cumulative = single-month estimate` and state rounding limits.
+9. If data is missing, stop at the mechanism and produce the missing-data block.
 
 ## Output Template
 
@@ -52,8 +74,11 @@ In a low-rate environment, do not mechanically apply "growth up = yields up" or 
 问题归类:
 框架事实:
 当前数据事实:
+差分推算:
+预期差:
 缺少数据:
 利率方向判断:
+政策反应函数:
 曲线含义:
 风险与反例:
 后续跟踪指标:
@@ -66,6 +91,11 @@ In a low-rate environment, do not mechanically apply "growth up = yields up" or 
 - Check whether funding is loose only because demand is weak, not because risk appetite is improving.
 - Check whether external-rate or FX constraints limit domestic easing.
 - Check whether institutional demand is duration-seeking enough to absorb supply.
+- Check whether the market already priced the data surprise before release.
+- Check whether policy response offsets the first-order growth or inflation signal.
+- Check whether the indicator is leading, coincident, or lagging before assigning trading weight.
+- Check whether the conclusion depends on a blocked economic circulation channel.
+- Check whether the result is public-sector financing rather than private endogenous demand.
 
 ## Source Reports
 
@@ -74,6 +104,8 @@ In a low-rate environment, do not mechanically apply "growth up = yields up" or 
 - `cicc-low-rate-investor-behavior-2025`
 - `huatai-bond-market-framework-2025`
 - `huatai-asset-allocation-framework-2025`
+- `huatai-fixed-income-framework-2025`
+- `huatai-fundamental-analysis-method-2025`
 
 ## Search Keywords
 

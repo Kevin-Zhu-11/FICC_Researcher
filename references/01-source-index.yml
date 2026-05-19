@@ -337,3 +337,33 @@
     - 银行理财
     - 公募基金
   source_role: framework
+
+- id: huatai-fixed-income-framework-2025
+  institution: Huatai
+  title: 固收分析框架 2025版
+  source_file: references/source-reports/【华泰固收】固收分析框架（2025版）/content.md
+  primary_playbooks:
+    - rates-macro
+    - bond-strategy
+  keywords:
+    - 固收分析框架
+    - 预期差
+    - 政策组合
+    - 供需平衡
+    - 债市传导
+  source_role: framework
+
+- id: huatai-fundamental-analysis-method-2025
+  institution: Huatai
+  title: 基本面分析的道与术 2025版
+  source_file: references/source-reports/【华泰固收】基本面分析的道与术（2025版）/content.md
+  primary_playbooks:
+    - rates-macro
+    - bond-strategy
+  keywords:
+    - 基本面分析
+    - 宏观指标
+    - 预期差
+    - 政策反应
+    - 供需循环
+  source_role: framework

@@ -1,5 +1,11 @@
 {
-  "mcpServers": {
+  "do_not_paste_into_openclaw_json": "OpenClaw 2026.5.x does not accept a top-level mcpServers key in ~/.openclaw/openclaw.json. Use `openclaw mcp set <name> '<json object>'` instead.",
+  "openclaw_examples": {
+    "list": "openclaw mcp list",
+    "set_example": "openclaw mcp set tushare '{\"command\":\"...\",\"args\":[\"...\"],\"env\":{\"TUSHARE_TOKEN\":\"${TUSHARE_TOKEN}\"}}'",
+    "show": "openclaw mcp show tushare"
+  },
+  "generic_mcp_servers_template": {
     "tushare": {
       "type": "stdio-or-http",
       "description": "Tushare connector. Store TUSHARE_TOKEN outside git and return source, as_of, retrieved_at, fields, and limitations."

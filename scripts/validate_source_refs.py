@@ -23,6 +23,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 INDEX_FILE = ROOT / "references" / "01-source-index.yml"
+EXPECTED_SOURCE_COUNT = 25
 SCAN_DIRS = [
     ROOT / "references" / "playbooks",
     ROOT / "references" / "evidence-cards",
@@ -57,7 +58,7 @@ def main() -> int:
     for source_id in unknown_ids:
         print(f"unknown: {source_id}")
 
-    passed = len(source_ids) == 23 and not unknown_ids
+    passed = len(source_ids) == EXPECTED_SOURCE_COUNT and not unknown_ids
     print(f"validation_passed={str(passed).lower()}")
     return 0 if passed else 1
 

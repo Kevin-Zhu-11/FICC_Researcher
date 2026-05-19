@@ -18,6 +18,22 @@ FICC Researcher should specify required fields and interpret verified data. MCP 
 
 Use Tushare when a token and package or MCP server are configured outside git. Require the connector to return the interface name, parameters, retrieval timestamp, row count, fields, and limitations. Treat Tushare as a useful public structured-data source, not as a complete China bond database.
 
+### OpenClaw Registration Note
+
+For OpenClaw 2026.5.x, do not add a top-level `mcpServers` key to `~/.openclaw/openclaw.json`. That shape is not accepted by the OpenClaw config validator and can stop the gateway.
+
+Use OpenClaw's command interface instead:
+
+```bash
+openclaw mcp set <name> '{"command":"...","args":["..."],"env":{"TUSHARE_TOKEN":"${TUSHARE_TOKEN}"}}'
+openclaw mcp list
+openclaw mcp show <name>
+```
+
+Store the real token in `~/.openclaw/.env` or another local secret mechanism. Do not commit it.
+
+Until a Tushare MCP server is registered, the VM can still use a local Tushare Python workflow as a data producer. In that case, pass the result into FICC Researcher as a data packet rather than treating FICC Researcher as the data-fetching layer.
+
 ## iFinD
 
 Use iFinD for China macro, fixed-income, fund, announcement, and market datasets when exact identifiers and permissions are available. Verify indicator IDs, frequency, and units before making data conclusions.

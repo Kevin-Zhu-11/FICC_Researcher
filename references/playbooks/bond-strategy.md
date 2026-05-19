@@ -41,7 +41,7 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 4. Analyze curve opportunity by segment: short-end funding anchor, belly rolldown, long-end duration beta.
 5. Compare rates versus credit: whether spread pickup compensates liquidity and credit risk.
 6. Evaluate supply-demand balance and likely marginal buyer.
-7. Translate into a portfolio action, scenario trigger, and stop condition.
+7. Translate into a portfolio action, scenario trigger, and stop condition with `references/06-portfolio-action-policy.md`.
 
 ## Output Template
 
@@ -52,6 +52,7 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 可用策略:
 需要的数据:
 当前只能确认的部分:
+组合动作:
 风险控制:
 跟踪指标:
 ```
@@ -63,6 +64,7 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 - Do not use spread pickup without issuer, rating, liquidity, and concentration checks.
 - Check whether curve steepness comes from supply pressure rather than attractive rolldown.
 - Distinguish trading book mark-to-market risk from hold-to-maturity accounting.
+- Always state what happens if the rate view is wrong: loss channel, trigger, and de-risking action.
 
 ## Source Reports
 
@@ -71,6 +73,7 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 - `cicc-low-rate-investor-behavior-2025`
 - `huatai-bond-market-framework-2025`
 - `huatai-asset-allocation-framework-2025`
+- `huatai-fixed-income-framework-2025`
 
 ## Search Keywords
 
