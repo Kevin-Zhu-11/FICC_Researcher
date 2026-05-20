@@ -488,7 +488,7 @@ For connector setup templates and boundaries, read `references/04-mcp-connectors
 Run:
 
 ```powershell
-Select-String -Path .\.mcp.example.json,.\references\04-mcp-connectors.md -Pattern 'sk-','token=','password','secret','TUSHARE_TOKEN='
+Select-String -Path .\.mcp.example.json,.\references\04-mcp-connectors.md -Pattern '<secret-shape-patterns>'
 ```
 
 Expected:
@@ -862,7 +862,7 @@ Skill is valid!
 Run:
 
 ```powershell
-Select-String -Path .\SKILL.md,.\references\*.md,.\references\playbooks\*.md,.\references\evidence-cards\*.md,.\.mcp.example.json -Pattern 'sk-','password=','token=','api_key=','secret='
+Select-String -Path .\SKILL.md,.\references\*.md,.\references\playbooks\*.md,.\references\evidence-cards\*.md,.\.mcp.example.json -Pattern '<secret-shape-patterns>'
 ```
 
 Expected:

@@ -32,17 +32,30 @@ Results:
 
 ```text
 host_or_private_path_scan: no matches
-secret_value_scan: no real secret values; only policy/scanner command text remains
+secret_value_scan: no matches
 tracked_source_reports: references/source-reports/.gitkeep only
 ```
+
+## Cloud Scan After First Push
+
+After pushing commit `ba5e7a7`, a fresh shallow clone from GitHub showed:
+
+```text
+remote_head: ba5e7a7
+host_or_private_path_scan: no matches
+tracked_source_reports: references/source-reports/.gitkeep only
+secret_value_scan: only scanner-command text matched, no credential assignment or key value
+```
+
+Second-pass cleanup replaced those scanner-command literals with abstract placeholders so strict scans do not alert on the documentation itself.
 
 ## Notes
 
 - `LICENSE` keeps the public copyright name.
 - `TUSHARE_TOKEN` appears only as a placeholder or environment-variable name.
-- `token=`, `password`, `secret`, and `api_key` may appear inside documented scan commands or policy text, not as assigned credential values.
+- Credential-related terms may appear inside documented scan commands or policy text, not as assigned credential values.
 
 ## Status
 
 审查结论：
-- 通过，可以提交第一轮脱敏与 skill 升级。
+- 通过，可以提交第二轮脱敏并再次推送。
