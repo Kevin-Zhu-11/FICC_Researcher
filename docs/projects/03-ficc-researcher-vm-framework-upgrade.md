@@ -74,7 +74,7 @@ python .\scripts\extract_image_urls.py
 python .\scripts\build_source_index.py
 python .\scripts\validate_source_refs.py
 python .\scripts\validate_skill_links.py
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+python <local-skill-creator>\scripts\quick_validate.py <repo-root>
 ```
 
 验收：

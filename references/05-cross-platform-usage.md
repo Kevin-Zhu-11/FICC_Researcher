@@ -9,6 +9,7 @@ Recommended loading order for data-assisted work:
 ```text
 SKILL.md -> references/00-routing.md -> references/10-workflow-entrypoints.md
 -> references/09-data-interface-catalog.md -> selected playbooks
+-> references/12-data-connector-mapping.md when provider-specific fields are needed
 -> templates and evidence cards as needed
 ```
 
@@ -33,6 +34,8 @@ openclaw agent --agent main --message "请使用 ficc-researcher 回答..."
 
 OpenClaw connector outputs should be treated as data packets. The FICC skill should not store OpenClaw tokens, MCP secrets, or host-specific private paths.
 
+Before syncing or troubleshooting OpenClaw skill discovery, read `references/13-openclaw-skill-hygiene.md`. Use Git-tracked public files for sync and keep backups outside the active `skills/` directory.
+
 ## Personal Agents
 
 Load only these files by default:
@@ -45,6 +48,7 @@ references/03-data-integration-policy.md
 selected playbooks
 selected evidence cards
 references/09-data-interface-catalog.md when data is required
+references/12-data-connector-mapping.md when provider-specific fields are required
 references/10-workflow-entrypoints.md when a repeatable report is requested
 ```
 

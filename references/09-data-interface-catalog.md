@@ -2,6 +2,9 @@
 
 Use this file when a fixed-income question needs current data, historical data, user-provided data, or connector-returned data. It defines what data is needed and where an agent may try to obtain it. It does not define credentials, private endpoints, or mandatory tool names.
 
+For provider-specific candidate interfaces, citation metadata, and missing-data downgrade rules, read `references/12-data-connector-mapping.md` after identifying the required fields here.
+For the canonical output contract and data packet, read `references/14-contracts-and-analysis-standards.md`.
+
 ## Purpose
 
 FICC Researcher owns:
@@ -34,6 +37,8 @@ universe:
 fields:
 row_count:
 units:
+schema_notes:
+missing_fields:
 limitations:
 ```
 
@@ -48,6 +53,7 @@ If a field is unknown, write `unknown`. Do not invent metadata.
 5. Broker research files only as framework evidence, never as current market data.
 
 Provider names below are optional examples. Users must configure their own credentials and comply with each provider's terms.
+Exact provider candidates are summarized in `references/12-data-connector-mapping.md`; this catalog remains the research-field and missing-data source of truth.
 
 ## Macro Credit And Money
 
@@ -264,7 +270,7 @@ When WebSearch is used, label whether the source is official, media转引, or ba
 Use this block whenever required fields are unavailable:
 
 ```text
-当前缺少数据:
+缺失数据:
 - 字段:
 - 推荐来源:
 - 时间范围:

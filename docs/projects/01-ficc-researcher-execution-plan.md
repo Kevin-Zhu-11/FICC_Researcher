@@ -28,8 +28,8 @@
 ### 阶段 1: 建立 skill 入口和元数据
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\SKILL.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\agents\openai.yaml`
+- Create: `<repo-root>\SKILL.md`
+- Create: `<repo-root>\agents\openai.yaml`
 
 - [ ] **Step 1: 写 `SKILL.md` frontmatter**
 
@@ -94,8 +94,8 @@ True
 ### 阶段 2: 建立路由和数据源政策
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\00-routing.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\02-data-source-policy.md`
+- Create: `<repo-root>\references\00-routing.md`
+- Create: `<repo-root>\references\02-data-source-policy.md`
 
 - [ ] **Step 1: 写 `00-routing.md` 的路由表**
 
@@ -155,8 +155,8 @@ Expected:
 ### 阶段 3: 建立源报告索引
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\01-source-index.yml`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\scripts\build_source_index.py`
+- Create: `<repo-root>\references\01-source-index.yml`
+- Create: `<repo-root>\scripts\build_source_index.py`
 
 - [ ] **Step 1: 写 `01-source-index.yml`**
 
@@ -211,11 +211,11 @@ unindexed_files=0
 ### 阶段 4: 建立第一批 playbook
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\rates-macro.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\bond-strategy.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\institution-behavior.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\credit-strategy.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\convertible-hybrid.md`
+- Create: `<repo-root>\references\playbooks\rates-macro.md`
+- Create: `<repo-root>\references\playbooks\bond-strategy.md`
+- Create: `<repo-root>\references\playbooks\institution-behavior.md`
+- Create: `<repo-root>\references\playbooks\credit-strategy.md`
+- Create: `<repo-root>\references\playbooks\convertible-hybrid.md`
 
 - [ ] **Step 1: 使用统一 playbook 模板**
 
@@ -287,7 +287,7 @@ unindexed_files=0
 ### 阶段 5: 建立图表笔记
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\chart-notes\key-framework-charts.md`
+- Create: `<repo-root>\references\chart-notes\key-framework-charts.md`
 
 - [ ] **Step 1: 转写至少 5 张关键图**
 
@@ -320,7 +320,7 @@ unindexed_files=0
 ### 阶段 6: 建立验证脚本
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\scripts\validate_skill_links.py`
+- Create: `<repo-root>\scripts\validate_skill_links.py`
 
 - [ ] **Step 1: 写路径校验脚本**
 
@@ -358,14 +358,14 @@ validation_passed=true
 ### 阶段 7: 使用 skill-creator 验证
 
 **Files:**
-- Validate: `D:\000AAA_Datas\Python\Skills\FICC_Researcher`
+- Validate: `<repo-root>`
 
 - [ ] **Step 1: 运行 quick_validate**
 
 Run:
 
 ```powershell
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+python <local-skill-creator>\scripts\quick_validate.py <repo-root>
 ```
 
 Expected:

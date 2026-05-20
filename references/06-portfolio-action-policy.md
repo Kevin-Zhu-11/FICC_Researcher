@@ -34,7 +34,7 @@ Convert research judgment into a scenario table:
 预期收益来源:
 主要亏损路径:
 止盈/止损/降风险条件:
-需要补充的数据:
+缺失数据:
 ```
 
 ## Duration Rules
@@ -63,6 +63,8 @@ Convert research judgment into a scenario table:
 - If spreads are low, prefer explicit risk budget and liquidity buffer.
 
 ## Source Reports
+
+These ids are validated by `scripts/validate_source_refs.py`, which scans reference Markdown files, not only playbooks and evidence cards.
 
 - `cicc-bond-principles-strategy-2025`
 - `huatai-fixed-income-framework-2025`

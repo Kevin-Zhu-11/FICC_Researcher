@@ -31,6 +31,12 @@ issuer systemic role and fundamentals
 
 System importance can reduce default probability, but it does not remove subordination, extension, coupon, or loss-absorption risk.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `FC-01` | 大金融信用债必须区分主体信用和工具条款风险。 | 二永债、TLAC、次级债等资本工具引入次级性、延期、递延、减记、转股和供给压力。 | 缺少条款、资本充足率、资产质量、赎回预期、利差和流动性数据。 |
+
 ## Analysis Steps
 
 1. Classify issuer: bank, broker, insurer, leasing, AMC, or other financial.
@@ -41,7 +47,7 @@ System importance can reduce default probability, but it does not remove subordi
 6. Check investor demand and liquidity.
 7. State whether the trade is carry, spread compression, relative value, or should be avoided.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: financial-credit
@@ -68,6 +74,10 @@ System importance can reduce default probability, but it does not remove subordi
 - `cicc-financial-credit-bonds-2025`
 - `huatai-credit-bond-framework-2025`
 - `huatai-institution-behavior-2025`
+
+## Claim IDs
+
+- `FC-01`
 
 ## Search Keywords
 

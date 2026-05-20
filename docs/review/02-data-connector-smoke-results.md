@@ -17,7 +17,7 @@ python3 -c "import tushare as ts; print(ts.__version__)"
 ## Results
 
 ```text
-No MCP servers configured in /home/kevin/.openclaw/openclaw.json.
+No MCP servers configured in ~/.openclaw/openclaw.json.
 TUSHARE_TOKEN_set=false
 tushare_import=failed
 ```

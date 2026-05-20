@@ -9,13 +9,19 @@
 ## 数据来源元数据
 
 - 数据来源:
+- provider:
 - 接口/文件/网页:
 - 查询参数:
 - as_of:
 - retrieved_at:
+- time_range:
+- frequency:
+- universe:
 - 字段:
 - row_count:
 - 单位:
+- schema_notes:
+- missing_fields:
 - limitations:
 
 ## 数据质量检查
@@ -29,7 +35,7 @@
 ## 缺失数据
 
 ```text
-当前缺少数据:
+缺失数据:
 - 字段:
 - 推荐来源:
 - 时间范围:

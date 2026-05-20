@@ -31,6 +31,12 @@ cash-bond curve
 
 Derivatives can reduce or transform exposure, but they also add margin, basis, liquidity, and model risk.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `DER-01` | 衍生品决策必须同时看现券敞口、资金条件、期货/互换定价、基差/DV01、对冲目标、保证金和流动性。 | 衍生品改变风险形态，但会引入基差、换券、展期、保证金、资金和模型风险。 | 缺少 CTD、转换因子、IRR、repo、DV01、保证金或对冲目标。 |
+
 ## Analysis Steps
 
 1. Define objective: hedge, directional view, curve trade, basis trade, or relative value.
@@ -41,7 +47,7 @@ Derivatives can reduce or transform exposure, but they also add margin, basis, l
 6. State implementation risk: margin, funding, liquidity, roll, delivery, and hedge slippage.
 7. If current market data is missing, provide required fields instead of trade conclusions.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: derivatives
@@ -66,6 +72,10 @@ Derivatives can reduce or transform exposure, but they also add margin, basis, l
 
 - `cicc-interest-rate-derivatives-2025`
 - `huatai-bond-market-framework-2025`
+
+## Claim IDs
+
+- `DER-01`
 
 ## Search Keywords
 

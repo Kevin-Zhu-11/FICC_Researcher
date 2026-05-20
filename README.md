@@ -52,6 +52,9 @@ FICC_Researcher/
 ├── assets/templates/                # Reusable output templates
 ├── docs/projects/                   # Design and execution plans
 ├── docs/review/                     # Validation and review notes
+├── examples/
+│   ├── data/                        # Synthetic or official-public sample data packets
+│   └── golden-cases/                # Golden answer examples for eval and style checks
 ├── references/
 │   ├── 00-routing.md                # Question routing table
 │   ├── 01-source-index.yml          # Source id index, without report originals
@@ -59,9 +62,17 @@ FICC_Researcher/
 │   ├── 03-data-integration-policy.md
 │   ├── 04-mcp-connectors.md         # MCP connector boundaries and examples
 │   ├── 05-cross-platform-usage.md   # Codex/OpenClaw/Claude usage notes
+│   ├── 06-portfolio-action-policy.md
+│   ├── 07-macro-indicator-glossary.md
+│   ├── 08-policy-reaction-function.md
 │   ├── 09-data-interface-catalog.md # Field-level data needs and connector boundaries
 │   ├── 10-workflow-entrypoints.md   # Portable command-like research workflows
 │   ├── 11-research-decision-chains.md
+│   ├── 12-data-connector-mapping.md # Provider candidate mapping and citation metadata
+│   ├── 13-openclaw-skill-hygiene.md # Safe OpenClaw sync and skill discovery rules
+│   ├── 14-contracts-and-analysis-standards.md # Canonical output/data contract
+│   ├── 15-playbook-framework-standard.md # Canonical playbook framework structure
+│   ├── 16-source-claim-map.yml      # Claim-to-evidence/source mapping
 │   ├── playbooks/                   # Core research playbooks
 │   ├── evidence-cards/              # Compressed source-evidence cards
 │   └── chart-notes/                 # Chart and image-url notes
@@ -76,8 +87,12 @@ For substantial fixed-income analysis, the agent should follow this path:
 ```text
 SKILL.md
 -> references/00-routing.md
+-> references/14-contracts-and-analysis-standards.md for canonical output and data contracts
+-> references/15-playbook-framework-standard.md for framework consistency and conflict handling
+-> references/16-source-claim-map.yml when source traceability is required
 -> references/10-workflow-entrypoints.md when the user asks for a repeatable report
 -> references/09-data-interface-catalog.md when current or historical data is required
+-> references/12-data-connector-mapping.md when provider-specific fields are needed
 -> one to three relevant playbooks
 -> data-source policy
 -> data-integration policy if user data or MCP data is available
@@ -89,10 +104,13 @@ Minimum output structure:
 ```text
 问题归类:
 使用 playbook:
+数据输入:
+数据质量检查:
 框架事实:
 数据事实:
 推断判断:
-缺少数据:
+置信度:
+缺失数据:
 风险与反例:
 后续跟踪:
 ```
@@ -135,6 +153,23 @@ Provider names in this repository are optional data-source examples, not endorse
 
 Use `references/09-data-interface-catalog.md` for field-level data needs and provider boundaries. For example, Tushare can be useful for selected macro datasets such as social-financing aggregates and money supply where permission allows, while professional bond curves, credit spreads, institution flows, and issuer-risk datasets often require Wind, iFinD, ChinaBond, CFETS, SHCH, a local database, or user-provided exports.
 
+Use `references/12-data-connector-mapping.md` for provider-specific candidate fields, required metadata, and missing-data downgrade rules. These mappings are optional and permission-dependent; they are not provider endorsements or guarantees.
+
+## Quality Evaluation And Examples
+
+The `evals/` folder now has two layers:
+
+- `expected-output-contracts.yml`: minimum output blocks for each workflow.
+- `quality-rubrics.yml`: hard gates and scoring dimensions for human or agent-assisted review.
+
+The `examples/data/` folder contains small sample packets. The `examples/golden-cases/` folder contains answer-shape examples that demonstrate missing-data discipline. Example data is synthetic, desensitized, or official-public only; it is not a licensed market-data export.
+
+## OpenClaw Usage Hygiene
+
+Read `references/13-openclaw-skill-hygiene.md` before syncing this skill into OpenClaw.
+
+The safe default is to sync Git-tracked public files only, keep backups outside the active `skills/` directory, and never copy ignored `references/source-reports/**` material into a public OpenClaw skill folder.
+
 ## Source Report Boundary
 
 The original broker-report Markdown files are intentionally not included in this GitHub repository.
@@ -163,22 +198,26 @@ Run these from the repo root:
 ```powershell
 python .\scripts\build_source_index.py
 python .\scripts\validate_source_refs.py
+python .\scripts\validate_claim_map.py
 python .\scripts\validate_skill_links.py
 python .\scripts\validate_eval_cases.py
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+python .\scripts\validate_quality_rubrics.py
+python .\scripts\validate_examples.py
 ```
+
+If Codex `skill-creator` is installed locally, also run its `quick_validate.py` against this repo using your own local skill path.
 
 Expected behavior:
 
 - Public clone: source index and source-id references can be validated without report originals.
 - Local research workspace: if `references/source-reports/*.md` exists, scripts also check that local source files align with the index.
-- Eval prompts: `evals/smoke-prompts.yml` defines cross-agent smoke cases, and `evals/expected-output-contracts.yml` defines the minimum output blocks each workflow should satisfy.
+- Eval prompts: `evals/smoke-prompts.yml` defines cross-agent smoke cases, `evals/expected-output-contracts.yml` defines the minimum output blocks each workflow should satisfy, and `evals/quality-rubrics.yml` defines quality review gates.
 
 ## Status
 
-Current completion level: approximately 95%.
+Current completion level: approximately 98%.
 
-The skill framework, routing, playbooks, evidence cards, templates, and OpenClaw regression checks are in place. The remaining 5% is live data-provider integration testing, especially Tushare MCP and future iFinD/Wind workflows.
+The skill framework, routing, playbooks, evidence cards, templates, quality rubrics, golden examples, connector mapping, and OpenClaw regression checks are in place. The remaining work is live data-provider integration testing and provider-specific expansion for future iFinD/Wind/local database workflows.
 
 ## License
 

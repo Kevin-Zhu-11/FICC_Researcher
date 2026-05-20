@@ -4,6 +4,7 @@ This file defines how FICC Researcher combines the research framework with user-
 
 For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
 For field-level data needs and connector-source mapping, read `references/09-data-interface-catalog.md`.
+For the canonical output contract, data packet, confidence labels, and missing-data block, read `references/14-contracts-and-analysis-standards.md`.
 
 ## Core Principle
 
@@ -40,17 +41,21 @@ If user-provided data conflicts with connector data, do not merge silently. Repo
 When receiving data from a user, MCP, connector, or script, normalize it into this mental contract before analysis:
 
 ```text
-data_source:
+source:
+provider:
+interface_or_file:
+query:
 as_of:
 retrieved_at:
 time_range:
 frequency:
 universe:
 fields:
+row_count:
 units:
 schema_notes:
 missing_fields:
-known_limitations:
+limitations:
 ```
 
 If any of these fields are unknown, label them as unknown. Do not invent metadata.
@@ -99,6 +104,8 @@ Connector results should be cited as data facts, for example:
 - Fields:
 - Limitation:
 ```
+
+Use the full canonical data packet from `references/14-contracts-and-analysis-standards.md` for handoffs, evals, and reusable reports.
 
 ## Tushare Boundary
 
@@ -170,14 +177,18 @@ When data is not available, do not force a current conclusion. Use:
 ```text
 问题归类:
 使用 playbook:
-框架判断:
-当前缺少数据:
+框架事实:
+推断判断:
+置信度: 低，原因是缺少当前数据。
+缺失数据:
 - 字段:
 - 推荐来源:
 - 时间范围:
 - 频率:
 - 用途:
 在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+风险与反例:
+后续跟踪:
 ```
 
 ## Data Quality Checks

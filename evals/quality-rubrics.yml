@@ -1,0 +1,129 @@
+rubrics:
+  macro-data-commentary:
+    hard_gates:
+      - no_fabricated_market_data
+      - source_and_timestamp_present
+      - missing_data_block_when_needed
+      - no_personalized_investment_advice
+    scoring:
+      source_traceability: {max_score: 2, pass_threshold: 1}
+      data_quality_discipline: {max_score: 2, pass_threshold: 1}
+      playbook_routing: {max_score: 2, pass_threshold: 1}
+      ficc_reasoning_depth: {max_score: 3, pass_threshold: 2}
+      risk_and_counterexample: {max_score: 2, pass_threshold: 1}
+      actionability_without_advice: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 9
+
+  yield-curve-review:
+    hard_gates:
+      - no_fabricated_curve_levels
+      - curve_source_and_date_present_when_claiming_levels
+      - missing_data_block_when_needed
+      - no_unconditional_duration_or_curve_trade
+    scoring:
+      curve_segmentation: {max_score: 3, pass_threshold: 2}
+      funding_supply_institution_linkage: {max_score: 3, pass_threshold: 2}
+      data_quality_discipline: {max_score: 2, pass_threshold: 1}
+      risk_triggers: {max_score: 2, pass_threshold: 1}
+      actionability_without_advice: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  credit-spread-review:
+    hard_gates:
+      - no_credit_downshift_without_spread_and_issuer_data
+      - no_policy_support_equals_no_risk
+      - no_carry_as_risk_free
+      - missing_data_block_when_needed
+    scoring:
+      spread_decomposition: {max_score: 3, pass_threshold: 2}
+      issuer_risk_discipline: {max_score: 3, pass_threshold: 2}
+      liquidity_exit_analysis: {max_score: 2, pass_threshold: 1}
+      institution_demand_linkage: {max_score: 2, pass_threshold: 1}
+      risk_and_counterexample: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  institution-flow-review:
+    hard_gates:
+      - no_position_claim_without_flow_or_holding_data
+      - nav_feedback_considered
+      - liability_stability_considered
+      - missing_data_block_when_needed
+    scoring:
+      institution_type_separation: {max_score: 2, pass_threshold: 1}
+      liability_and_nav_feedback: {max_score: 3, pass_threshold: 2}
+      market_transmission_chain: {max_score: 3, pass_threshold: 2}
+      data_quality_discipline: {max_score: 2, pass_threshold: 1}
+      risk_and_counterexample: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  portfolio-action-review:
+    hard_gates:
+      - no_personalized_investment_advice
+      - portfolio_constraints_stated_or_marked_missing
+      - no_leverage_without_funding_and_liability_data
+      - risk_and_stop_conditions_present
+    scoring:
+      scenario_table_quality: {max_score: 2, pass_threshold: 1}
+      pnl_path_decomposition: {max_score: 3, pass_threshold: 2}
+      mandate_and_constraint_awareness: {max_score: 2, pass_threshold: 1}
+      risk_trigger_quality: {max_score: 2, pass_threshold: 1}
+      data_quality_discipline: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  policy-event-commentary:
+    hard_gates:
+      - policy_fact_source_and_time_present
+      - policy_tool_not_confused_with_implementation
+      - policy_constraints_considered
+      - no_market_pricing_claim_without_data
+    scoring:
+      policy_reaction_function: {max_score: 3, pass_threshold: 2}
+      expectation_gap_discipline: {max_score: 2, pass_threshold: 1}
+      rates_credit_institution_transmission: {max_score: 3, pass_threshold: 2}
+      risk_and_counterexample: {max_score: 2, pass_threshold: 1}
+      follow_up_indicators: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  convertible-review:
+    hard_gates:
+      - no_valuation_without_parity_premium_bond_floor
+      - clause_status_marked_missing_when_unavailable
+      - liquidity_and_rating_considered
+      - no_personalized_investment_advice
+    scoring:
+      valuation_decomposition: {max_score: 3, pass_threshold: 2}
+      equity_credit_clause_linkage: {max_score: 3, pass_threshold: 2}
+      data_quality_discipline: {max_score: 2, pass_threshold: 1}
+      risk_and_counterexample: {max_score: 2, pass_threshold: 1}
+      output_structure: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  daily-bond-brief:
+    hard_gates:
+      - no_market_brief_from_framework_alone_without_disclaimer
+      - data_sources_and_times_present
+      - no_fabricated_yields_spreads_or_funding
+      - risk_and_next_watchlist_present
+    scoring:
+      cross_market_coverage: {max_score: 3, pass_threshold: 2}
+      source_traceability: {max_score: 2, pass_threshold: 1}
+      concise_research_judgment: {max_score: 2, pass_threshold: 1}
+      missing_data_honesty: {max_score: 2, pass_threshold: 1}
+      follow_up_indicators: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 8
+
+  data-assisted-analysis:
+    hard_gates:
+      - data_packet_or_input_summary_present
+      - data_quality_check_present
+      - no_silent_source_merge
+      - missing_fields_and_limits_present
+      - no_generic_quant_pipeline_when_quant_prompt
+    scoring:
+      input_schema_understanding: {max_score: 2, pass_threshold: 1}
+      data_quality_discipline: {max_score: 3, pass_threshold: 2}
+      framework_to_data_linkage: {max_score: 3, pass_threshold: 2}
+      ficc_domain_specificity: {max_score: 2, pass_threshold: 1}
+      inference_boundary: {max_score: 2, pass_threshold: 1}
+      risk_and_counterexample: {max_score: 2, pass_threshold: 1}
+    minimum_total_score: 9

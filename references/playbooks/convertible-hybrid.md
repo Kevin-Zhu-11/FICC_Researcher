@@ -33,6 +33,13 @@ underlying stock and volatility
 
 Do not answer "看平价还是债底" as an either-or rule. In high parity, equity beta and redemption risk dominate. In low parity, bond floor, credit quality, put/downward revision, and liquidity dominate. In the middle zone, premium and option value decide risk-reward.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `CH-01` | 转债价值由正股弹性、债底保护、期权价值、信用质量、流动性和路径依赖条款共同决定。 | 股性、债性和条款在不同市场状态下切换主导权。 | 缺少平价、溢价率、债底、YTM、条款状态、评级或流动性数据。 |
+| `CH-02` | 平价区间决定主要风险来源。 | 高平价偏正股和赎回，低平价偏债底/信用/流动性，中间区间偏溢价率和期权价值。 | 未控制平价区间就比较溢价率或策略收益。 |
+
 ## Analysis Steps
 
 1. Classify the convertible: equity-like, balanced, debt-like, distressed, or clause-driven.
@@ -43,7 +50,7 @@ Do not answer "看平价还是债底" as an either-or rule. In high parity, equi
 6. Match strategy to investor objective: equity beta, low-volatility carry, event-driven, relative value, or hedging.
 7. For non-convertible hybrid assets, state the extension path and required data rather than overfitting convertible logic.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: convertible-hybrid
@@ -53,7 +60,7 @@ Do not answer "看平价还是债底" as an either-or rule. In high parity, equi
 权益上行:
 债性保护:
 策略判断:
-需要的数据:
+缺失数据:
 风险与反例:
 ```
 
@@ -70,6 +77,11 @@ Do not answer "看平价还是债底" as an either-or rule. In high parity, equi
 - `cicc-convertible-bonds-framework-2025`
 - `huatai-convertible-framework-2025`
 - `cicc-hybrid-assets-framework-2025`
+
+## Claim IDs
+
+- `CH-01`
+- `CH-02`
 
 ## Search Keywords
 

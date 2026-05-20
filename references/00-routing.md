@@ -2,6 +2,9 @@
 
 Use this file before reading playbooks. Route by the user's instrument, market driver, investor group, and required decision.
 
+For canonical output labels, missing-data format, source-traceability triggers, portfolio-action boundaries, and cross-framework conflict handling, read `references/14-contracts-and-analysis-standards.md`.
+For playbook framework expression, claim ids, and claim-to-source mapping, use `references/15-playbook-framework-standard.md` and `references/16-source-claim-map.yml`.
+
 ## Core Routes
 
 | User question keywords | Primary playbooks | Source-report families | Required data direction |
@@ -24,25 +27,38 @@ Use this file before reading playbooks. Route by the user's instrument, market d
 
 - If the question asks "为什么" or "机制", prioritize framework playbooks and chart notes.
 - If the question asks "现在能买吗/怎么看当前", require current market data before concluding.
+- If several playbooks match, choose the primary playbook by the user's decision target:
+  - macro direction, policy reaction, and curve direction -> `rates-macro.md`;
+  - portfolio expression, duration, curve, leverage, or stop conditions -> `bond-strategy.md` plus `06-portfolio-action-policy.md`;
+  - credit spread, downshift, carry, issuer risk -> `credit-strategy.md` or the matching credit sub-playbook;
+  - redemption, allocation, liability, or positioning feedback -> `institution-behavior.md`;
+  - quant workflow, factor validation, monitoring design -> `quant-ai-research.md`.
 - If the question spans macro and investor demand, combine `rates-macro.md` with `institution-behavior.md`.
 - If the question spans credit returns and redemptions, combine `credit-strategy.md` with `institution-behavior.md`.
-- If current data is unavailable, return the missing-data block from `references/02-data-source-policy.md` and avoid current-market conclusions.
+- If current data is unavailable, return the `缺失数据` block from `references/14-contracts-and-analysis-standards.md` and avoid current-market conclusions.
 - For MCP or connector usage, route data access decisions to `references/02-data-source-policy.md`.
 - For current data, first route the research question, then read `references/09-data-interface-catalog.md` for field-level data requirements, preferred sources, and connector limits.
 - If the user asks for a repeatable research product rather than a one-off explanation, choose the workflow in `references/10-workflow-entrypoints.md` before choosing the final output template.
-- If the question spans several playbooks, use `references/11-research-decision-chains.md` to preserve the reasoning path.
+- If the question spans several playbooks or channels point in different directions, use `references/11-research-decision-chains.md` to preserve the reasoning path and state scenario conditions.
+- Do not combine playbooks mechanically. If a secondary playbook cannot change the conclusion or required data, mention it as a follow-up instead of loading it.
+- Treat `credit-strategy.md` as the generic spread/risk layer. Route city investment, financial credit, ABS/REITs, convertibles, derivatives, or offshore questions to their specialized playbook first, and use credit strategy only as the shared valuation layer.
+- Treat `bond-strategy.md` as portfolio reasoning and `references/06-portfolio-action-policy.md` as the action translation gate.
 - For portfolio implementation, require scenario, action, trigger, expected return components, and stop condition from `references/06-portfolio-action-policy.md`.
 - For macro data releases, require indicator口径, expectation gap, policy reaction, and bond-market transmission from `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
+- For source traceability, follow the trigger rules in `references/14-contracts-and-analysis-standards.md`.
 
 ## Minimum Answer Skeleton
 
 ```text
 问题归类:
 使用 playbook:
+数据输入:
+数据质量检查:
 框架事实:
-需要的数据:
-当前可给出的判断:
-不能确认的部分:
+数据事实:
+推断判断:
+置信度:
+缺失数据:
 风险与反例:
 后续跟踪:
 ```

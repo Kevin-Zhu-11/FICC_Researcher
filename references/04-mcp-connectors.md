@@ -5,6 +5,8 @@
 FICC Researcher should specify required fields and interpret verified data. MCP servers and external tools should fetch data and return source, timestamp, fields, and limitations. Keep connector configuration outside playbooks.
 
 For field-level data needs, source priority, and provider limitations, read `references/09-data-interface-catalog.md`.
+For provider-specific candidate fields, citation metadata, and missing-data downgrades, read `references/12-data-connector-mapping.md`.
+For the canonical data packet and missing-data contract, read `references/14-contracts-and-analysis-standards.md`.
 
 ## Connector Matrix
 
@@ -15,6 +17,8 @@ For field-level data needs, source priority, and provider limitations, read `ref
 | Wind Local Bridge | Curves, credit spreads, valuations, bond terms, holdings, issuer fundamentals | Environments without Wind terminal/export permission |
 | Local Bond Database | Curated point-in-time curves, spreads, issuers, ratings, holdings, NAV, transactions | Data not ingested or not timestamped |
 | WebSearch | Policy/news/source discovery and official-page leads | Licensed prices, yields, spreads, NAV, holdings, or trade data replacement |
+
+This matrix is intentionally high level. Do not copy provider docs or concrete credentials into this repository. Provider-specific candidates in `references/12-data-connector-mapping.md` are optional examples that still require local permission and field verification.
 
 ## Tushare
 
@@ -60,6 +64,8 @@ Every connector response should be converted into:
 
 ```text
 source:
+provider:
+interface_or_file:
 query:
 as_of:
 retrieved_at:
@@ -69,8 +75,12 @@ universe:
 fields:
 row_count:
 units:
+schema_notes:
+missing_fields:
 limitations:
 ```
+
+For full packet metadata and provider citation rules, use `references/14-contracts-and-analysis-standards.md` and `references/12-data-connector-mapping.md`.
 
 ## Security Rules
 

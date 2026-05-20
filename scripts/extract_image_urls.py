@@ -20,11 +20,11 @@ import re
 import sys
 from pathlib import Path
 
+from validation_config import EXPECTED_SOURCE_COUNT
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "references" / "source-reports"
 OUTPUT_FILE = ROOT / "references" / "chart-notes" / "image-url-index.yml"
-EXPECTED_SOURCE_COUNT = 25
 
 
 MARKDOWN_IMAGE_RE = re.compile(r"!\[([^\]]*)\]\((https?://[^)\s]+)\)")

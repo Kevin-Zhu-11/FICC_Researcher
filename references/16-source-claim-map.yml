@@ -1,0 +1,182 @@
+claims:
+  - claim_id: RM-01
+    playbook: rates-macro
+    claim: Low-rate regimes weaken one-factor growth or inflation beta; rates analysis must combine macro, policy, funding, supply, FX, and institution demand.
+    evidence_card: rates-macro-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-low-rate-macro-bond-pricing-2025
+      - huatai-bond-market-framework-2025
+      - huatai-fixed-income-framework-2025
+    decision_chain: Macro Release To Rates
+
+  - claim_id: RM-02
+    playbook: rates-macro
+    claim: Macro releases should pass through expectation gap, policy reaction, fiscal supply, funding, curve, credit, and institution channels before market conclusions.
+    evidence_card: macro-policy-evidence.md
+    evidence_section: Standard Analysis Map
+    source_ids:
+      - huatai-fundamental-analysis-method-2025
+      - huatai-fixed-income-framework-2025
+      - huatai-bond-market-framework-2025
+    decision_chain: Macro Release To Rates
+
+  - claim_id: BS-01
+    playbook: bond-strategy
+    claim: Portfolio actions must be expressed as scenario, trigger, return path, loss path, and stop condition rather than a single unconditional trade.
+    evidence_card: rates-macro-evidence.md
+    evidence_section: Common Misreadings
+    source_ids:
+      - cicc-bond-principles-strategy-2025
+      - huatai-asset-allocation-framework-2025
+      - huatai-fixed-income-framework-2025
+    decision_chain: Policy Event To Portfolio
+
+  - claim_id: BS-02
+    playbook: bond-strategy
+    claim: Carry and rolldown only become portfolio return after funding, liquidity, product-liability, and drawdown constraints are checked.
+    evidence_card: institution-wealth-evidence.md
+    evidence_section: Common Misreadings
+    source_ids:
+      - cicc-low-rate-investor-behavior-2025
+      - cicc-bond-principles-strategy-2025
+      - huatai-institution-behavior-2025
+    decision_chain: Funding To Curve
+
+  - claim_id: CR-01
+    playbook: credit-strategy
+    claim: Credit spread allocation depends on spread level, issuer fundamentals, refinancing, liquidity premium, supply, and institution demand.
+    evidence_card: credit-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-credit-strategy-low-spread-2025
+      - huatai-credit-bond-framework-2025
+      - huatai-institution-behavior-2025
+    decision_chain: Credit Spread To Allocation
+
+  - claim_id: CR-02
+    playbook: credit-strategy
+    claim: Low spreads and asset shortage are not proof of issuer safety; carry is not risk-free.
+    evidence_card: credit-evidence.md
+    evidence_section: Common Misreadings
+    source_ids:
+      - cicc-credit-strategy-low-spread-2025
+      - huatai-credit-bond-framework-2025
+    decision_chain: Credit Spread To Allocation
+
+  - claim_id: CI-01
+    playbook: city-investment-bonds
+    claim: City-investment bond analysis separates regional fiscal capacity, debt pressure, issuer cash flow, refinancing path, policy support, valuation, and liquidity.
+    evidence_card: credit-evidence.md
+    evidence_section: Data Fields Mentioned
+    source_ids:
+      - cicc-city-investment-bonds-2025
+      - huatai-credit-bond-framework-2025
+      - cicc-credit-strategy-low-spread-2025
+    decision_chain: Credit Spread To Allocation
+
+  - claim_id: FC-01
+    playbook: financial-credit
+    claim: Financial credit analysis must distinguish senior issuer credit from subordinated capital-tool risks such as extension, coupon deferral, write-down, conversion, and supply pressure.
+    evidence_card: credit-evidence.md
+    evidence_section: Data Fields Mentioned
+    source_ids:
+      - cicc-financial-credit-bonds-2025
+      - huatai-credit-bond-framework-2025
+      - huatai-institution-behavior-2025
+    decision_chain: Credit Spread To Allocation
+
+  - claim_id: IH-01
+    playbook: institution-behavior
+    claim: Institution behavior transmits liability stability, accounting, regulation, leverage capacity, and liquidity needs into marginal demand for rates, credit, curve, and liquidity.
+    evidence_card: institution-wealth-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - huatai-institution-behavior-2025
+      - cicc-low-rate-investor-behavior-2025
+      - cicc-bond-principles-strategy-2025
+    decision_chain: Institution Behavior To Market
+
+  - claim_id: WM-01
+    playbook: wealth-management-funds
+    claim: Net-value wealth and fund products transmit market volatility through NAV drawdown, redemption, liquidity management, and forced selling feedback loops.
+    evidence_card: institution-wealth-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-wealth-management-net-value-2025
+      - cicc-fixed-income-plus-fund-framework-2025
+      - huatai-institution-behavior-2025
+    decision_chain: Institution Behavior To Market
+
+  - claim_id: CH-01
+    playbook: convertible-hybrid
+    claim: Convertible value balances equity upside, bond-floor protection, option value, liquidity, credit quality, and path-dependent clauses.
+    evidence_card: convertible-hybrid-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-convertible-bonds-framework-2025
+      - huatai-convertible-framework-2025
+      - cicc-hybrid-assets-framework-2025
+    decision_chain: Convertible To Hybrid Allocation
+
+  - claim_id: CH-02
+    playbook: convertible-hybrid
+    claim: Parity zone determines whether equity beta, premium valuation, bond floor, credit downside, or clause events dominate.
+    evidence_card: convertible-hybrid-evidence.md
+    evidence_section: Common Misreadings
+    source_ids:
+      - cicc-convertible-bonds-framework-2025
+      - huatai-convertible-framework-2025
+    decision_chain: Convertible To Hybrid Allocation
+
+  - claim_id: DER-01
+    playbook: derivatives
+    claim: Derivative decisions require cash-bond exposure, funding conditions, futures or swap pricing, basis or DV01, hedge objective, margin, and liquidity.
+    evidence_card: derivatives-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-interest-rate-derivatives-2025
+      - huatai-bond-market-framework-2025
+    decision_chain: Funding To Curve
+
+  - claim_id: OFF-01
+    playbook: offshore-global-rates
+    claim: Offshore valuation separates global risk-free rates, Fed path, FX and hedge cost, issuer credit, legal terms, cross-border policy, and liquidity.
+    evidence_card: offshore-global-rates-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-us-treasuries-framework-2025
+      - cicc-offshore-credit-usd-dim-sum-2025
+      - cicc-offshore-rmb-bonds-2025
+    decision_chain: Offshore Rates And Credit To Domestic FICC
+
+  - claim_id: ABS-01
+    playbook: abs-reits
+    claim: ABS and REITs require bottom-up asset-pool or project cash-flow, waterfall or distribution mechanics, legal structure, valuation, liquidity, and investor-demand analysis.
+    evidence_card: abs-reits-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - cicc-abs-framework-2025
+      - cicc-public-reits-strategy-2025
+      - huatai-credit-bond-framework-2025
+    decision_chain: Credit Spread To Allocation
+
+  - claim_id: QA-01
+    playbook: quant-ai-research
+    claim: FICC quant research starts from point-in-time data contracts, release lag, frequency alignment, entity mapping, labels, costs, and validation before factor performance claims.
+    evidence_card: quant-ai-evidence.md
+    evidence_section: Core Framework Claims
+    source_ids:
+      - huatai-quant-ai-ficc-2025
+      - cicc-ficc-ai-agent-path-2025
+    decision_chain: Macro Release To Rates
+
+  - claim_id: QA-02
+    playbook: quant-ai-research
+    claim: AI agents can parse, route, summarize, monitor, and generate candidates, but they are not market-data sources and must keep human review for investment and risk decisions.
+    evidence_card: quant-ai-evidence.md
+    evidence_section: Common Misreadings
+    source_ids:
+      - huatai-quant-ai-ficc-2025
+      - cicc-ficc-ai-agent-path-2025
+    decision_chain: Policy Event To Portfolio

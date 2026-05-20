@@ -2,6 +2,9 @@
 
 Use this file when the user asks for a recurring research product rather than a one-off explanation. These entries act like portable command semantics across Codex, OpenClaw, Claude-style agents, and personal agents. They do not require a platform-specific slash-command implementation.
 
+All workflows must include the canonical blocks in `references/14-contracts-and-analysis-standards.md`. The output blocks below are workflow-specific additions or aliases, not replacement contracts.
+For framework consistency and source traceability, use `references/15-playbook-framework-standard.md` and `references/16-source-claim-map.yml` when a workflow cites broker-derived claims or compares playbooks.
+
 ## macro-data-commentary
 
 When to use:
@@ -15,6 +18,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/07-macro-indicator-glossary.md`
 - `references/08-policy-reaction-function.md`
 - `references/09-data-interface-catalog.md`
@@ -30,7 +34,7 @@ Template:
 
 Output blocks:
 
-- 问题归类, 数据来源与时间, 数据事实, 预期差, 政策反应函数, 债市传导, 曲线含义, 信用与机构行为, 不能确认的部分, 风险与反例, 后续跟踪。
+- 问题归类, 数据来源与时间, 数据事实, 预期差, 政策反应函数, 债市传导, 曲线含义, 信用与机构行为, 缺失数据, 风险与反例, 后续跟踪。
 
 Forbidden shortcuts:
 
@@ -41,6 +45,10 @@ Forbidden shortcuts:
 Eval case:
 
 - `macro-social-financing`
+
+Quality rubric:
+
+- `macro-data-commentary`
 
 ## yield-curve-review
 
@@ -55,6 +63,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/06-portfolio-action-policy.md`
 - `references/09-data-interface-catalog.md`
 - `references/11-research-decision-chains.md`
@@ -69,7 +78,7 @@ Template:
 
 Output blocks:
 
-- 曲线数据来源, 期限分段, 短端驱动, 中端驱动, 长端驱动, 供需与机构行为, 可用策略, 缺少数据, 风险触发条件。
+- 曲线数据来源, 期限分段, 短端驱动, 中端驱动, 长端驱动, 供需与机构行为, 可用策略, 缺失数据, 风险触发条件。
 
 Forbidden shortcuts:
 
@@ -80,6 +89,10 @@ Forbidden shortcuts:
 Eval case:
 
 - `yield-curve-no-data`
+
+Quality rubric:
+
+- `yield-curve-review`
 
 ## credit-spread-review
 
@@ -96,6 +109,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/09-data-interface-catalog.md`
 - `references/11-research-decision-chains.md`
 
@@ -121,6 +135,10 @@ Eval case:
 
 - `credit-spread-low-level`
 
+Quality rubric:
+
+- `credit-spread-review`
+
 ## institution-flow-review
 
 When to use:
@@ -135,6 +153,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/09-data-interface-catalog.md`
 - `references/11-research-decision-chains.md`
 
@@ -148,7 +167,7 @@ Template:
 
 Output blocks:
 
-- 机构类型, 负债稳定性, 资产配置, 久期/杠杆, 净值反馈, 对利率债/信用债/曲线影响, 缺少数据, 风险。
+- 机构类型, 负债稳定性, 资产配置, 久期/杠杆, 净值反馈, 对利率债/信用债/曲线影响, 缺失数据, 风险。
 
 Forbidden shortcuts:
 
@@ -158,6 +177,10 @@ Forbidden shortcuts:
 Eval case:
 
 - `institution-redemption`
+
+Quality rubric:
+
+- `institution-flow-review`
 
 ## portfolio-action-review
 
@@ -172,6 +195,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/06-portfolio-action-policy.md`
 - `references/09-data-interface-catalog.md`
 - `references/11-research-decision-chains.md`
@@ -186,7 +210,7 @@ Template:
 
 Output blocks:
 
-- 组合背景, 当前判断, 情景表, 持有期收益拆解, 主要亏损路径, 需要补充的数据, 后续跟踪。
+- 组合背景, 当前判断, 情景表, 持有期收益拆解, 主要亏损路径, 缺失数据, 后续跟踪。
 
 Forbidden shortcuts:
 
@@ -195,7 +219,11 @@ Forbidden shortcuts:
 
 Eval case:
 
-- `portfolio-action-missing-holdings`
+- `funding-leverage`
+
+Quality rubric:
+
+- `portfolio-action-review`
 
 ## policy-event-commentary
 
@@ -210,6 +238,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/08-policy-reaction-function.md`
 - `references/09-data-interface-catalog.md`
 - `references/11-research-decision-chains.md`
@@ -233,7 +262,11 @@ Forbidden shortcuts:
 
 Eval case:
 
-- `policy-event-no-market-data`
+- `overseas-rates-linkage`
+
+Quality rubric:
+
+- `policy-event-commentary`
 
 ## convertible-review
 
@@ -247,6 +280,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/09-data-interface-catalog.md`
 
 Required data:
@@ -269,6 +303,10 @@ Eval case:
 
 - `convertible-missing-valuation`
 
+Quality rubric:
+
+- `convertible-review`
+
 ## daily-bond-brief
 
 When to use:
@@ -284,6 +322,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/09-data-interface-catalog.md`
 - `references/10-workflow-entrypoints.md`
 
@@ -307,6 +346,10 @@ Eval case:
 
 - `daily-brief-no-live-data`
 
+Quality rubric:
+
+- `daily-bond-brief`
+
 ## data-assisted-analysis
 
 When to use:
@@ -319,6 +362,7 @@ Required playbooks:
 
 Required references:
 
+- `references/14-contracts-and-analysis-standards.md`
 - `references/03-data-integration-policy.md`
 - `references/09-data-interface-catalog.md`
 
@@ -342,3 +386,7 @@ Forbidden shortcuts:
 Eval case:
 
 - `user-data-minimal-table`
+
+Quality rubric:
+
+- `data-assisted-analysis`

@@ -615,7 +615,7 @@ eval_validation_passed=true
 Run:
 
 ```powershell
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+python <local-skill-creator>\scripts\quick_validate.py <repo-root>
 ```
 
 Expected:

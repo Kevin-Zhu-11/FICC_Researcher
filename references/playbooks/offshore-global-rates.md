@@ -32,6 +32,12 @@ global risk-free curve
 
 Do not transfer an onshore credit conclusion directly to offshore bonds. Offshore instruments add currency, legal, liquidity, rating, and cross-border-policy layers.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `OFF-01` | 离岸估值必须拆成全球无风险利率、Fed path、FX/套保、主体信用、法律条款、跨境政策和流动性。 | 离岸债券叠加币种、法律、评级、流动性和跨境融资约束，不能直接套用境内信用结论。 | 缺少 UST、汇率、套保成本、离岸利差、条款和流动性数据。 |
+
 ## Analysis Steps
 
 1. Classify instrument: UST, Chinese USD bond, dim sum bond, offshore RMB rate bond, or offshore credit.
@@ -42,7 +48,7 @@ Do not transfer an onshore credit conclusion directly to offshore bonds. Offshor
 6. State whether the analysis is macro rates, credit spread, FX carry, or relative value.
 7. Return missing-data block if current yields, spreads, or FX data are unavailable.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: offshore-global-rates
@@ -68,6 +74,10 @@ Do not transfer an onshore credit conclusion directly to offshore bonds. Offshor
 - `cicc-us-treasuries-framework-2025`
 - `cicc-offshore-credit-usd-dim-sum-2025`
 - `cicc-offshore-rmb-bonds-2025`
+
+## Claim IDs
+
+- `OFF-01`
 
 ## Search Keywords
 

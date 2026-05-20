@@ -11,6 +11,8 @@ Use this skill for fixed-income and FICC research tasks that need broker-framewo
 
 - Start from `references/00-routing.md`, then read only the relevant playbooks.
 - Keep `SKILL.md` lightweight; use `references/` for long framework details and source evidence.
+- Use `references/14-contracts-and-analysis-standards.md` as the canonical source for output blocks, data packets, missing-data format, confidence labels, time horizons, source traceability, and portfolio-action boundaries.
+- Use `references/15-playbook-framework-standard.md` to interpret or edit playbook frameworks, and `references/16-source-claim-map.yml` when source-level traceability is required.
 - Separate framework facts, current data facts, and inferred judgments in every research output.
 - Treat broker research Markdown files as framework evidence, not as live market data.
 - Never fabricate real-time yields, spreads, prices, ratings, holdings, NAV, issuance, trading volume, or policy events.
@@ -21,34 +23,33 @@ Use this skill for fixed-income and FICC research tasks that need broker-framewo
 
 1. Classify the user question by topic, instrument, investor type, and time sensitivity.
 2. Read `references/00-routing.md` and choose 1 to 3 playbooks.
-3. Read the selected files under `references/playbooks/`.
-4. If source-traceability is needed, consult `references/01-source-index.yml`.
-5. If the answer needs broker-evidence synthesis, read the relevant file under `references/evidence-cards/` before reading full source reports.
-6. If current data is needed, apply `references/02-data-source-policy.md` before drawing conclusions.
-7. If the task needs live, historical, or user-supplied data fields, read `references/09-data-interface-catalog.md` for required fields, preferred sources, connector limits, and missing-data behavior.
-8. If the user asks for a repeatable research product, read `references/10-workflow-entrypoints.md` and use the mapped template under `assets/templates/`.
-9. If the answer spans multiple playbooks, use `references/11-research-decision-chains.md` to keep the reasoning path explicit.
-10. If the user uploads data or an MCP/connector returns data, normalize it with `references/03-data-integration-policy.md`.
-11. For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
-12. For portfolio-action questions, use `references/06-portfolio-action-policy.md`.
-13. For macro data releases, use `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
-14. Produce an auditable research draft with assumptions, data gaps, risk checks, and follow-up indicators.
+3. Read `references/14-contracts-and-analysis-standards.md` for the canonical output and data contract.
+4. Read `references/15-playbook-framework-standard.md` when the task requires framework comparison, playbook editing, or cross-playbook conflict resolution.
+5. Read the selected files under `references/playbooks/`.
+6. If the user asks for a repeatable research product, read `references/10-workflow-entrypoints.md` and use the mapped template under `assets/templates/`.
+7. If source traceability is triggered by `references/14-contracts-and-analysis-standards.md`, consult `references/16-source-claim-map.yml`, `references/01-source-index.yml`, and the relevant file under `references/evidence-cards/`.
+8. If the task needs live, historical, or user-supplied data, read `references/09-data-interface-catalog.md` to define required fields before choosing sources.
+9. Apply `references/02-data-source-policy.md` to choose source priority and missing-data behavior.
+10. If provider-specific field mapping is needed, read `references/12-data-connector-mapping.md`.
+11. If the user uploads data or an MCP/connector returns data, normalize it with `references/03-data-integration-policy.md`.
+12. If the answer spans multiple playbooks or channels conflict, use `references/11-research-decision-chains.md`.
+13. For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
+14. For portfolio-action questions, use `references/06-portfolio-action-policy.md`.
+15. For macro data releases, use `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
+16. If deploying or syncing this skill into OpenClaw, read `references/13-openclaw-skill-hygiene.md`.
+17. Produce an auditable research draft using the canonical contract in `references/14-contracts-and-analysis-standards.md`.
 
 ## Data Source Priority
 
-Use this priority order:
+Use the canonical current-data priority in `references/14-contracts-and-analysis-standards.md`, with operational rules in `references/02-data-source-policy.md`.
 
-1. User-provided data or local verified databases.
-2. Verified finance data connectors such as iFinD, Tushare, Wind, or local bond databases.
-3. Broker research frameworks in `references/source-reports/`.
-4. Official public sources and exchange, clearing, central bank, treasury, regulator, or issuer disclosures.
-5. Web search only as background or news verification when a reliable current source is required.
-
-If required data is missing, output the missing-data block from `references/02-data-source-policy.md` and limit the conclusion to framework analysis.
+If required data is missing, output the `缺失数据` block from `references/14-contracts-and-analysis-standards.md` and limit the conclusion to framework analysis.
 
 If the user provides a table, file, or pasted dataset, analyze that data first. State what the data can support, what it cannot support, and which connector or official source would fill the gap.
 
 For field-level data needs, use `references/09-data-interface-catalog.md`. It is connector-neutral: it may mention Tushare, iFinD, Wind, local databases, official sources, or WebSearch as optional sources, but it must not be treated as credential setup or provider endorsement.
+
+For provider-specific field candidates and citation metadata, use `references/12-data-connector-mapping.md`. Treat every provider mapping as optional and permission-dependent.
 
 ## Routing
 
@@ -63,17 +64,20 @@ Use `references/00-routing.md` for routing. For broad or ambiguous questions:
 
 ## Output Contract
 
-Every substantial answer should include:
+Every substantial answer should follow `references/14-contracts-and-analysis-standards.md`:
 
-- Question classification and selected playbooks.
-- Framework facts: stable mechanisms from broker frameworks.
-- Data facts: current or user-provided data, with source and timestamp.
-- Data input: user file, MCP result, connector output, official source, or WebSearch lead.
-- Inferred judgments: conditional conclusions and confidence level.
-- Missing data: fields, recommended source, time range, frequency, and use.
-- Risks and counterexamples.
-- Follow-up indicators or monitoring checklist.
-- Portfolio action block when the user asks for duration, curve, leverage, credit allocation, or risk triggers.
+- `问题归类`
+- `使用 playbook`
+- `数据输入`
+- `数据质量检查`
+- `框架事实`
+- `数据事实`
+- `推断判断`
+- `置信度`
+- `缺失数据`
+- `风险与反例`
+- `后续跟踪`
+- `组合动作` when the user asks for duration, curve, leverage, credit allocation, sizing, or risk triggers.
 
 For reusable output formats, use `assets/templates/` when producing reports or handoff drafts.
 
@@ -84,6 +88,7 @@ For reusable output formats, use `assets/templates/` when producing reports or h
 - Do not treat old research-report examples as current market facts.
 - Do not hide material uncertainty or missing data.
 - Do not put passwords, tokens, API keys, account identifiers, or private service URLs in repository files.
+- Do not use mechanical shortcuts such as `data weak = yields down`, `supply up = yields up only`, `carry = risk-free`, `policy support = issuer safety`, or `single DR007 point = leverage signal`.
 
 ## Validation
 
@@ -91,7 +96,12 @@ Before treating this skill as ready, run:
 
 ```powershell
 python .\scripts\build_source_index.py
+python .\scripts\validate_source_refs.py
+python .\scripts\validate_claim_map.py
 python .\scripts\validate_skill_links.py
 python .\scripts\validate_eval_cases.py
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+python .\scripts\validate_quality_rubrics.py
+python .\scripts\validate_examples.py
 ```
+
+If the local Codex `skill-creator` system skill is installed, also run its `quick_validate.py` against this skill directory using the local machine's own skill path.

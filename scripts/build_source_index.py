@@ -21,11 +21,11 @@ import re
 import sys
 from pathlib import Path
 
+from validation_config import EXPECTED_SOURCE_COUNT
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE_DIR = ROOT / "references" / "source-reports"
 INDEX_FILE = ROOT / "references" / "01-source-index.yml"
-EXPECTED_SOURCE_COUNT = 25
 
 
 def to_repo_path(path: Path) -> str:
@@ -51,6 +51,16 @@ def count_index_entries() -> int:
     return len(re.findall(r"^- id:\s+", text, re.MULTILINE))
 
 
+def validate_index_only(entry_count: int) -> int:
+    print("source_reports_present=no")
+    print(f"indexed_reports_count={entry_count}")
+    if entry_count != EXPECTED_SOURCE_COUNT:
+        print(f"error: expected indexed_reports_count={EXPECTED_SOURCE_COUNT}")
+        return 1
+    print("info: source report originals are optional and ignored for public GitHub pushes")
+    return 0
+
+
 def main() -> int:
     if not INDEX_FILE.exists():
         print(f"missing_index_file={INDEX_FILE}")
@@ -59,23 +69,11 @@ def main() -> int:
     entry_count = count_index_entries()
     indexed_files = set(parse_index_source_files())
     if not SOURCE_DIR.exists():
-        print("source_reports_present=no")
-        print(f"indexed_reports_count={entry_count}")
-        if entry_count != EXPECTED_SOURCE_COUNT:
-            print(f"error: expected indexed_reports_count={EXPECTED_SOURCE_COUNT}")
-            return 1
-        print("info: source report originals are optional and ignored for public GitHub pushes")
-        return 0
+        return validate_index_only(entry_count)
 
     source_reports = scan_source_reports()
     if not source_reports:
-        print("source_reports_present=no")
-        print(f"indexed_reports_count={entry_count}")
-        if entry_count != EXPECTED_SOURCE_COUNT:
-            print(f"error: expected indexed_reports_count={EXPECTED_SOURCE_COUNT}")
-            return 1
-        print("info: source report originals are optional and ignored for public GitHub pushes")
-        return 0
+        return validate_index_only(entry_count)
 
     missing_files = sorted(indexed_files - source_reports)
     unindexed_files = sorted(source_reports - indexed_files)

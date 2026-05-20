@@ -30,6 +30,12 @@ underlying asset quality
 
 Structured priority reduces some risks but does not remove asset-pool, servicer, prepayment, legal, or liquidity risk.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `ABS-01` | ABS/REITs 分析必须从底层资产或项目现金流、分层/分派机制、法律结构、估值、流动性和投资者需求出发。 | 结构优先级只重分配风险，不消灭资产、运营、提前偿付、法律、估值或流动性风险。 | 缺少资产池、现金流、waterfall、NOI、估值、折溢价或流动性数据。 |
+
 ## Analysis Steps
 
 1. Classify asset: ABS tranche, project REIT, infrastructure REIT, or other structured product.
@@ -40,7 +46,7 @@ Structured priority reduces some risks but does not remove asset-pool, servicer,
 6. State whether risk comes mainly from asset performance, structure, rates, or liquidity.
 7. If pool or project data is missing, avoid current valuation conclusions.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: abs-reits
@@ -66,6 +72,10 @@ Structured priority reduces some risks but does not remove asset-pool, servicer,
 - `cicc-abs-framework-2025`
 - `cicc-public-reits-strategy-2025`
 - `huatai-credit-bond-framework-2025`
+
+## Claim IDs
+
+- `ABS-01`
 
 ## Search Keywords
 

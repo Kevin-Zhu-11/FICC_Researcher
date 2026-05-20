@@ -55,6 +55,13 @@ The four circulation channels are:
 - Property sales, price, land, new starts, and investment.
 - External demand, exports, production chain, and exchange-rate pressure.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `RM-01` | Low-rate regimes weaken one-factor growth or inflation beta. | Fiscal behavior, policy constraints, funding, supply, and institution liabilities can dominate single macro prints. | Current curve, funding, supply, and institution data show a different dominant channel. |
+| `RM-02` | Macro releases require expectation-gap, policy-reaction, supply, funding, curve, credit, and institution filters. | Markets price surprises relative to expectations and policy reaction, not raw data alone. | Consensus, market-pricing, policy, or curve data are missing; confidence must fall. |
+
 ## Analysis Steps
 
 1. Classify the question: level, slope, volatility, short-end funding, long-end duration, or macro regime.
@@ -69,7 +76,7 @@ The four circulation channels are:
 10. If a single-month value is derived from cumulative data, show `current cumulative - previous cumulative = single-month estimate` and state rounding limits.
 11. If data is missing, stop at the mechanism and produce the missing-data block.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: rates-macro
@@ -78,7 +85,7 @@ The four circulation channels are:
 当前数据事实:
 差分推算:
 预期差:
-缺少数据:
+缺失数据:
 利率方向判断:
 政策反应函数:
 曲线含义:
@@ -108,6 +115,11 @@ The four circulation channels are:
 - `huatai-asset-allocation-framework-2025`
 - `huatai-fixed-income-framework-2025`
 - `huatai-fundamental-analysis-method-2025`
+
+## Claim IDs
+
+- `RM-01`
+- `RM-02`
 
 ## Search Keywords
 

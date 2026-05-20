@@ -2,9 +2,9 @@
 
 ## Environment
 
-- Host: `kevin@192.168.159.130`
+- Host: `<vm-ssh-target>`
 - OpenClaw: `2026.5.12`
-- Skill path: `/home/kevin/.openclaw/workspace/skills/ficc-researcher`
+- Skill path: `~/.openclaw/workspace/skills/ficc-researcher`
 - Gateway: reachable on local loopback.
 - Skill permissions after sync: read-only directory.
 

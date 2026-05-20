@@ -34,6 +34,12 @@ financing demand and policy
 
 Analyze institutions by liability stability, regulatory/accounting constraints, tax treatment, leverage capacity, investment scope, and liquidity needs. The same yield move can have different meanings when the marginal buyer changes.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `IH-01` | 机构行为通过负债稳定性、会计、监管、杠杆能力和流动性需求传导到边际买盘和卖盘。 | 不同机构的负债和约束决定其久期、信用、杠杆、现金和流动性偏好。 | 缺少申赎、持仓、久期、杠杆、保费、存款或托管流数据。 |
+
 ## Analysis Steps
 
 1. Identify the likely marginal institution for the instrument and tenor.
@@ -45,7 +51,7 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 7. Use `references/11-research-decision-chains.md` for institution-behavior-to-market transmission.
 8. Combine with rates or credit playbooks when pricing conclusions are needed.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: institution-behavior
@@ -54,7 +60,7 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 约束条件:
 可能行为:
 对利率/信用/流动性的影响:
-需要的数据:
+缺失数据:
 风险与反例:
 ```
 
@@ -74,6 +80,10 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 - `cicc-bond-principles-strategy-2025`
 - `cicc-wealth-management-net-value-2025`
 - `cicc-credit-strategy-low-spread-2025`
+
+## Claim IDs
+
+- `IH-01`
 
 ## Search Keywords
 

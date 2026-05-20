@@ -59,8 +59,8 @@ validation_passed=true
 已运行:
 
 ```powershell
-$env:PYTHONPATH='D:\000AAA_Datas\Python\Skills\FICC_Researcher\.tmp_pyyaml'
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+$env:PYTHONPATH='<repo-root>\.tmp_pyyaml'
+python <local-skill-creator>\scripts\quick_validate.py <repo-root>
 ```
 
 结果:
@@ -77,8 +77,8 @@ Skill is valid!
 
 ## 影响面
 
-- 只影响 `D:\000AAA_Datas\Python\Skills\FICC_Researcher` 独立 Git 仓库。
-- 未修改 `D:\000AAA_Datas\Python\Skills` 下其他 skill。
+- 只影响 `<repo-root>` 独立 Git 仓库。
+- 未修改 `<skills-root>` 下其他 skill。
 - 未创建真实 `.mcp.json`，未写入任何 token、API key、账号或私有连接信息。
 
 ## 风险和后续

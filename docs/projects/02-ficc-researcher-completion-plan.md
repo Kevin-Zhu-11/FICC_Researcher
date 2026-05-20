@@ -73,8 +73,8 @@
 ## Task 1: 建立 02 号基线和完成度仪表盘
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\docs\review\02-ficc-researcher-completion-review.md`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\scripts\validate_skill_links.py`
+- Create: `<repo-root>\docs\review\02-ficc-researcher-completion-review.md`
+- Modify: `<repo-root>\scripts\validate_skill_links.py`
 
 - [ ] **Step 1: 检查 Git 状态**
 
@@ -195,14 +195,14 @@ validate_skill_links.py may fail until required new files/playbooks are created
 ## Task 2: 补齐 7 个缺失 playbook
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\city-investment-bonds.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\financial-credit.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\wealth-management-funds.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\derivatives.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\offshore-global-rates.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\abs-reits.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\playbooks\quant-ai-research.md`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\00-routing.md`
+- Create: `<repo-root>\references\playbooks\city-investment-bonds.md`
+- Create: `<repo-root>\references\playbooks\financial-credit.md`
+- Create: `<repo-root>\references\playbooks\wealth-management-funds.md`
+- Create: `<repo-root>\references\playbooks\derivatives.md`
+- Create: `<repo-root>\references\playbooks\offshore-global-rates.md`
+- Create: `<repo-root>\references\playbooks\abs-reits.md`
+- Create: `<repo-root>\references\playbooks\quant-ai-research.md`
+- Modify: `<repo-root>\references\00-routing.md`
 
 - [ ] **Step 1: 使用统一 playbook 模板**
 
@@ -334,14 +334,14 @@ validation_passed=true
 ## Task 3: 建立源报告 evidence cards
 
 **Files:**
-- Create directory: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards\rates-macro-evidence.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards\credit-evidence.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards\institution-wealth-evidence.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards\convertible-hybrid-evidence.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards\offshore-derivatives-abs-reits-evidence.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\evidence-cards\quant-ai-evidence.md`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\SKILL.md`
+- Create directory: `<repo-root>\references\evidence-cards`
+- Create: `<repo-root>\references\evidence-cards\rates-macro-evidence.md`
+- Create: `<repo-root>\references\evidence-cards\credit-evidence.md`
+- Create: `<repo-root>\references\evidence-cards\institution-wealth-evidence.md`
+- Create: `<repo-root>\references\evidence-cards\convertible-hybrid-evidence.md`
+- Create: `<repo-root>\references\evidence-cards\offshore-derivatives-abs-reits-evidence.md`
+- Create: `<repo-root>\references\evidence-cards\quant-ai-evidence.md`
+- Modify: `<repo-root>\SKILL.md`
 
 - [ ] **Step 1: Create evidence-card template**
 
@@ -414,10 +414,10 @@ If the answer needs broker-evidence synthesis, read the relevant file under `ref
 ## Task 4: 建立 MCP 和数据连接器模板
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\04-mcp-connectors.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\.mcp.example.json`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\02-data-source-policy.md`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\03-data-integration-policy.md`
+- Create: `<repo-root>\references\04-mcp-connectors.md`
+- Create: `<repo-root>\.mcp.example.json`
+- Modify: `<repo-root>\references\02-data-source-policy.md`
+- Modify: `<repo-root>\references\03-data-integration-policy.md`
 
 - [ ] **Step 1: Create `04-mcp-connectors.md`**
 
@@ -500,9 +500,9 @@ No real credential values; only explanatory placeholder text may appear.
 ## Task 5: 增强图表笔记和图片 URL 索引
 
 **Files:**
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\chart-notes\key-framework-charts.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\chart-notes\image-url-index.yml`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\scripts\extract_image_urls.py`
+- Modify: `<repo-root>\references\chart-notes\key-framework-charts.md`
+- Create: `<repo-root>\references\chart-notes\image-url-index.yml`
+- Create: `<repo-root>\scripts\extract_image_urls.py`
 
 - [ ] **Step 1: Write `extract_image_urls.py`**
 
@@ -558,11 +558,11 @@ Text reconstruction
 ## Task 6: 建立跨平台使用协议和输出模板
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\references\05-cross-platform-usage.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\assets\templates\framework-analysis-template.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\assets\templates\data-assisted-analysis-template.md`
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\assets\templates\missing-data-template.md`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\SKILL.md`
+- Create: `<repo-root>\references\05-cross-platform-usage.md`
+- Create: `<repo-root>\assets\templates\framework-analysis-template.md`
+- Create: `<repo-root>\assets\templates\data-assisted-analysis-template.md`
+- Create: `<repo-root>\assets\templates\missing-data-template.md`
+- Modify: `<repo-root>\SKILL.md`
 
 - [ ] **Step 1: Create `05-cross-platform-usage.md`**
 
@@ -646,8 +646,8 @@ For reusable output formats, use `assets/templates/` when producing reports or h
 ## Task 7: 增加 source id 引用校验
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\scripts\validate_source_refs.py`
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\scripts\validate_skill_links.py`
+- Create: `<repo-root>\scripts\validate_source_refs.py`
+- Modify: `<repo-root>\scripts\validate_skill_links.py`
 
 - [ ] **Step 1: Write `validate_source_refs.py`**
 
@@ -692,16 +692,16 @@ This keeps each validator focused.
 ## Task 8: 完成 OpenClaw 回归测试矩阵
 
 **Files:**
-- Create: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\docs\review\02-openclaw-regression-results.md`
+- Create: `<repo-root>\docs\review\02-openclaw-regression-results.md`
 
 - [ ] **Step 1: Sync test copy to OpenClaw**
 
 Use the existing safe sync pattern:
 
 ```powershell
-tar -C D:\000AAA_Datas\Python\Skills\FICC_Researcher --exclude .git --exclude .tmp_pyyaml --exclude outputs --exclude tmp -cf ficc-researcher-openclaw-test.tar .
-scp -i C:\Users\kevin\.ssh\id_ed25519 C:\tmp\ficc-researcher-openclaw-test.tar kevin@192.168.159.130:/tmp/ficc-researcher-openclaw-test.tar
-ssh -i C:\Users\kevin\.ssh\id_ed25519 kevin@192.168.159.130 "chmod -R u+w /home/kevin/.openclaw/workspace/skills/ficc-researcher; tar -C /home/kevin/.openclaw/workspace/skills/ficc-researcher -xf /tmp/ficc-researcher-openclaw-test.tar; chmod -R a-w /home/kevin/.openclaw/workspace/skills/ficc-researcher"
+tar -C <repo-root> --exclude .git --exclude .tmp_pyyaml --exclude outputs --exclude tmp -cf ficc-researcher-openclaw-test.tar .
+scp -i <ssh-key> <local-temp>\ficc-researcher-openclaw-test.tar <vm-ssh-target>:/tmp/ficc-researcher-openclaw-test.tar
+ssh -i <ssh-key> <vm-ssh-target> "chmod -R u+w ~/.openclaw/workspace/skills/ficc-researcher; tar -C ~/.openclaw/workspace/skills/ficc-researcher -xf /tmp/ficc-researcher-openclaw-test.tar; chmod -R a-w ~/.openclaw/workspace/skills/ficc-researcher"
 ```
 
 Expected:
@@ -774,7 +774,7 @@ Create `docs/review/02-openclaw-regression-results.md`:
 ## Task 9: 条件项：真实 Tushare 或 MCP 数据闭环
 
 **Files:**
-- Create if credentials are available: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\docs\review\02-data-connector-smoke-results.md`
+- Create if credentials are available: `<repo-root>\docs\review\02-data-connector-smoke-results.md`
 
 - [ ] **Step 1: Check connector availability**
 
@@ -834,7 +834,7 @@ Write:
 ## Task 10: 最终验证和首提交准备
 
 **Files:**
-- Modify: `D:\000AAA_Datas\Python\Skills\FICC_Researcher\docs\review\02-ficc-researcher-completion-review.md`
+- Modify: `<repo-root>\docs\review\02-ficc-researcher-completion-review.md`
 
 - [ ] **Step 1: Run local validators**
 
@@ -844,8 +844,8 @@ Run:
 python .\scripts\build_source_index.py
 python .\scripts\validate_skill_links.py
 python .\scripts\validate_source_refs.py
-$env:PYTHONPATH='D:\000AAA_Datas\Python\Skills\FICC_Researcher\.tmp_pyyaml'
-python C:\Users\kevin\.codex\skills\.system\skill-creator\scripts\quick_validate.py D:\000AAA_Datas\Python\Skills\FICC_Researcher
+$env:PYTHONPATH='<repo-root>\.tmp_pyyaml'
+python <local-skill-creator>\scripts\quick_validate.py <repo-root>
 ```
 
 Expected:

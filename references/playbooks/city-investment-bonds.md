@@ -31,6 +31,12 @@ regional fiscal capacity
 
 化债 improves refinancing visibility for some regions and issuers, but it does not make every platform risk-free. Treat policy support as one input, not as a substitute for debt-service capacity.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `CI-01` | 城投债分析必须同时看区域财政、债务压力、平台功能、现金流、再融资、政策支持、估值和流动性。 | 化债改善再融资能见度，但最终偿付能力仍取决于区域与主体现金流、融资通道和市场补偿。 | 缺少区域财政、主体现金流、债务期限、当前利差或再融资数据。 |
+
 ## Analysis Steps
 
 1. Identify region, administrative level, issuer role, and bond type.
@@ -41,7 +47,7 @@ regional fiscal capacity
 6. State whether the opportunity is regional beta, issuer selection, maturity selection, or avoid.
 7. If current spreads or issuer data are missing, return the missing-data block.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: city-investment-bonds
@@ -68,6 +74,10 @@ regional fiscal capacity
 - `cicc-city-investment-bonds-2025`
 - `huatai-credit-bond-framework-2025`
 - `cicc-credit-strategy-low-spread-2025`
+
+## Claim IDs
+
+- `CI-01`
 
 ## Search Keywords
 

@@ -1,0 +1,31 @@
+source: official_public_or_desensitized_example
+provider: synthetic_desensitized_example
+interface_or_file: examples/data/macro-social-financing-public-sample.yml
+query: macro_social_financing_monthly_sample
+as_of: "2026-04"
+retrieved_at: "2026-05-20 09:00:00 Asia/Shanghai"
+time_range: "2026-03 to 2026-04"
+frequency: monthly
+universe: china_macro
+fields:
+  - indicator
+  - period
+  - value
+  - unit
+  - source_note
+row_count: 2
+units: mixed
+limitations:
+  - "Synthetic desensitized sample for output-shape training; do not use as market fact."
+  - "Do not paste licensed database exports into this example file."
+records:
+  - indicator: social_financing_increment
+    period: "2026-04"
+    value: 6200
+    unit: "CNY 100mn"
+    source_note: "synthetic rounded value; replace with official or connector data in real analysis"
+  - indicator: m2_yoy
+    period: "2026-04"
+    value: 8.6
+    unit: "percent"
+    source_note: "synthetic example field; replace with official or connector data in real analysis"

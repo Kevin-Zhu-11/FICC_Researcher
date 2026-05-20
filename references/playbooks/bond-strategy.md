@@ -33,6 +33,13 @@ macro regime + funding liquidity + regulatory policy
 
 Strategy should be stated as conditional scenarios, not as a single unconditional trade. The same low-yield level can imply different choices depending on carry, funding stability, valuation cushion, redemption risk, and policy volatility.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `BS-01` | Portfolio actions require scenario, trigger, return path, loss path, and stop condition. | The same market view has different implications under different mandates, accounting, liquidity, and drawdown budgets. | Portfolio constraints or current market data are missing. |
+| `BS-02` | Carry and rolldown become usable return only after funding, liquidity, liability, and drawdown checks. | Funding cost, redemption risk, mark-to-market pressure, and liquidity can erase coupon/carry gains. | Funding and product-liability data are absent or unstable. |
+
 ## Analysis Steps
 
 1. Define the investor and mandate: bank book, fund, wealth product, insurance, proprietary book, or absolute-return portfolio.
@@ -45,14 +52,14 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 8. Use `references/11-research-decision-chains.md` when the strategy depends on macro release, funding, fiscal supply, or institution behavior.
 9. Translate into a portfolio action, scenario trigger, and stop condition with `references/06-portfolio-action-policy.md`.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: bond-strategy
 投资者/组合约束:
 收益来源拆解:
 可用策略:
-需要的数据:
+缺失数据:
 当前只能确认的部分:
 组合动作:
 风险控制:
@@ -77,6 +84,11 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 - `huatai-bond-market-framework-2025`
 - `huatai-asset-allocation-framework-2025`
 - `huatai-fixed-income-framework-2025`
+
+## Claim IDs
+
+- `BS-01`
+- `BS-02`
 
 ## Search Keywords
 

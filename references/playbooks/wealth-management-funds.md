@@ -31,6 +31,12 @@ liability stability
 
 Net-value products transmit market volatility to investors faster than old expected-return products. Redemption pressure can force selling of liquid assets first, not necessarily the riskiest assets first.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `WM-01` | 净值化理财和基金通过 NAV 回撤、申赎、流动性管理和被动卖出形成反馈。 | 投资者行为和产品开放/封闭条款把市场波动传导为资产处置和利差/曲线压力。 | 缺少产品规模、NAV、申赎、持仓、久期、杠杆和流动性桶数据。 |
+
 ## Analysis Steps
 
 1. Identify product type: bank wealth, cash-like product, fixed-income fund, 固收+, or hybrid.
@@ -41,7 +47,7 @@ Net-value products transmit market volatility to investors faster than old expec
 6. Combine with `institution-behavior.md` and `credit-strategy.md` when market impact is needed.
 7. State missing data before making current redemption conclusions.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: wealth-management-funds
@@ -68,6 +74,10 @@ Net-value products transmit market volatility to investors faster than old expec
 - `cicc-fixed-income-plus-fund-framework-2025`
 - `huatai-institution-behavior-2025`
 - `cicc-low-rate-investor-behavior-2025`
+
+## Claim IDs
+
+- `WM-01`
 
 ## Search Keywords
 

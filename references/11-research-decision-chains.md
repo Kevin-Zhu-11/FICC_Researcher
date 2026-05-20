@@ -2,6 +2,8 @@
 
 Use this file when a question spans multiple playbooks or when an agent needs a repeatable reasoning path rather than a free-form essay.
 
+Use `references/15-playbook-framework-standard.md` for the standard playbook claim format, and `references/16-source-claim-map.yml` to trace stable framework claims back to evidence-card sections and source report ids.
+
 ## Macro Release To Rates
 
 ```text

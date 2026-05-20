@@ -5,24 +5,28 @@ This policy controls how FICC Researcher uses live data, broker frameworks, MCP 
 For combining uploaded files, connector results, and playbooks in one answer, also read `references/03-data-integration-policy.md`.
 For connector setup templates and boundaries, read `references/04-mcp-connectors.md`.
 For field-level connector mapping and missing-data implications, read `references/09-data-interface-catalog.md`.
+For provider-specific candidate interfaces and citation metadata, read `references/12-data-connector-mapping.md`.
+For the canonical output contract, data packet, and missing-data block, read `references/14-contracts-and-analysis-standards.md`.
 
 ## Data Source Priority
 
-1. User-provided files, tables, terminal output, or verified local databases.
-2. Centralized MCP or local finance connectors configured outside this repository:
+1. User-provided files, tables, terminal output, screenshots, pasted data, or verified local databases.
+2. Centralized MCP outputs or local finance connectors configured outside this repository:
    - iFinD: broad China macro, rates, bonds, funds, announcements, and market data.
    - Tushare: A-share, funds, macro, rates where coverage and license permit.
    - Wind: local terminal/export bridge for China fixed-income, curve, credit, issuer, fund, and macro data.
    - Local bond database: internal curves, spreads, issuer fundamentals, ratings, holdings, fund NAV, and transaction history.
-3. Broker framework Markdown files under `references/source-reports/`.
-4. Official public sources: PBOC, MOF, NAFR, CSRC, exchanges, CCDC, SHCH, NIFC, issuer disclosures, and official statistics.
-5. Web search for news verification or background only when current information is essential.
+3. Licensed or configured structured data providers such as iFinD, Wind, Tushare, or a local bond database.
+4. Official public sources: PBOC, MOF, NBS, NAFR, CSRC, exchanges, CCDC, SHCH, CFETS, NIFC, issuer disclosures, and official statistics.
+5. Web search for official-source discovery, news verification, or public event context only when current information is essential.
+6. Broker framework Markdown files under `references/source-reports/`, only as framework evidence and never as current market data.
 
 ## MCP Centralization Principle
 
 - Keep connector configuration centralized, not scattered across playbooks.
 - Playbooks should specify required fields, frequency, time range, and use.
-- Field-level source mapping belongs in `references/09-data-interface-catalog.md`, not inside individual playbooks.
+- Field-level data requirements belong in `references/09-data-interface-catalog.md`, not inside individual playbooks.
+- Provider-specific candidate mapping belongs in `references/12-data-connector-mapping.md`, not inside individual playbooks.
 - Connector outputs should be passed into analysis as explicit data packets, not hidden context.
 - This repository must not store real credentials, tokens, API keys, account IDs, private service URLs, or production database strings.
 - If an MCP connector is unavailable, downgrade to a missing-data block and explain what cannot be concluded.
@@ -49,12 +53,16 @@ Prefer the local bond database when it has curated point-in-time curves, spreads
 
 Use web sources for official announcements, recent policy changes, and source verification. Web snippets do not replace licensed market data for current prices, spreads, holdings, or valuations.
 
+## Citation Metadata
+
+When using a connector, official page, WebSearch result, user file, or local database, cite the canonical data packet in `references/14-contracts-and-analysis-standards.md`. If the source does not provide one of these fields, mark it as `unknown`.
+
 ## Missing Data Format
 
-Use this exact block when data is required but unavailable:
+Use this exact canonical block when data is required but unavailable:
 
 ```text
-当前缺少数据:
+缺失数据:
 - 字段:
 - 推荐来源:
 - 时间范围:
@@ -62,6 +70,8 @@ Use this exact block when data is required but unavailable:
 - 用途:
 在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
 ```
+
+`当前缺少数据` is a legacy alias. New outputs and templates should use `缺失数据`.
 
 ## Current Data Discipline
 

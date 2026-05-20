@@ -34,6 +34,13 @@ spread level
 
 City investment, financial credit, and sector-specific credit require specialized extensions. This playbook handles the common layer: spread valuation, risk screening, and strategy selection.
 
+## Framework Claims
+
+| Claim id | Claim | Mechanism | Fails when |
+| --- | --- | --- | --- |
+| `CR-01` | Credit spread allocation depends on spread level, issuer fundamentals, refinancing, liquidity, supply, and institution demand. | Spread is compensation for credit, liquidity, and technical risks, not a standalone return metric. | Spread, issuer, refinancing, and liquidity data are missing. |
+| `CR-02` | Low spreads and asset shortage do not prove issuer safety; carry is not risk-free. | Crowded demand can compress compensation while issuer and liquidity risks remain. | Current spreads still compensate risk and exit liquidity is verified. |
+
 ## Analysis Steps
 
 1. Define the credit universe: rating, sector, tenor, issuer type, liquidity, and eligible instruments.
@@ -46,7 +53,7 @@ City investment, financial credit, and sector-specific credit require specialize
 8. Choose strategy: stay high grade, selective sinking, short-duration carry, sector rotation, barbell, or avoid.
 9. Document risks and data gaps before making any current-market conclusion.
 
-## Output Template
+## Output Overlay
 
 ```text
 使用 playbook: credit-strategy
@@ -55,7 +62,7 @@ City investment, financial credit, and sector-specific credit require specialize
 主体/品种基本面:
 机构需求与流动性:
 策略选择:
-需要的数据:
+缺失数据:
 风险与反例:
 ```
 
@@ -76,6 +83,11 @@ City investment, financial credit, and sector-specific credit require specialize
 - `cicc-city-investment-bonds-2025`
 - `cicc-financial-credit-bonds-2025`
 - `huatai-institution-behavior-2025`
+
+## Claim IDs
+
+- `CR-01`
+- `CR-02`
 
 ## Search Keywords
 

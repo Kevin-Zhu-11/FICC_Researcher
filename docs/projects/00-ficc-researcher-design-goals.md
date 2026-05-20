@@ -2,8 +2,8 @@
 
 ## 当前状态
 
-- 仓库根目录: `D:\000AAA_Datas\Python\Skills\FICC_Researcher`
-- Git 边界: 本 skill 独立使用 `FICC_Researcher/.git`，不使用 `D:\000AAA_Datas\Python\Skills` 根目录作为仓库。
+- 仓库根目录: `<repo-root>`
+- Git 边界: 本 skill 独立使用 `FICC_Researcher/.git`，不使用 `<skills-root>` 根目录作为仓库。
 - 已有资料: `references/source-reports/` 下保存 23 篇中金、华泰固定收益研究框架 Markdown。
 - 当前目标: 将这些研报框架、Anthropic financial-services 的优秀组织方式、Codex `skill-creator` 的技能规范，合并成一个可维护、可验证、可扩展的固定收益分析 skill。
 

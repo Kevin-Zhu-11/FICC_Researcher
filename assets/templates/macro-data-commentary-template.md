@@ -4,14 +4,20 @@
 
 ```text
 官方来源:
+provider:
 接口/文件/网页:
 查询参数:
 发布时间:
 数据期:
 检索时间:
+time_range:
+frequency:
+universe:
 字段:
 row_count:
 单位:
+schema_notes:
+missing_fields:
 辅助来源:
 数据权限或工具限制:
 ```
@@ -77,10 +83,10 @@ row_count:
 | 领域 | 可能影响 | 需要验证 |
 | --- | --- | --- |
 
-## 不能确认的部分
+## 缺失数据
 
 ```text
-当前缺少数据:
+缺失数据:
 - 字段:
 - 推荐来源:
 - 时间范围:

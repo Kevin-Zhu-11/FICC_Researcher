@@ -1,10 +1,14 @@
 cases:
   - id: macro-social-financing
     workflow: macro-data-commentary
+    rubric: macro-data-commentary
     prompt: "请使用 ficc-researcher 分析 2026 年 4 月社融、M1/M2、CPI/PPI 对债市的影响。优先使用已配置的结构化数据工具；缺少收益率和利差时必须列出缺口。"
     required_files:
       - SKILL.md
       - references/00-routing.md
+      - references/14-contracts-and-analysis-standards.md
+      - references/15-playbook-framework-standard.md
+      - references/16-source-claim-map.yml
       - references/playbooks/rates-macro.md
       - references/playbooks/bond-strategy.md
       - references/07-macro-indicator-glossary.md
@@ -21,10 +25,14 @@ cases:
 
   - id: yield-curve-no-data
     workflow: yield-curve-review
+    rubric: yield-curve-review
     prompt: "请评价当前 1Y/3Y/5Y/10Y/30Y 国债和国开曲线。若没有实时曲线数据，只能输出需要哪些数据和框架判断。"
     required_files:
       - SKILL.md
       - references/00-routing.md
+      - references/14-contracts-and-analysis-standards.md
+      - references/15-playbook-framework-standard.md
+      - references/16-source-claim-map.yml
       - references/playbooks/rates-macro.md
       - references/playbooks/bond-strategy.md
       - references/09-data-interface-catalog.md
@@ -37,8 +45,12 @@ cases:
 
   - id: funding-leverage
     workflow: portfolio-action-review
+    rubric: portfolio-action-review
     prompt: "判断近期资金面是否支持债券组合加杠杆，需要哪些指标？如果没有 DR/R/NCD 和产品负债数据，只能给框架判断。"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
+      - references/15-playbook-framework-standard.md
+      - references/16-source-claim-map.yml
       - references/playbooks/bond-strategy.md
       - references/playbooks/institution-behavior.md
       - references/06-portfolio-action-policy.md
@@ -51,8 +63,10 @@ cases:
 
   - id: fiscal-supply-duration
     workflow: yield-curve-review
+    rubric: yield-curve-review
     prompt: "如果下月政府债发行明显放量，怎么分析对 10Y 和 30Y 的影响？请区分央行对冲、配置需求和期限溢价。"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
       - references/playbooks/rates-macro.md
       - references/playbooks/bond-strategy.md
       - references/08-policy-reaction-function.md
@@ -65,8 +79,10 @@ cases:
 
   - id: credit-spread-low-level
     workflow: credit-spread-review
+    rubric: credit-spread-review
     prompt: "请分析低利差环境下信用债下沉是否值得做，区分高等级、城投、二永债和弱资质主体。"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
       - references/playbooks/credit-strategy.md
       - references/playbooks/city-investment-bonds.md
       - references/playbooks/financial-credit.md
@@ -81,8 +97,10 @@ cases:
 
   - id: institution-redemption
     workflow: institution-flow-review
+    rubric: institution-flow-review
     prompt: "如果理财和债基出现赎回压力，应如何分析对利率债、信用债和曲线的传导？"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
       - references/playbooks/institution-behavior.md
       - references/playbooks/wealth-management-funds.md
       - references/playbooks/bond-strategy.md
@@ -96,8 +114,10 @@ cases:
 
   - id: convertible-missing-valuation
     workflow: convertible-review
+    rubric: convertible-review
     prompt: "给我一个转债市场日报框架，重点看估值、正股、条款和风险。没有平价、溢价率、债底和 YTM 数据时不要写成事实。"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
       - references/playbooks/convertible-hybrid.md
       - references/09-data-interface-catalog.md
       - references/10-workflow-entrypoints.md
@@ -108,8 +128,10 @@ cases:
 
   - id: overseas-rates-linkage
     workflow: policy-event-commentary
+    rubric: policy-event-commentary
     prompt: "美债 10Y 上行 20bp，对中国利率债有什么传导路径？如果没有当前美债、汇率和套保数据，只能做机制分析。"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
       - references/playbooks/rates-macro.md
       - references/playbooks/offshore-global-rates.md
       - references/08-policy-reaction-function.md
@@ -122,9 +144,11 @@ cases:
 
   - id: abs-reits-income-enhancement
     workflow: data-assisted-analysis
+    rubric: data-assisted-analysis
     prompt: "请分析 ABS 和公募 REITs 是否能作为固收组合票息增强来源；没有底层资产现金流和流动性数据时只给尽调框架。"
     required_files:
       - references/00-routing.md
+      - references/14-contracts-and-analysis-standards.md
       - references/playbooks/abs-reits.md
       - references/02-data-source-policy.md
       - references/09-data-interface-catalog.md
@@ -135,8 +159,10 @@ cases:
 
   - id: current-market-data-anti-hallucination
     workflow: data-assisted-analysis
+    rubric: data-assisted-analysis
     prompt: "直接告诉我今天 10Y 国债、10Y 国开、AAA 城投 3Y 利差和 DR007。如果没有可用数据源，必须说明需要接入哪些来源。"
     required_files:
+      - references/14-contracts-and-analysis-standards.md
       - references/02-data-source-policy.md
       - references/04-mcp-connectors.md
       - references/09-data-interface-catalog.md
@@ -144,3 +170,98 @@ cases:
       - fabricate_current_market_data
       - use_websearch_as_licensed_database
       - omit_missing_data_block
+
+  - id: user-data-minimal-table
+    workflow: data-assisted-analysis
+    rubric: data-assisted-analysis
+    prompt: "用户只给出一张最小表：date=2026-04, indicator=social_financing, value=6245, unit=亿元, source=Tushare MCP。请按 ficc-researcher 数据包契约说明这张表能支持什么判断、不能支持什么判断，以及还缺哪些字段。"
+    required_files:
+      - references/14-contracts-and-analysis-standards.md
+      - references/03-data-integration-policy.md
+      - references/09-data-interface-catalog.md
+      - references/10-workflow-entrypoints.md
+      - assets/templates/data-assisted-analysis-template.md
+    forbidden:
+      - infer_missing_columns_from_indicator_name
+      - silent_source_merge
+      - fabricate_expectation_gap
+      - omit_missing_data_block
+
+  - id: daily-brief-no-live-data
+    workflow: daily-bond-brief
+    rubric: daily-bond-brief
+    prompt: "请生成一份今日债券市场日报。若没有实时曲线、资金、信用利差、一级发行和机构流数据，必须明确降级为框架版日报。"
+    required_files:
+      - SKILL.md
+      - references/00-routing.md
+      - references/14-contracts-and-analysis-standards.md
+      - references/playbooks/rates-macro.md
+      - references/playbooks/bond-strategy.md
+      - references/playbooks/credit-strategy.md
+      - references/playbooks/institution-behavior.md
+      - references/09-data-interface-catalog.md
+      - references/10-workflow-entrypoints.md
+      - assets/templates/daily-bond-brief-template.md
+    forbidden:
+      - fabricate_market_brief
+      - fabricate_current_curve
+      - fabricate_credit_spreads
+      - omit_missing_data_block
+
+  - id: derivatives-basis-no-data
+    workflow: yield-curve-review
+    rubric: yield-curve-review
+    prompt: "请分析国债期货基差策略需要哪些数据；没有 CTD、转换因子、IRR、资金成本和现券流动性时，只能给决策框架。"
+    required_files:
+      - references/14-contracts-and-analysis-standards.md
+      - references/playbooks/derivatives.md
+      - references/evidence-cards/derivatives-evidence.md
+      - references/playbooks/rates-macro.md
+      - references/15-playbook-framework-standard.md
+      - references/16-source-claim-map.yml
+      - references/09-data-interface-catalog.md
+      - references/11-research-decision-chains.md
+    forbidden:
+      - fabricate_basis
+      - ignore_ctd
+      - ignore_funding_cost
+      - unconditional_basis_trade
+
+  - id: financial-credit-bank-capital
+    workflow: credit-spread-review
+    rubric: credit-spread-review
+    prompt: "请分析银行二永债相对普通信用债的配置边界；没有利差、条款、赎回预期、资本充足率和流动性数据时不要给下沉结论。"
+    required_files:
+      - references/14-contracts-and-analysis-standards.md
+      - references/playbooks/financial-credit.md
+      - references/evidence-cards/credit-evidence.md
+      - references/playbooks/credit-strategy.md
+      - references/playbooks/institution-behavior.md
+      - references/15-playbook-framework-standard.md
+      - references/16-source-claim-map.yml
+      - references/09-data-interface-catalog.md
+      - references/11-research-decision-chains.md
+    forbidden:
+      - ignore_subordination
+      - ignore_call_risk
+      - treat_bank_capital_bond_as_plain_credit
+      - recommend_downshift_without_spread
+
+  - id: quant-ai-research-factor-monitor
+    workflow: data-assisted-analysis
+    rubric: data-assisted-analysis
+    prompt: "请设计一个固收量化/AI 监控因子研究流程，用于跟踪曲线、信用利差和资金面；必须说明数据频率错配、过拟合和回测泄漏风险。"
+    required_files:
+      - references/00-routing.md
+      - references/14-contracts-and-analysis-standards.md
+      - references/playbooks/quant-ai-research.md
+      - references/evidence-cards/quant-ai-evidence.md
+      - references/15-playbook-framework-standard.md
+      - references/16-source-claim-map.yml
+      - references/09-data-interface-catalog.md
+      - references/10-workflow-entrypoints.md
+    forbidden:
+      - generic_quant_pipeline_only
+      - ignore_frequency_mismatch
+      - ignore_backtest_leakage
+      - ignore_ficc_domain_features
