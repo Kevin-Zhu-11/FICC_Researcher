@@ -2,11 +2,11 @@
 
 ## Scope
 
-Use this playbook for bank wealth management products, net-value transformation, redemption pressure, 固收+ funds, mutual fund behavior, product liabilities, NAV drawdown, and portfolio feedback loops.
+Use this playbook for bank wealth management products, net-value transformation, redemption pressure, fixed-income-plus funds, mutual fund behavior, product liabilities, NAV drawdown, and portfolio feedback loops.
 
 ## When To Use
 
-- The question mentions 银行理财, 净值化, 赎回, 固收+, 公募基金, 基金久期, 基金杠杆, 产品负债端, or 破净.
+- The question mentions bank wealth management products, net-value transformation, redemption, fixed-income-plus, mutual funds, fund duration, fund leverage, product liability side, or NAV below par.
 - The analysis needs to explain how product liabilities affect credit bonds, short-end rates, fund flows, or forced selling.
 - The user provides NAV, holdings, duration, leverage, or redemption data.
 
@@ -35,11 +35,11 @@ Net-value products transmit market volatility to investors faster than old expec
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `WM-01` | 净值化理财和基金通过 NAV 回撤、申赎、流动性管理和被动卖出形成反馈。 | 投资者行为和产品开放/封闭条款把市场波动传导为资产处置和利差/曲线压力。 | 缺少产品规模、NAV、申赎、持仓、久期、杠杆和流动性桶数据。 |
+| `WM-01` | Net-value wealth products and funds create feedback through NAV drawdowns, subscriptions/redemptions, liquidity management, and forced selling. | Investor behavior and open/closed product terms transmit market volatility into asset disposal and spread/curve pressure. | Missing product size, NAV, subscriptions/redemptions, holdings, duration, leverage, or liquidity-bucket data. |
 
 ## Analysis Steps
 
-1. Identify product type: bank wealth, cash-like product, fixed-income fund, 固收+, or hybrid.
+1. Identify product type: bank wealth, cash-like product, fixed-income fund, fixed-income-plus, or hybrid.
 2. Check liability stability and redemption terms.
 3. Check NAV drawdown, recent performance, and investor behavior.
 4. Map holdings into rates, credit, cash, NCD, funds, convertibles, and liquidity buckets.
@@ -50,14 +50,14 @@ Net-value products transmit market volatility to investors faster than old expec
 ## Output Overlay
 
 ```text
-使用 playbook: wealth-management-funds
-产品类型:
-负债端状态:
-持仓与流动性:
-净值和赎回反馈:
-对债市影响:
-缺失数据:
-风险与反例:
+Playbooks used: wealth-management-funds
+Product type:
+Liability-side condition:
+Holdings and liquidity:
+NAV and redemption feedback:
+Impact on the bond market:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -81,4 +81,4 @@ Net-value products transmit market volatility to investors faster than old expec
 
 ## Search Keywords
 
-银行理财, 净值化, 赎回, 固收+, 公募基金, 基金久期, 杠杆, 负债端, 破净, 现金管理
+bank wealth management products, net-value transformation, redemption, fixed-income-plus, mutual funds, fund duration, Leverage, liability side, NAV below par, cash management

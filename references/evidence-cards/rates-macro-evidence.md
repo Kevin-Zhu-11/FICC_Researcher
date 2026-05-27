@@ -13,7 +13,7 @@ Use for rates direction, low-rate macro regimes, curve shape, fiscal supply, fun
 
 ## Core Framework Claims
 
-- Low-rate environments weaken one-factor growth or inflation explanations; fiscal behavior, industrial-chain pricing, institutional liabilities, and supply-demand matter more.
+- low-rate environments weaken one-factor growth or inflation explanations; fiscal behavior, industrial-chain pricing, institutional liabilities, and supply-demand matter more.
 - Rates analysis should combine macro fundamentals, funding liquidity, policy anchors, fiscal supply, investor demand, and curve structure.
 - Long-end rates need a term-premium and allocation-demand lens, not only a short-rate-policy lens.
 
@@ -32,4 +32,4 @@ Use for rates direction, low-rate macro regimes, curve shape, fiscal supply, fun
 
 ## Useful Search Terms
 
-低利率, 宏观分析, 债券定价, 财政供给, 收益率曲线, 资金面, IS-LM, 期限溢价
+low-rate, macro analysis, bond pricing, fiscal supply, yield curve, Funding conditions, IS-LM, term premium

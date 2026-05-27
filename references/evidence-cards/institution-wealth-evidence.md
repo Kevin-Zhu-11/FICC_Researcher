@@ -33,4 +33,4 @@ Use for bank, insurance, wealth-management, mutual-fund, broker, foreign-investo
 
 ## Useful Search Terms
 
-机构行为, 银行理财, 净值化, 赎回, 公募基金, 保险配债, 负债端, 久期, 杠杆
+Institution behavior, bank wealth management products, net-value transformation, redemption, mutual funds, insurersbond allocation, liability side, Duration, Leverage

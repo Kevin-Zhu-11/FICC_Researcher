@@ -33,4 +33,4 @@ Use for credit spreads, asset shortage, credit beta, credit sinking, city invest
 
 ## Useful Search Terms
 
-信用利差, 资产荒, 信用下沉, 城投化债, 区域利差, 二永债, TLAC, 金融信用债
+credit spreads, asset shortage, credit downshift, LGFVdebt-resolution policy, regional spreads, Tier-2 capital bonds and perpetual bank bonds, TLAC, financial-sector credit bonds

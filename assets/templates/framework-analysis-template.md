@@ -1,23 +1,23 @@
 # Framework Analysis
 
-## 问题归类
+## Question type
 
-## 使用 Playbook
+## Playbooks used
 
-## 框架事实
+## Framework facts
 
-## 数据输入
+## Data input
 
-## 数据质量检查
+## Data quality checks
 
-## 数据事实
+## Data facts
 
-## 置信度
+## Confidence
 
-## 缺失数据
+## Missing data
 
-## 推断判断
+## Inferred judgments
 
-## 风险与反例
+## Risks and counterexamples
 
-## 后续跟踪
+## Follow-up indicators

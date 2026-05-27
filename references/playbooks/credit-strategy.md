@@ -6,7 +6,7 @@ Use this playbook for credit bonds, credit spreads, asset shortage, rating frame
 
 ## When To Use
 
-- The question mentions 信用债, 信用利差, 资产荒, 信用下沉, 评级, 违约, 展期, 产业债, 城投, 二永债, or 票息.
+- The question mentions Credit bonds, credit spreads, asset shortage, credit downshift, rating, default, extension, industrial bonds, LGFV, Tier-2 capital bonds and perpetual bank bonds, or coupon carry.
 - The user asks how to earn return when spreads are low.
 - The user needs a framework for credit risk, valuation, and investor-demand interaction.
 
@@ -39,7 +39,7 @@ City investment, financial credit, and sector-specific credit require specialize
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
 | `CR-01` | Credit spread allocation depends on spread level, issuer fundamentals, refinancing, liquidity, supply, and institution demand. | Spread is compensation for credit, liquidity, and technical risks, not a standalone return metric. | Spread, issuer, refinancing, and liquidity data are missing. |
-| `CR-02` | Low spreads and asset shortage do not prove issuer safety; carry is not risk-free. | Crowded demand can compress compensation while issuer and liquidity risks remain. | Current spreads still compensate risk and exit liquidity is verified. |
+| `CR-02` | low spreads and asset shortage do not prove issuer safety; carry is not risk-free. | Crowded demand can compress compensation while issuer and liquidity risks remain. | Current spreads still compensate risk and exit liquidity is verified. |
 
 ## Analysis Steps
 
@@ -56,14 +56,14 @@ City investment, financial credit, and sector-specific credit require specialize
 ## Output Overlay
 
 ```text
-使用 playbook: credit-strategy
-信用问题归类:
-估值与利差:
-主体/品种基本面:
-机构需求与流动性:
-策略选择:
-缺失数据:
-风险与反例:
+Playbooks used: credit-strategy
+Credit question type:
+Valuation and spreads:
+Issuer and instrument fundamentals:
+Institution demand and liquidity:
+Strategy selection:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -91,4 +91,4 @@ City investment, financial credit, and sector-specific credit require specialize
 
 ## Search Keywords
 
-信用债, 信用利差, 资产荒, 信用下沉, 评级, 违约, 展期, 产业债, 城投, 二永债, 票息, 信用策略
+Credit bonds, credit spreads, asset shortage, credit downshift, rating, default, extension, industrial bonds, LGFV, Tier-2 capital bonds and perpetual bank bonds, coupon carry, credit strategy

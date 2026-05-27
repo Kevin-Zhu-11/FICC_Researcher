@@ -2,7 +2,7 @@
 
 This file reconstructs important visual frameworks in text so the skill can still use them when image URLs expire.
 
-## 中金债券组合构建框架
+## CICC bond portfolio-construction framework
 
 - Source report: `cicc-bond-principles-strategy-2025`
 - Original image URL: Source Markdown uses MinerU CDN image links; verify the exact URL in the source report before quoting.
@@ -21,7 +21,7 @@ economic fundamentals / inflation / liquidity / regulation
 -> portfolio return, drawdown, liquidity, and mandate fit
 ```
 
-## 华泰投资者行为图谱
+## Huataiinvestor-behavior map
 
 - Source report: `huatai-institution-behavior-2025`
 - Original image URL: Source Markdown uses MinerU CDN image links; verify the exact URL in the source report before quoting.
@@ -38,7 +38,7 @@ financing demand and macro policy
 -> rates, credit spreads, repo leverage, redemption feedback
 ```
 
-## 华泰信用债品种演化图
+## Huatai credit-bond product evolution map
 
 - Source report: `huatai-credit-bond-framework-2025`
 - Original image URL: Source Markdown uses MinerU CDN image links; verify the exact URL in the source report before quoting.
@@ -55,7 +55,7 @@ early enterprise bonds and short-term financing bills
 -> differentiated credit risk, liquidity, regulation, and investor demand
 ```
 
-## 华泰 IS-LM 利率理论图
+## Huatai IS-LM interest-rate theory chart
 
 - Source report: `huatai-bond-market-framework-2025`
 - Original image URL: Source Markdown uses MinerU CDN image links; verify the exact URL in the source report before quoting.
@@ -71,7 +71,7 @@ goods market and money market equilibrium
 -> observable indicators: growth, inflation, credit, repo, policy rates, bond supply, investor demand
 ```
 
-## 转债条款/估值/择券框架图
+## Convertible-bond clause, valuation, and selection framework chart
 
 - Source report: `cicc-convertible-bonds-framework-2025`, `huatai-convertible-framework-2025`
 - Original image URL: Source Markdown uses MinerU CDN image links; verify the exact URL in the source report before quoting.
@@ -89,12 +89,12 @@ underlying stock price and volatility
 -> equity-like, balanced, debt-like, or event-driven strategy
 ```
 
-## 城投债区域分析框架
+## LGFV regional analysis framework
 
 - Source report: `cicc-city-investment-bonds-2025`
 - Original image URL: See `references/chart-notes/image-url-index.yml` after running `scripts/extract_image_urls.py`.
 - Core message: City investment bond analysis should combine regional fiscal capacity, debt pressure, platform function, refinancing path, policy support, and market spread.
-- Use when: The user asks about 化债, 区域利差, 城投平台, 隐性债务, or regional credit selection.
+- Use when: The user asks about debt-resolution policy, regional spreads, LGFVplatform, implicit debt, or regional credit selection.
 - Do not use when: The user needs a live issuer spread or current policy event without data.
 - Text reconstruction:
 
@@ -107,12 +107,12 @@ regional fiscal capacity
 -> regional beta, issuer selection, maturity choice, or avoid
 ```
 
-## 大金融信用债资本工具框架
+## Financial-sector credit capital-instrument framework
 
 - Source report: `cicc-financial-credit-bonds-2025`
 - Original image URL: See `references/chart-notes/image-url-index.yml` after running `scripts/extract_image_urls.py`.
 - Core message: Financial credit requires separate analysis of issuer fundamentals and instrument-level subordination or loss-absorption terms.
-- Use when: The user asks about 二永债, TLAC, 银行资本债, 券商债, or 保险资本工具.
+- Use when: The user asks about Tier-2 capital bonds and perpetual bank bonds, TLAC, bank capital bonds, broker bonds, or insurerscapital instruments.
 - Do not use when: The question only needs generic senior credit spread comparison.
 - Text reconstruction:
 
@@ -124,7 +124,7 @@ issuer systemic role and fundamentals
 -> spread compensation for financial capital tools
 ```
 
-## 理财净值化赎回反馈链条
+## wealth management productsnet-value transformationredemptionfeedback chain
 
 - Source report: `cicc-wealth-management-net-value-2025`, `huatai-institution-behavior-2025`
 - Original image URL: See `references/chart-notes/image-url-index.yml` after running `scripts/extract_image_urls.py`.
@@ -141,12 +141,12 @@ market drawdown
 -> spread widening, short-end pressure, and further NAV feedback
 ```
 
-## 利率衍生品基差/IRR 框架
+## Rates derivatives basis/IRR framework
 
 - Source report: `cicc-interest-rate-derivatives-2025`
 - Original image URL: See `references/chart-notes/image-url-index.yml` after running `scripts/extract_image_urls.py`.
 - Core message: Futures basis and IRR depend on cash bond, conversion factor, funding, delivery option, and liquidity.
-- Use when: The user asks about 国债期货, CTD, 基差, IRR, or hedging.
+- Use when: The user asks about China government bond futures, CTD, basis, IRR, or hedging.
 - Do not use when: The task lacks futures price, cash bond data, or funding cost but asks for trade implementation.
 - Text reconstruction:
 
@@ -158,7 +158,7 @@ cash bond price and yield
 -> basis, implied repo, hedge ratio, and roll/delivery risk
 ```
 
-## ABS/REITs 现金流与估值框架
+## ABS/REITs cash-flow and valuation framework
 
 - Source report: `cicc-abs-framework-2025`, `cicc-public-reits-strategy-2025`
 - Original image URL: See `references/chart-notes/image-url-index.yml` after running `scripts/extract_image_urls.py`.

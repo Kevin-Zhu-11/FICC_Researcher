@@ -74,13 +74,13 @@ When the user uploads or pastes data:
 Use this output block:
 
 ```text
-用户数据识别:
-- 数据类型:
-- 时间范围:
-- 频率:
-- 样本范围:
-- 可直接支持的判断:
-- 不能支持的判断:
+User-data identification:
+- Data type:
+- Time range:
+- Frequency:
+- Sample universe:
+- judgments directly supported:
+- judgments not supported:
 ```
 
 ## MCP Or Connector Workflow
@@ -97,7 +97,7 @@ When an MCP or connector is available:
 Connector results should be cited as data facts, for example:
 
 ```text
-数据事实:
+Data facts:
 - Source: Tushare / iFinD / Wind / local bond database
 - Retrieved at:
 - As of:
@@ -158,16 +158,16 @@ When WebSearch is used, label the result as news or source-discovery evidence un
 When data is available, use this structure:
 
 ```text
-问题归类:
-使用 playbook:
-数据输入:
-数据质量检查:
-框架事实:
-数据事实:
-推断判断:
-风险与反例:
-缺失数据:
-后续跟踪:
+Question type:
+Playbooks used:
+Data input:
+Data quality checks:
+Framework facts:
+Data facts:
+Inferred judgments:
+Risks and counterexamples:
+Missing data:
+Follow-up indicators:
 ```
 
 ## Analysis Output Without Data
@@ -175,20 +175,20 @@ When data is available, use this structure:
 When data is not available, do not force a current conclusion. Use:
 
 ```text
-问题归类:
-使用 playbook:
-框架事实:
-推断判断:
-置信度: 低，原因是缺少当前数据。
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
-风险与反例:
-后续跟踪:
+Question type:
+Playbooks used:
+Framework facts:
+Inferred judgments:
+Confidence: Low, because current data is missing.
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
+Risks and counterexamples:
+Follow-up indicators:
 ```
 
 ## Data Quality Checks

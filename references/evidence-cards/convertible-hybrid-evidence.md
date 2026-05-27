@@ -31,4 +31,4 @@ Use for convertible bonds, exchangeable bonds, parity, conversion premium, bond 
 
 ## Useful Search Terms
 
-可转债, 可交债, 平价, 转股溢价率, 债底, 下修, 赎回, 回售, 隐含波动率, 混合型资产
+convertible bonds, exchangeable bonds, parity, conversion premium, bond floor, downward conversion-price revision, redemption, put option, implied volatility, hybrid assets

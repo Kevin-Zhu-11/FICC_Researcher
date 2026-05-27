@@ -2,18 +2,18 @@
 
 ## Prompt
 
-请评价当前 1Y/3Y/5Y/10Y/30Y 国债和国开曲线。如果没有实时曲线、资金、供给和机构数据，只能给框架判断和需要补充的数据。
+Review the current 1Y/3Y/5Y/10Y/30Y CGB and CDB curves. If live curve, funding, supply, and institution data are unavailable, provide only framework judgment and required additional data.
 
 ## Missing Fields
 
 ```text
-当前缺少数据:
-- 字段: 1Y/3Y/5Y/7Y/10Y/30Y 国债曲线、国开或政策金融债曲线、DR007/R007、NCD 利率、政府债发行和缴款、配置盘需求、国债期货基差。
-- 推荐来源: ChinaBond, CFETS, SHCH, NIFC, Wind, iFinD, local bond database, user-provided exports.
-- 时间范围: 当前交易日和至少一个比较日。
-- 频率: 日频；资金面和交易拥挤度可使用更高频数据。
-- 用途: 判断曲线分段、期限利差、资金锚、供给冲击、配置吸收和组合风险。
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Currently missing data:
+- Fields: 1Y/3Y/5Y/7Y/10Y/30Y CGB curve, CDB or policy-bank curve, DR007/R007, NCD rates, government-bond issuance and payment settlement, allocation-account demand, and China government bond futures basis.
+- Recommended sources: ChinaBond, CFETS, SHCH, NIFC, Wind, iFinD, local bond database, user-provided exports.
+- Time range: Current trading day and at least one comparison date.
+- Frequency: Daily frequency; funding conditions and crowded-positioning indicators may use higher-frequency data.
+- Use: Assess curve segmentation, tenor spreads, funding anchor, supply shock, allocation absorption, and portfolio risk.
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
 ## Allowed Framework Analysis
@@ -33,13 +33,13 @@
 ## Expected Answer Shape
 
 ```text
-曲线数据来源:
-期限分段:
-短端驱动:
-中端驱动:
-长端驱动:
-供需与机构行为:
-可用策略:
-缺少数据:
-风险触发:
+Curve data sources:
+Tenor segmentation:
+Short-end drivers:
+Belly drivers:
+Long-end drivers:
+Supply-demand and institution behavior:
+Available strategies:
+Missing data:
+Risk triggers:
 ```

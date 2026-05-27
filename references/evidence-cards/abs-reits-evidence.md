@@ -31,4 +31,4 @@ Use for asset-backed securities, public REITs, asset-pool cash flow, tranche des
 
 ## Useful Search Terms
 
-ABS, 资产证券化, 公募REITs, 底层资产, 现金流, 分层, 增信, NOI, 分派率, 估值, 流动性
+ABS, asset securitization, public REITs, underlying assets, cash flow, tranching, credit enhancement, NOI, distribution yield, valuation, liquidity

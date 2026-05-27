@@ -2,11 +2,11 @@
 
 ## Scope
 
-Use this playbook for 城投债, 化债, 区域利差, 平台转型, 隐性债务, refinancing pressure, and local-government support analysis.
+Use this playbook for LGFV bonds, debt-resolution policy, regional spreads, platform transformation, implicit debt, refinancing pressure, and local-government support analysis.
 
 ## When To Use
 
-- The question mentions 城投, 化债, 区域利差, 平台, 隐债, 特殊再融资债, 土地财政, or 城投转型.
+- The question mentions LGFV, debt-resolution policy, regional spreads, platform, implicit debt, special refinancing bonds, land-finance model, or LGFV transformation.
 - The answer needs to separate regional fiscal support from issuer-level cash-flow risk.
 - The user asks whether policy support changes credit-risk compensation.
 
@@ -29,13 +29,13 @@ regional fiscal capacity
 -> regional spread and issuer-specific credit compensation
 ```
 
-化债 improves refinancing visibility for some regions and issuers, but it does not make every platform risk-free. Treat policy support as one input, not as a substitute for debt-service capacity.
+debt-resolution policy improves refinancing visibility for some regions and issuers, but it does not make every platform risk-free. Treat policy support as one input, not as a substitute for debt-service capacity.
 
 ## Framework Claims
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `CI-01` | 城投债分析必须同时看区域财政、债务压力、平台功能、现金流、再融资、政策支持、估值和流动性。 | 化债改善再融资能见度，但最终偿付能力仍取决于区域与主体现金流、融资通道和市场补偿。 | 缺少区域财政、主体现金流、债务期限、当前利差或再融资数据。 |
+| `CI-01` | LGFV-bond analysis must review regional fiscal position, debt pressure, platform function, cash flow, refinancing, policy support, valuation, and liquidity together. | Debt-resolution policy improves refinancing visibility, but final debt-service capacity still depends on regional and issuer cash flow, financing channels, and market compensation. | Missing regional fiscal position, issuer cash flow, debt maturity profile, current spreads, or refinancing data. |
 
 ## Analysis Steps
 
@@ -50,21 +50,21 @@ regional fiscal capacity
 ## Output Overlay
 
 ```text
-使用 playbook: city-investment-bonds
-区域与主体:
-区域财政和债务压力:
-平台功能与现金流:
-再融资和化债路径:
-估值与区域利差:
-策略判断:
-缺失数据:
-风险与反例:
+Playbooks used: city-investment-bonds
+Region and issuer:
+Regional fiscal position and debt pressure:
+Platform function and cash flow:
+Refinancing and debt-resolution path:
+Valuation and regional spread:
+Strategy assessment:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
 
 - Do not use administrative level alone as credit quality.
-- Do not equate 化债 policy with full guarantee for all issuers.
+- Do not equate debt-resolution policy policy with full guarantee for all issuers.
 - Check whether debt-resolution pressure shifts risk from public bonds to non-standard debt or suppliers.
 - Check whether land-sale weakness undermines fiscal support.
 - Distinguish short-term refinancing relief from long-term business transformation.
@@ -81,4 +81,4 @@ regional fiscal capacity
 
 ## Search Keywords
 
-城投债, 化债, 区域利差, 财政自给率, 债务率, 隐性债务, 特殊再融资债, 平台转型, 再融资
+LGFV bonds, debt-resolution policy, regional spreads, fiscal self-sufficiency ratio, debt ratio, implicit debt, special refinancing bonds, platform transformation, refinancing

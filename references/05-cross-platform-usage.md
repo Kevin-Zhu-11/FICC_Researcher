@@ -29,7 +29,7 @@ Keep the skill read-only for testing when possible. Configure Tushare, iFinD, Wi
 
 ```bash
 openclaw skills info ficc-researcher
-openclaw agent --agent main --message "请使用 ficc-researcher 回答..."
+openclaw agent --agent main --message "Use ficc-researcher to answer..."
 ```
 
 OpenClaw connector outputs should be treated as data packets. The FICC skill should not store OpenClaw tokens, MCP secrets, or host-specific private paths.
@@ -76,7 +76,7 @@ Connector results must include source, query, as-of date, retrieval time, fields
 Use these prompts after installation, or run the structured cases listed in `evals/smoke-prompts.yml`:
 
 ```text
-当前低利率环境下，10 年国债收益率上行需要哪些条件？
-信用利差处于低位时，信用债还能怎么做收益？
-用户提供模拟数据：AAA_3Y信用利差=32bp；DR007=1.72%。这些数据能支持什么判断？
+What conditions would push the 10Y CGB yield higher in a low-rate environment?
+How can credit bonds still generate returns when credit spreads are at low levels?
+User-provided sample data: AAA 3Y credit spread = 32bp; DR007 = 1.72%. What conclusions can this data support?
 ```

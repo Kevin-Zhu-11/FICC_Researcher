@@ -1,41 +1,41 @@
 # Credit Spread Review
 
-## 利差数据来源
+## Spread Data Sources
 
-- 数据来源:
-- 接口/文件/网页:
-- 查询参数:
+- Data source:
+- Interface/file/page:
+- Query parameters:
 - as_of:
 - retrieved_at:
-- 字段:
+- Fields:
 - row_count:
-- 单位:
+- Units:
 - limitations:
 
-## 利差变化
+## Spread changes
 
-## 分评级
+## By rating
 
-## 分期限
+## By tenor
 
-## 分行业/主体类型
+## By sector or issuer type
 
-## 供给与净融资
+## Supply and net financing
 
-## 机构需求
+## Institution demand
 
-## 可用策略
+## Available strategies
 
-## 缺失数据
+## Missing data
 
 ```text
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
-## 风险与反例
+## Risks and counterexamples

@@ -1,29 +1,29 @@
 # Portfolio Action
 
-以下为研究框架表达，不构成个人投资建议或收益承诺。
+This is a research-framework expression, not personal investment advice or a return promise.
 
-## 组合背景
+## Portfolio context
 
-## 数据来源元数据
+## Data-source metadata
 
-- 数据来源:
-- 接口/文件/网页:
-- 查询参数:
+- Data source:
+- Interface/file/page:
+- Query parameters:
 - as_of:
 - retrieved_at:
-- 字段:
+- Fields:
 - row_count:
-- 单位:
+- Units:
 - limitations:
 
-## 当前判断
+## Current assessment
 
-## 情景表
+## Scenario table
 
-| 情景 | 触发条件 | 久期 | 曲线 | 杠杆 | 信用仓位 | 预期收益来源 | 止盈/止损 |
+| Scenario | Trigger conditions | Duration | Curve | Leverage | Credit allocation | Expected return sources | Take-profit/stop-loss |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 
-## 持有期收益拆解
+## Holding-period return decomposition
 
 - Coupon:
 - Carry:
@@ -32,18 +32,18 @@
 - Capital gain/loss:
 - Funding cost:
 
-## 主要亏损路径
+## Main loss paths
 
-## 缺失数据
+## Missing data
 
 ```text
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
-## 后续跟踪
+## Follow-up indicators

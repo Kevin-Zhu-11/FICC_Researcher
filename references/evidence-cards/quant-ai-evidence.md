@@ -30,4 +30,4 @@ Use for fixed-income quant research, AI research agents, factor design, monitori
 
 ## Useful Search Terms
 
-固收量化, AI投研, 智能体, 因子, 数据契约, 样本外, 监控, 自动化报告, Prompt
+FICC quant research, AI-assisted research, agent, factor, Data contract, out-of-sample, monitoring, automated reporting, Prompt

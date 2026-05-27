@@ -43,7 +43,7 @@ Use this skill for fixed-income and FICC research tasks that need broker-framewo
 
 Use the canonical current-data priority in `references/14-contracts-and-analysis-standards.md`, with operational rules in `references/02-data-source-policy.md`.
 
-If required data is missing, output the `缺失数据` block from `references/14-contracts-and-analysis-standards.md` and limit the conclusion to framework analysis.
+If required data is missing, output the `Missing data` block from `references/14-contracts-and-analysis-standards.md` and limit the conclusion to framework analysis.
 
 If the user provides a table, file, or pasted dataset, analyze that data first. State what the data can support, what it cannot support, and which connector or official source would fill the gap.
 
@@ -66,18 +66,18 @@ Use `references/00-routing.md` for routing. For broad or ambiguous questions:
 
 Every substantial answer should follow `references/14-contracts-and-analysis-standards.md`:
 
-- `问题归类`
-- `使用 playbook`
-- `数据输入`
-- `数据质量检查`
-- `框架事实`
-- `数据事实`
-- `推断判断`
-- `置信度`
-- `缺失数据`
-- `风险与反例`
-- `后续跟踪`
-- `组合动作` when the user asks for duration, curve, leverage, credit allocation, sizing, or risk triggers.
+- `Question type`
+- `Playbooks used`
+- `Data input`
+- `Data quality checks`
+- `Framework facts`
+- `Data facts`
+- `Inferred judgments`
+- `Confidence`
+- `Missing data`
+- `Risks and counterexamples`
+- `Follow-up indicators`
+- `Portfolio actions` when the user asks for duration, curve, leverage, credit allocation, sizing, or risk triggers.
 
 For reusable output formats, use `assets/templates/` when producing reports or handoff drafts.
 

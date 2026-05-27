@@ -1,98 +1,98 @@
 # Macro Data Commentary
 
-## 数据来源与时间
+## Data sources and time
 
 ```text
-官方来源:
+Official source:
 provider:
-接口/文件/网页:
-查询参数:
-发布时间:
-数据期:
-检索时间:
+Interface/file/page:
+Query parameters:
+Release time:
+Data period:
+Retrieved at:
 time_range:
 frequency:
 universe:
-字段:
+Fields:
 row_count:
-单位:
+Units:
 schema_notes:
 missing_fields:
-辅助来源:
-数据权限或工具限制:
+Supplementary sources:
+Data permission or tool limitations:
 ```
 
-## 数据事实表
+## Data fact table
 
-| 指标 | 实际值 | 预期 | 前值 | 方向 | 备注 |
+| Indicator | Actual value | Expectation | Previous value | Direction | Notes |
 | --- | --- | --- | --- | --- | --- |
 
-## 差分推算表
+## Difference-derived table
 
-用于累计口径推算单月口径。
+Use when deriving a single-month value from cumulative reported figures.
 
-| 指标 | 当前累计 | 前一期累计 | 单月推算 | 公式 | 四舍五入限制 |
+| Indicator | Current cumulative value | Previous cumulative value | Single-month estimate | Formula | Rounding limit |
 | --- | --- | --- | --- | --- | --- |
 
-## 预期差
+## Expectation gap
 
 ```text
-实际值:
-市场预期:
-前值:
-是否已被市场定价:
-预期差方向:
-预期差强度:
+Actual value:
+Market expectation:
+Previous value:
+Already priced by market:
+Surprise direction:
+Surprise strength:
 ```
 
-## 指标口径
+## Indicator definition
 
-| 指标 | 口径 | 频率 | 公布机构 | 领先/同步/滞后 | 常见误读 |
+| Indicator | Definition | Frequency | Release agency | Leading/coincident/lagging | Common misreadings |
 | --- | --- | --- | --- | --- | --- |
 
-## 基本面含义
+## Fundamental meaning
 
 ```text
-经济温度:
-周期季节:
-影响循环:
-- 就业收入消费:
-- 制造业价格信号和投资:
-- 地产销售价格投资链条:
-- 外需出口产业链:
-需求/供给/价格/政策/市场定价:
+Economic temperature:
+Cycle and seasonality:
+Transmission loop:
+- employment, income, and consumption:
+- manufacturing price signals and investment:
+- property sales, prices, and investment chain:
+- external demand and export chain:
+demand, supply, prices, policy, and market pricing:
 ```
 
-## 政策反应函数
+## Policy reaction function
 
-| 数据信号 | 触发政策目标 | 可能工具 | 约束 | 资金面含义 | 供给含义 |
+| Data signal | Policy objective triggered | Possible tools | Constraints | Funding implication | Supply implication |
 | --- | --- | --- | --- | --- | --- |
 
-## 债市传导
+## Bond-market transmission
 
-| 传导层级 | 利率方向 | 支撑逻辑 | 削弱因素 | 需要补充数据 |
+| Transmission layer | Rate direction | Supporting logic | Offsetting factors | Data still needed |
 | --- | --- | --- | --- | --- |
 
-## 曲线含义
+## Curve implication
 
-| 曲线段 | 主导因素 | 方向判断 | 风险 |
+| Curve segment | Dominant factor | Directional view | Risk |
 | --- | --- | --- | --- |
 
-## 信用与机构行为含义
+## Credit and institution behavior implications
 
-| 领域 | 可能影响 | 需要验证 |
+| Domain | Potential impact | Required checks |
 | --- | --- | --- |
 
-## 缺失数据
+## Missing data
 
 ```text
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
-## 后续跟踪
+## Follow-up indicators

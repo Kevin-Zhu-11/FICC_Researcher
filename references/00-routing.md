@@ -3,30 +3,31 @@
 Use this file before reading playbooks. Route by the user's instrument, market driver, investor group, and required decision.
 
 For canonical output labels, missing-data format, source-traceability triggers, portfolio-action boundaries, and cross-framework conflict handling, read `references/14-contracts-and-analysis-standards.md`.
+
 For playbook framework expression, claim ids, and claim-to-source mapping, use `references/15-playbook-framework-standard.md` and `references/16-source-claim-map.yml`.
 
 ## Core Routes
 
 | User question keywords | Primary playbooks | Source-report families | Required data direction |
 | --- | --- | --- | --- |
-| 利率, 宏观, 曲线, 久期, 10 年国债, 国开, 利率方向 | `rates-macro.md`, `bond-strategy.md` | 中金债券原理与策略, 中金低利率宏观与债券定价, 华泰债市分析框架 | Growth, inflation, funding, policy, fiscal supply, curve, term premium |
-| 社融, M1, M2, CPI, PPI, PMI, 工增, 投资, 消费, 出口, 预期差 | `rates-macro.md`, `bond-strategy.md` plus `07-macro-indicator-glossary.md` and `08-policy-reaction-function.md` | 华泰基本面分析的道与术, 华泰固收分析框架 | Indicator definition, frequency, expectation, previous value, surprise, transmission to policy and rates |
-| 资金面, 央行, 财政供给, 存单, 短端, 流动性 | `rates-macro.md`, `institution-behavior.md` | 中金低利率投资者行为, 华泰机构行为, 华泰债市分析框架 | DR007, repo, NCD, deposit, fiscal payment, open-market operations |
-| 久期怎么摆, 曲线怎么做, 杠杆, 止盈, 止损, 组合动作, 持有期收益 | `bond-strategy.md` plus `06-portfolio-action-policy.md` | 中金债券原理与策略, 华泰固收分析框架 | Portfolio duration, curve buckets, leverage, carry, rolldown, funding cost, drawdown tolerance |
-| 信用利差, 资产荒, 信用下沉, 信用 beta, 票息策略 | `credit-strategy.md`, `institution-behavior.md` | 中金低利差信用债投资, 华泰信用债分析框架 | Spread levels, rating migration, default risk, issuance, investor demand |
-| 城投, 化债, 区域利差, 平台, 隐债 | `city-investment-bonds.md`, `credit-strategy.md` | 中金城投债分析框架 | Region fiscal capacity, debt pressure, refinancing, policy support |
-| 二永债, 银行资本债, 券商债, 保险债, 大金融 | `financial-credit.md`, `institution-behavior.md` | 中金大金融信用债分析框架 | Capital adequacy, TLAC, issuer fundamentals, regulatory capital rules |
-| 理财赎回, 净值化, 银行理财, 公募基金, 基金行为 | `wealth-management-funds.md`, `institution-behavior.md` | 中金理财发展趋势, 中金固收+基金, 华泰机构行为 | Product NAV, duration, leverage, redemption flow, asset allocation |
-| 转债, 可交债, 平价, 转股溢价率, 债底, 下修, 赎回 | `convertible-hybrid.md` | 中金转债框架, 华泰可转债框架, 中金混合型资产框架 | Equity price, conversion value, premium, bond floor, terms, liquidity |
-| 国债期货, 利率互换, IRS, 基差, 套保 | `derivatives.md`, `rates-macro.md` | 中金利率衍生品 | Futures basis, swap curve, deliverable basket, repo, hedge objective |
-| 美债, 美元债, 点心债, 离岸人民币债, offshore, UST | `offshore-global-rates.md` | 中金美债, 中金中资美元债与点心债, 中金离岸人民币债 | Treasury curve, FX, cross-border funding, issuer spread, global policy |
-| ABS, 公募 REITs, 资产证券化, 底层资产 | `abs-reits.md` | 中金 ABS 框架, 中金公募 REITs 框架 | Asset pool, cash flow, senior/subordination, project NOI, valuation |
-| 固收量化, AI 投研, 因子, 监控, 智能体 | `quant-ai-research.md` | 华泰固收量化与 AI, 中金固收+智能体 | Data schema, factor definition, model validation, monitoring target |
+| rates, macro, curve, duration, 10Y CGB, CDB, rate direction | `rates-macro.md`, `bond-strategy.md` | CICC bond principles and strategy; CICC low-rate macro and bond pricing; Huatai bond-market framework | Growth, inflation, funding, policy, fiscal supply, curve, term premium |
+| social financing, M1, M2, CPI, PPI, PMI, industrial value added, investment, consumption, exports, expectation gap | `rates-macro.md`, `bond-strategy.md` plus `07-macro-indicator-glossary.md` and `08-policy-reaction-function.md` | Huatai fundamental-analysis framework; Huatai fixed-income framework | Indicator definition, frequency, expectation, previous value, surprise, transmission to policy and rates |
+| funding, central bank, fiscal supply, NCD, short end, liquidity | `rates-macro.md`, `institution-behavior.md` | CICC low-rate investor behavior; Huatai institution behavior; Huatai bond-market framework | DR007, repo, NCD, deposit, fiscal payment, open-market operations |
+| duration stance, curve trade, leverage, take-profit, stop-loss, portfolio action, holding-period return | `bond-strategy.md` plus `06-portfolio-action-policy.md` | CICC bond principles and strategy; Huatai fixed-income framework | Portfolio duration, curve buckets, leverage, carry, rolldown, funding cost, drawdown tolerance |
+| credit spreads, asset shortage, credit downshift, credit beta, coupon strategy | `credit-strategy.md`, `institution-behavior.md` | CICC low-spread credit investment; Huatai credit-bond framework | Spread levels, rating migration, default risk, issuance, investor demand |
+| LGFV, debt-resolution policy, regional spreads, platform transformation, implicit debt | `city-investment-bonds.md`, `credit-strategy.md` | CICC LGFV-bond framework | Region fiscal capacity, debt pressure, refinancing, policy support |
+| Tier-2 capital bonds, perpetual bank bonds, bank capital bonds, broker bonds, insurance bonds, financial-sector credit | `financial-credit.md`, `institution-behavior.md` | CICC financial-sector credit framework | Capital adequacy, TLAC, issuer fundamentals, regulatory capital rules |
+| wealth-management redemption, net-value transformation, bank wealth products, mutual funds, fund behavior | `wealth-management-funds.md`, `institution-behavior.md` | CICC wealth-management trends; CICC fixed-income-plus funds; Huatai institution behavior | Product NAV, duration, leverage, redemption flow, asset allocation |
+| convertibles, exchangeables, parity, conversion premium, bond floor, downward conversion-price revision, redemption | `convertible-hybrid.md` | CICC convertible framework; Huatai convertible framework; CICC hybrid-asset framework | Equity price, conversion value, premium, bond floor, terms, liquidity |
+| China government bond futures, interest-rate swaps, IRS, basis, hedging | `derivatives.md`, `rates-macro.md` | CICC interest-rate derivatives | Futures basis, swap curve, deliverable basket, repo, hedge objective |
+| U.S. Treasuries, USD bonds, dim sum bonds, offshore RMB bonds, offshore, UST | `offshore-global-rates.md` | CICC U.S. Treasuries; CICC Chinese USD bonds and dim sum bonds; CICC offshore RMB bonds | Treasury curve, FX, cross-border funding, issuer spread, global policy |
+| ABS, public REITs, asset securitization, underlying assets | `abs-reits.md` | CICC ABS framework; CICC public REITs framework | Asset pool, cash flow, senior/subordination, project NOI, valuation |
+| FICC quant research, AI-assisted research, factor, monitoring, agent workflow | `quant-ai-research.md` | Huatai FICC quant and AI; CICC fixed-income-plus agents | Data schema, factor definition, model validation, monitoring target |
 
 ## Routing Rules
 
-- If the question asks "为什么" or "机制", prioritize framework playbooks and chart notes.
-- If the question asks "现在能买吗/怎么看当前", require current market data before concluding.
+- If the question asks why or asks for a mechanism, prioritize framework playbooks and chart notes.
+- If the question asks whether to buy now or how to assess current conditions, require current market data before concluding.
 - If several playbooks match, choose the primary playbook by the user's decision target:
   - macro direction, policy reaction, and curve direction -> `rates-macro.md`;
   - portfolio expression, duration, curve, leverage, or stop conditions -> `bond-strategy.md` plus `06-portfolio-action-policy.md`;
@@ -35,7 +36,7 @@ For playbook framework expression, claim ids, and claim-to-source mapping, use `
   - quant workflow, factor validation, monitoring design -> `quant-ai-research.md`.
 - If the question spans macro and investor demand, combine `rates-macro.md` with `institution-behavior.md`.
 - If the question spans credit returns and redemptions, combine `credit-strategy.md` with `institution-behavior.md`.
-- If current data is unavailable, return the `缺失数据` block from `references/14-contracts-and-analysis-standards.md` and avoid current-market conclusions.
+- If current data is unavailable, return the `Missing data` block from `references/14-contracts-and-analysis-standards.md` and avoid current-market conclusions.
 - For MCP or connector usage, route data access decisions to `references/02-data-source-policy.md`.
 - For current data, first route the research question, then read `references/09-data-interface-catalog.md` for field-level data requirements, preferred sources, and connector limits.
 - If the user asks for a repeatable research product rather than a one-off explanation, choose the workflow in `references/10-workflow-entrypoints.md` before choosing the final output template.
@@ -44,21 +45,21 @@ For playbook framework expression, claim ids, and claim-to-source mapping, use `
 - Treat `credit-strategy.md` as the generic spread/risk layer. Route city investment, financial credit, ABS/REITs, convertibles, derivatives, or offshore questions to their specialized playbook first, and use credit strategy only as the shared valuation layer.
 - Treat `bond-strategy.md` as portfolio reasoning and `references/06-portfolio-action-policy.md` as the action translation gate.
 - For portfolio implementation, require scenario, action, trigger, expected return components, and stop condition from `references/06-portfolio-action-policy.md`.
-- For macro data releases, require indicator口径, expectation gap, policy reaction, and bond-market transmission from `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
+- For macro data releases, require indicator definition, expectation gap, policy reaction, and bond-market transmission from `references/07-macro-indicator-glossary.md` and `references/08-policy-reaction-function.md`.
 - For source traceability, follow the trigger rules in `references/14-contracts-and-analysis-standards.md`.
 
 ## Minimum Answer Skeleton
 
 ```text
-问题归类:
-使用 playbook:
-数据输入:
-数据质量检查:
-框架事实:
-数据事实:
-推断判断:
-置信度:
-缺失数据:
-风险与反例:
-后续跟踪:
+Question type:
+Playbooks used:
+Data input:
+Data quality checks:
+Framework facts:
+Data facts:
+Inferred judgments:
+Confidence:
+Missing data:
+Risks and counterexamples:
+Follow-up indicators:
 ```

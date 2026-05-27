@@ -2,11 +2,11 @@
 
 ## Scope
 
-Use this playbook for bank capital bonds, 二永债, TLAC, broker bonds, insurance subordinated bonds, and financial-sector credit bonds.
+Use this playbook for bank capital bonds, Tier-2 capital bonds and perpetual bank bonds, TLAC, broker bonds, insurance subordinated bonds, and financial-sector credit bonds.
 
 ## When To Use
 
-- The question mentions 二永债, 银行资本债, TLAC, 券商债, 保险债, 大金融, 次级债, or 资本工具.
+- The question mentions Tier-2 capital bonds and perpetual bank bonds, bank capital bonds, TLAC, broker bonds, insurance bonds, financial-sector, subordinated bonds, or capital instruments.
 - The analysis needs both issuer credit and bond-term subordination.
 - The user asks whether financial credit spreads compensate capital-tool risk.
 
@@ -35,7 +35,7 @@ System importance can reduce default probability, but it does not remove subordi
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `FC-01` | 大金融信用债必须区分主体信用和工具条款风险。 | 二永债、TLAC、次级债等资本工具引入次级性、延期、递延、减记、转股和供给压力。 | 缺少条款、资本充足率、资产质量、赎回预期、利差和流动性数据。 |
+| `FC-01` | Financial-sector credit analysis must separate issuer credit from instrument-term risk. | Bank capital instruments such as Tier-2 capital bonds, perpetual bank bonds, TLAC, and subordinated debt introduce subordination, extension, deferral, write-down, conversion-to-equity, and supply pressure. | Missing terms, capital adequacy ratio, asset quality, call/redemption expectations, spreads, or liquidity data. |
 
 ## Analysis Steps
 
@@ -50,15 +50,15 @@ System importance can reduce default probability, but it does not remove subordi
 ## Output Overlay
 
 ```text
-使用 playbook: financial-credit
-主体类型:
-工具条款:
-资本与资产质量:
-估值与利差:
-机构需求:
-策略判断:
-缺失数据:
-风险与反例:
+Playbooks used: financial-credit
+Issuer type:
+Instrument terms:
+Capital and asset quality:
+Valuation and spreads:
+Institution demand:
+Strategy assessment:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -81,4 +81,4 @@ System importance can reduce default probability, but it does not remove subordi
 
 ## Search Keywords
 
-二永债, 银行资本债, TLAC, 大金融信用债, 券商债, 保险债, 次级债, 永续债, 资本充足率, 损失吸收
+Tier-2 capital bonds and perpetual bank bonds, bank capital bonds, TLAC, financial-sectorCredit bonds, broker bonds, insurance bonds, subordinated bonds, perpetual bonds, capital adequacy ratio, loss absorption

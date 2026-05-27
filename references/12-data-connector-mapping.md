@@ -47,9 +47,9 @@ These names are optional candidate interfaces, not required dependencies. Availa
 | Research need | Candidate interface | Use | Limit |
 | --- | --- | --- | --- |
 | Social financing aggregate | `sf_month` | Monthly aggregate increment, cumulative increment, and stock where available. | Does not replace full PBOC component decomposition. |
-| Money supply | `cn_m` | M0, M1, M2 levels and同比/环比 fields where available. | Does not prove transaction活化 without M1 structure and activity data. |
-| CPI | `cn_cpi` | CPI同比/环比 and selected breakdowns. | Needs NBS/source verification for official release commentary. |
-| PPI | `cn_ppi` | PPI同比/环比 and selected breakdowns. | Separate energy, commodity, base effect, and demand channels. |
+| Money supply | `cn_m` | M0, M1, M2 levels andYoY/MoM fields where available. | Does not prove transactionactivation without M1 structure and activity data. |
+| CPI | `cn_cpi` | CPIYoY/MoM and selected breakdowns. | Needs NBS/source verification for official release commentary. |
+| PPI | `cn_ppi` | PPIYoY/MoM and selected breakdowns. | Separate energy, commodity, base effect, and demand channels. |
 | GDP and activity context | `cn_gdp` and covered macro interfaces | Quarterly growth and activity context where licensed. | Do not call surprise without consensus or market-pricing data. |
 | ChinaBond treasury curve | `yc_cb` | Treasury curve fields such as trade date, curve name/type, term, and yield where licensed. | Permissioned interface; not guaranteed for every token. |
 | Shibor and selected rates | provider-covered Shibor/LPR interfaces | Funding context if exact fields are verified. | Does not replace DR/R repo, NCD, or interbank bond funding panels. |

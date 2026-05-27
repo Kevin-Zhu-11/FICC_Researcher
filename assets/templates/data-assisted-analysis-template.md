@@ -1,49 +1,49 @@
 # Data Assisted Analysis
 
-## 问题归类
+## Question type
 
-## 使用 Playbook
+## Playbooks used
 
-## 数据输入
+## Data input
 
-## 数据来源元数据
+## Data-source metadata
 
-- 数据来源:
+- Data source:
 - provider:
-- 接口/文件/网页:
-- 查询参数:
+- Interface/file/page:
+- Query parameters:
 - as_of:
 - retrieved_at:
 - time_range:
 - frequency:
 - universe:
-- 字段:
+- Fields:
 - row_count:
-- 单位:
+- Units:
 - schema_notes:
 - missing_fields:
 - limitations:
 
-## 数据质量检查
+## Data quality checks
 
-## 框架事实
+## Framework facts
 
-## 数据事实
+## Data facts
 
-## 推断判断
+## Inferred judgments
 
-## 缺失数据
+## Missing data
 
 ```text
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
-## 风险与反例
+## Risks and counterexamples
 
-## 后续跟踪
+## Follow-up indicators

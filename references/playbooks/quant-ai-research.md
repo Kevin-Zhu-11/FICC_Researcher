@@ -6,7 +6,7 @@ Use this playbook for fixed-income quant research, AI research workflows, factor
 
 ## When To Use
 
-- The question mentions 固收量化, AI投研, 因子, 监控, 智能体, 自动化报告, LLM, prompt, or 数据驱动研究.
+- The question mentions FICC quant research, AI-assisted research, factor, monitoring, agent, automated reporting, LLM, prompt, or data-driven research.
 - The user wants to turn research reports or market data into repeatable signals or monitoring workflows.
 - The answer needs model validation and human review boundaries.
 
@@ -64,17 +64,17 @@ FICC-specific factor families:
 ## Output Overlay
 
 ```text
-使用 playbook: quant-ai-research
-研究问题:
-数据契约:
-PIT 和频率校验:
-FICC 因子族:
-标签和验证窗口:
-因子/规则/智能体流程:
-验证设计:
-监控方案:
-缺失数据:
-风险与反例:
+Playbooks used: quant-ai-research
+Research question:
+Data contract:
+PIT and frequency checks:
+FICC factor families:
+Label and validation window:
+Factor, rule, or agent workflow:
+Validation design:
+Monitoring plan:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -101,4 +101,4 @@ FICC 因子族:
 
 ## Search Keywords
 
-固收量化, AI投研, 因子, 智能体, 监控, Prompt, LLM, 数据契约, 回测, 样本外, 自动化报告
+FICC quant research, AI-assisted research, factor, agent, monitoring, Prompt, LLM, Data contract, backtest, out-of-sample, automated reporting

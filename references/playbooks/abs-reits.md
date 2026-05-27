@@ -6,7 +6,7 @@ Use this playbook for asset-backed securities, structured credit, public REITs, 
 
 ## When To Use
 
-- The question mentions ABS, 资产证券化, 公募 REITs, 底层资产, 现金流, 分层, 增信, NOI, 分派率, or 项目估值.
+- The question mentions ABS, asset securitization, public REITs, underlying assets, cash flow, tranching, credit enhancement, NOI, distribution yield, or project valuation.
 - The analysis needs to understand cash-flow structure rather than only issuer credit.
 - The user provides asset-pool, REITs operation, or tranche data.
 
@@ -34,7 +34,7 @@ Structured priority reduces some risks but does not remove asset-pool, servicer,
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `ABS-01` | ABS/REITs 分析必须从底层资产或项目现金流、分层/分派机制、法律结构、估值、流动性和投资者需求出发。 | 结构优先级只重分配风险，不消灭资产、运营、提前偿付、法律、估值或流动性风险。 | 缺少资产池、现金流、waterfall、NOI、估值、折溢价或流动性数据。 |
+| `ABS-01` | ABS/REITs analysis must start from underlying assets or project cash flow, tranching/distribution mechanisms, legal structure, valuation, liquidity, and investor demand. | Structural priority reallocates risk; it does not eliminate asset, operating, prepayment, legal, valuation, or liquidity risk. | Missing asset pool, cash flow, waterfall, NOI, valuation, discount/premium, or liquidity data. |
 
 ## Analysis Steps
 
@@ -49,14 +49,14 @@ Structured priority reduces some risks but does not remove asset-pool, servicer,
 ## Output Overlay
 
 ```text
-使用 playbook: abs-reits
-资产类型:
-底层资产和现金流:
-结构和增信:
-估值与流动性:
-策略判断:
-缺失数据:
-风险与反例:
+Playbooks used: abs-reits
+Asset type:
+Underlying assets and cash flow:
+Structure and credit enhancement:
+Valuation and liquidity:
+Strategy assessment:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -79,4 +79,4 @@ Structured priority reduces some risks but does not remove asset-pool, servicer,
 
 ## Search Keywords
 
-ABS, 资产证券化, 公募REITs, 底层资产, 现金流, 分层, 增信, NOI, 分派率, 估值, 流动性
+ABS, asset securitization, public REITs, underlying assets, cash flow, tranching, credit enhancement, NOI, distribution yield, valuation, liquidity

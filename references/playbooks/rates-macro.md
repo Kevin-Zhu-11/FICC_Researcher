@@ -6,7 +6,7 @@ Use this playbook for rates direction, yield-curve shape, macro-policy transmiss
 
 ## When To Use
 
-- The question mentions 利率, 宏观, 曲线, 久期, 资金面, 央行, 财政供给, 汇率约束, 国债, 国开, 存单, or 低利率.
+- The question mentions rates, macro, Curve, Duration, Funding conditions, central bank, fiscal supply, FXConstraints, China government bonds, China Development Bank bonds, NCD, or low-rate.
 - The user asks whether yields should rise or fall.
 - The user asks why traditional growth/inflation models are less effective in a low-rate regime.
 - The question needs a macro-to-bond-pricing bridge rather than only a trading tactic.
@@ -59,7 +59,7 @@ The four circulation channels are:
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `RM-01` | Low-rate regimes weaken one-factor growth or inflation beta. | Fiscal behavior, policy constraints, funding, supply, and institution liabilities can dominate single macro prints. | Current curve, funding, supply, and institution data show a different dominant channel. |
+| `RM-01` | low-rate regimes weaken one-factor growth or inflation beta. | Fiscal behavior, policy constraints, funding, supply, and institution liabilities can dominate single macro prints. | Current curve, funding, supply, and institution data show a different dominant channel. |
 | `RM-02` | Macro releases require expectation-gap, policy-reaction, supply, funding, curve, credit, and institution filters. | Markets price surprises relative to expectations and policy reaction, not raw data alone. | Consensus, market-pricing, policy, or curve data are missing; confidence must fall. |
 
 ## Analysis Steps
@@ -79,18 +79,18 @@ The four circulation channels are:
 ## Output Overlay
 
 ```text
-使用 playbook: rates-macro
-问题归类:
-框架事实:
-当前数据事实:
-差分推算:
-预期差:
-缺失数据:
-利率方向判断:
-政策反应函数:
-曲线含义:
-风险与反例:
-后续跟踪指标:
+Playbooks used: rates-macro
+Question type:
+Framework facts:
+Current data facts:
+Difference-derived estimate:
+Expectation gap:
+Missing data:
+Rate-direction view:
+Policy reaction function:
+Curve implication:
+Risks and counterexamples:
+Follow-up indicators:
 ```
 
 ## Risk Checks
@@ -123,4 +123,4 @@ The four circulation channels are:
 
 ## Search Keywords
 
-利率, 宏观, 低利率, 收益率曲线, 久期, 资金面, 央行, 财政供给, 通胀, 汇率, IS-LM, 国债, 国开, 存单
+rates, macro, low-rate, yield curve, Duration, Funding conditions, central bank, fiscal supply, inflation, FX, IS-LM, China government bonds, China Development Bank bonds, NCD

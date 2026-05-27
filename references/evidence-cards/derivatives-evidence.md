@@ -30,4 +30,4 @@ Use for China government-bond futures, interest-rate swaps, basis, IRR, CTD, DV0
 
 ## Useful Search Terms
 
-国债期货, IRS, 利率互换, 基差, IRR, CTD, 转换因子, DV01, 套保, 隐含回购, 保证金
+China government bond futures, IRS, interest-rate swaps, basis, IRR, CTD, conversion factor, DV01, hedging, implied repo, margin

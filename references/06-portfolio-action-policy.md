@@ -4,12 +4,12 @@ Use this file when the user asks for portfolio action, not only market explanati
 
 ## When To Use
 
-- 久期怎么摆
-- 曲线怎么做
-- 要不要加杠杆
-- 利率债和信用债怎么配
-- 如果判断错了怎么止损
-- 某个宏观或政策事件对组合有什么动作含义
+- Duration stance
+- Curve trade
+- whether to add Leverage
+- How to allocate between rates bonds and credit bonds
+- How to stop loss if the view is wrong
+- How a macro or policy event translates into portfolio action
 
 ## Required Inputs
 
@@ -24,17 +24,17 @@ Use this file when the user asks for portfolio action, not only market explanati
 Convert research judgment into a scenario table:
 
 ```text
-情景:
-触发条件:
-组合动作:
-久期:
-曲线:
-杠杆:
-信用仓位:
-预期收益来源:
-主要亏损路径:
-止盈/止损/降风险条件:
-缺失数据:
+Scenario:
+Trigger conditions:
+Portfolio actions:
+Duration:
+Curve:
+Leverage:
+Credit allocation:
+Expected return sources:
+Main loss paths:
+Take-profit/stop-loss/risk-reduction conditions:
+Missing data:
 ```
 
 ## Duration Rules

@@ -77,14 +77,14 @@ Preferred sources:
 Tushare examples:
 
 - `sf_month`: monthly social financing aggregate. Useful fields include `month`, `inc_month`, `inc_cumval`, `stk_endval`. It does not replace full PBOC decomposition when detailed components are needed.
-- `cn_m`: money supply. Useful for M0, M1, M2 level and同比/环比 fields where available.
+- `cn_m`: money supply. Useful for M0, M1, M2 level andYoY/MoM fields where available.
 - `cn_cpi`: CPI series.
 - `cn_ppi`: PPI series.
 - `cn_gdp`: GDP series where quarterly context is needed.
 
 Missing-data behavior:
 
-- If consensus expectation is unavailable, do not say "超预期" or "低于预期"; compare only with previous value and seasonality.
+- If consensus expectation is unavailable, do not say "above expectation" or "below expectation"; compare only with previous value and seasonality.
 - If only Tushare aggregate social-financing data is available, state that detailed PBOC components are missing.
 
 ## Rates And Yield Curves
@@ -170,7 +170,7 @@ Preferred sources:
 
 Missing-data behavior:
 
-- Without current spreads and issuer data, do not recommend credit下沉. Provide framework, required fields, and risk checks only.
+- Without current spreads and issuer data, do not recommend credit downshift. Provide framework, required fields, and risk checks only.
 
 ## Institution Behavior
 
@@ -207,7 +207,7 @@ Preferred sources:
 
 Tushare examples:
 
-- Convertible基础、行情、转股价、赎回、评级等接口 may be useful where permission allows. Always verify exact fields before conclusion.
+- Convertible basics, quote, conversion-price, redemption, and rating interfaces may be useful where permission allows. Always verify exact fields before conclusion.
 
 Missing-data behavior:
 
@@ -263,20 +263,20 @@ Do not use WebSearch for:
 - Replacing licensed current yield, spread, NAV, holding, or transaction data.
 - Filling missing data with media guesses.
 
-When WebSearch is used, label whether the source is official, media转引, or background.
+When WebSearch is used, label whether the source is official, media-reposted, or background.
 
 ## Missing Data Rules
 
 Use this block whenever required fields are unavailable:
 
 ```text
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
 ## Provider Compliance Notes

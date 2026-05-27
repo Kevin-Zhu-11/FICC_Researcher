@@ -60,4 +60,4 @@ Use for macro data releases, expectation-gap analysis, policy reaction, social f
 
 ## Useful Search Terms
 
-社融, M1, M2, PMI, CPI, PPI, 预期差, 政策反应函数, 财政供给, 反内卷, 广义财政, 货币政策
+social financing, M1, M2, PMI, CPI, PPI, Expectation gap, Policy reaction function, fiscal supply, anti-involution policy, broad fiscal policy, monetary policy

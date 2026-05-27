@@ -9,51 +9,51 @@ Other reference files may add workflow-specific blocks, but they must not redefi
 Every substantial answer should use these blocks in this order unless a workflow template explicitly adds more detail:
 
 ```text
-问题归类:
-使用 playbook:
-数据输入:
-数据质量检查:
-框架事实:
-数据事实:
-推断判断:
-置信度:
-缺失数据:
-风险与反例:
-后续跟踪:
-组合动作:  # only when the user asks for duration, curve, leverage, credit allocation, sizing, stop conditions, or portfolio scenarios
+Question type:
+Playbooks used:
+Data input:
+Data quality checks:
+Framework facts:
+Data facts:
+Inferred judgments:
+Confidence:
+Missing data:
+Risks and counterexamples:
+Follow-up indicators:
+Portfolio actions:  # only when the user asks for duration, curve, leverage, credit allocation, sizing, stop conditions, or portfolio scenarios
 ```
 
 Block meaning:
 
-- `框架事实`: stable mechanisms or research frameworks from playbooks, evidence cards, source reports, or decision chains.
-- `数据事实`: timestamped current data, user-provided data, connector output, official releases, or clearly labelled historical examples.
-- `推断判断`: conditional interpretation that combines framework facts and data facts.
-- `置信度`: high, medium, or low, with one sentence explaining the basis.
-- `缺失数据`: fields needed before stronger current-market conclusions.
-- `组合动作`: scenario-based research expression only; do not present it as personalized investment advice.
+- `Framework facts`: stable mechanisms or research frameworks from playbooks, evidence cards, source reports, or decision chains.
+- `Data facts`: timestamped current data, user-provided data, connector output, official releases, or clearly labelled historical examples.
+- `Inferred judgments`: conditional interpretation that combines framework facts and data facts.
+- `Confidence`: high, medium, or low, with one sentence explaining the basis.
+- `Missing data`: fields needed before stronger current-market conclusions.
+- `Portfolio actions`: scenario-based research expression only; do not present it as personalized investment advice.
 
 ## Minimum No-Data Contract
 
 When current data is required but unavailable, use the same canonical labels:
 
 ```text
-问题归类:
-使用 playbook:
-框架事实:
-推断判断:
-置信度: 低，原因是缺少当前数据。
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
-风险与反例:
-后续跟踪:
+Question type:
+Playbooks used:
+Framework facts:
+Inferred judgments:
+Confidence: low, because current data is missing.
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
+Risks and counterexamples:
+Follow-up indicators:
 ```
 
-`当前缺少数据` is accepted only as a legacy alias. New templates and evals should use `缺失数据`.
+`Currently missing data` is accepted only as a legacy alias. New templates and evals should use `Missing data`.
 
 ## Canonical Data Packet Contract
 
@@ -102,9 +102,9 @@ Broker reports can be higher priority for framework reasoning, but never for cur
 
 Use three labels:
 
-- `高`: required current data is complete enough for the question, source and timestamp are clear, units and universe are checked, and the selected playbooks or decision chains point in the same direction.
-- `中`: key data is present but one or more supporting fields, comparisons, or market-pricing inputs are missing; conclusion must remain conditional.
-- `低`: answer is framework-only, uses stale or incomplete data, lacks current market levels, or has unresolved cross-framework conflicts.
+- `high`: required current data is complete enough for the question, source and timestamp are clear, units and universe are checked, and the selected playbooks or decision chains point in the same direction.
+- `medium`: key data is present but one or more supporting fields, comparisons, or market-pricing inputs are missing; conclusion must remain conditional.
+- `low`: answer is framework-only, uses stale or incomplete data, lacks current market levels, or has unresolved cross-framework conflicts.
 
 Do not use numeric probabilities unless the user provides a model, sample, and calibration method.
 
@@ -140,7 +140,7 @@ Not allowed:
 
 Read `references/16-source-claim-map.yml`, `references/01-source-index.yml`, and the relevant evidence card when:
 
-- The user asks for source, provenance, "依据", "来自哪篇研报", or comparison across institutions.
+- The user asks for source, provenance, "basis", "which research report this comes from", or comparison across institutions.
 - The answer cites a broker framework as evidence.
 - A playbook, evidence card, or source-derived rule is being edited.
 - The conclusion depends on a non-obvious framework claim rather than general market knowledge.
@@ -161,23 +161,23 @@ When playbooks point in different directions:
 Example:
 
 ```text
-财政发力有两个方向：增长预期修复可能抬升长端利率，供给放量也可能提高期限溢价；但如果央行对冲充分且银行配置盘吸收供给，长端上行会被削弱。需要发行节奏、缴款、央行净投放、配置需求和曲线点位来判断主导通道。
+Fiscal expansion has two channels: stronger growth expectations can lift long-end yields, while heavier supply can raise term premium. If central-bank liquidity offsets are sufficient and bank allocation accounts absorb supply, long-end upward pressure may be weakened. Use issuance pace, payment settlement, central-bank net injection, allocation demand, and curve levels to identify the dominant channel.
 ```
 
 ## Language Policy
 
-- Default answer language is Chinese when the user asks in Chinese.
-- Use canonical Chinese block labels.
+- Default answer language may follow the user's language.
+- Use canonical English block labels from this file for structured research output.
 - English market terms are acceptable when they are standard industry usage, for example `carry`, `rolldown`, `basis`, `term premium`, `DV01`, `NCD`.
-- If a workflow or template uses English aliases, keep them as explanatory parentheses rather than replacing the canonical Chinese labels.
+- If local-language explanations are needed, keep the block labels in English and translate only the prose under each block.
 
 ## Concrete Inference Traps
 
 Avoid these common shortcuts:
 
-- 社融弱 does not mechanically mean yields must fall.
-- 社融高 does not automatically mean private endogenous demand is strong.
-- Fiscal supply up does not mechanically mean long yields must rise; check央行对冲 and allocation demand.
+- weak social financing does not mechanically mean yields must fall.
+- strong social financing does not automatically mean private endogenous demand is strong.
+- Fiscal supply up does not mechanically mean long yields must rise; check central-bank liquidity offset and allocation demand.
 - Carry is not risk-free income; check spread compensation, drawdown, liquidity, and exit.
 - A single DR007 point does not justify leverage; check repo volume, NCD, liability stability, and liquidity.
 - Policy support does not make every credit issuer safe.

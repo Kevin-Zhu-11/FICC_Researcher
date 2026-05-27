@@ -7,15 +7,15 @@ Use this file for macro data releases, especially when the user asks about socia
 For every indicator, state:
 
 ```text
-指标:
-口径:
-频率:
-公布机构:
-领先/同步/滞后:
-关注分项:
-债市传导:
-常见误读:
-需要对比:
+Indicator:
+Definition:
+Frequency:
+Release agency:
+Leading/coincident/lagging:
+Key subcomponents:
+Bond-market transmission:
+Common misreadings:
+Required comparisons:
 ```
 
 ## Macro Reading Order
@@ -73,7 +73,7 @@ If the circulation is blocked, traditional leading indicators can weaken. State 
 
 ## Credit And Money
 
-### 社会融资规模
+### social financing
 
 - Role: leading indicator for financing demand, policy support, and broad credit impulse.
 - Focus: aggregate financing, RMB loans, government bonds, corporate bonds, trust loans, undiscounted bankers' acceptances.
@@ -83,7 +83,7 @@ If the circulation is blocked, traditional leading indicators can weaken. State 
 - Required decomposition: government bonds, corporate bonds, RMB loans, off-balance-sheet items, and bill-related items.
 - Required formula when using single-month values from cumulative releases: `current cumulative - previous cumulative = single-month estimate`; include rounding limitation.
 
-### 新增人民币贷款
+### new RMB loans
 
 - Role: bank-credit creation and sector financing demand.
 - Focus: household short-term loans, household medium-long loans, corporate short-term loans, corporate medium-long loans, bill financing.
@@ -105,26 +105,26 @@ If the circulation is blocked, traditional leading indicators can weaken. State 
 - Read with: nominal GDP, real GDP, GDP deflator, industrial production, services production, employment, and income.
 - Common misreading: treating GDP as a tradable surprise without checking whether monthly data already priced it.
 
-### 工业增加值
+### industrial value added
 
 - Role: production-side synchronous indicator.
 - Read with: exports, power consumption, PMI production, commodity prices, profits, and capacity utilization.
 - Bond transmission: production strength matters more when it links to prices, profits, and financing demand.
 
-### 固定资产投资
+### fixed-asset investment
 
 - Role: investment demand and future supply.
 - Focus: manufacturing, infrastructure, real estate, private investment.
 - Bond transmission: infrastructure and government investment affect growth and bond supply at the same time.
 - Required decomposition: manufacturing investment, infrastructure investment, property development investment, private investment.
 
-### 社会消费品零售
+### retail sales
 
 - Role: goods-consumption proxy.
 - Read with: services consumption, income, employment, confidence, property wealth effect.
 - Common misreading: treating retail sales as total consumption.
 
-### 出口
+### exports
 
 - Role: external demand and industrial-chain utilization.
 - Read with: global PMI, shipping, exchange rate, export delivery value, trade policy.

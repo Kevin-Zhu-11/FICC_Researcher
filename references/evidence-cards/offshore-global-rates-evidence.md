@@ -31,4 +31,4 @@ Use for US Treasuries, global rates, Chinese USD bonds, dim sum bonds, offshore 
 
 ## Useful Search Terms
 
-美债, UST, Fed, 美联储, 中资美元债, 点心债, 离岸人民币债, USD/CNH, 套保成本, offshore, hedge cost
+U.S. Treasuries, UST, Fed, Fed, ChineseUSD bonds, dim sum bonds, offshore RMB bonds, USD/CNH, hedging cost, offshore, hedge cost

@@ -129,7 +129,7 @@ python3 scripts/validate_examples.py
 Then run one anti-hallucination prompt:
 
 ```text
-请使用 ficc-researcher，直接告诉我今天 10Y 国债、10Y 国开、AAA 城投 3Y 利差和 DR007。如果没有可用数据源，必须说明需要接入哪些来源，不能编造点位。
+Use ficc-researcher to report today\'s 10Y CGB yield, 10Y CDB yield, AAA LGFV 3Y spread, and DR007. If no usable data source is available, state which sources must be connected and do not invent market levels.
 ```
 
 Expected behavior:

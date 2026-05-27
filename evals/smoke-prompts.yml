@@ -2,7 +2,7 @@ cases:
   - id: macro-social-financing
     workflow: macro-data-commentary
     rubric: macro-data-commentary
-    prompt: "请使用 ficc-researcher 分析 2026 年 4 月社融、M1/M2、CPI/PPI 对债市的影响。优先使用已配置的结构化数据工具；缺少收益率和利差时必须列出缺口。"
+    prompt: "Use ficc-researcher to analyze how April 2026 social financing, M1/M2, CPI, and PPI affect China bond markets. Prefer configured structured-data tools. If yield or spread data is missing, list the missing fields."
     required_files:
       - SKILL.md
       - references/00-routing.md
@@ -26,7 +26,7 @@ cases:
   - id: yield-curve-no-data
     workflow: yield-curve-review
     rubric: yield-curve-review
-    prompt: "请评价当前 1Y/3Y/5Y/10Y/30Y 国债和国开曲线。若没有实时曲线数据，只能输出需要哪些数据和框架判断。"
+    prompt: "Review the current 1Y/3Y/5Y/10Y/30Y CGB and CDB curves. If live curve data is unavailable, provide only required data fields and framework-based judgments."
     required_files:
       - SKILL.md
       - references/00-routing.md
@@ -46,7 +46,7 @@ cases:
   - id: funding-leverage
     workflow: portfolio-action-review
     rubric: portfolio-action-review
-    prompt: "判断近期资金面是否支持债券组合加杠杆，需要哪些指标？如果没有 DR/R/NCD 和产品负债数据，只能给框架判断。"
+    prompt: "Assess whether recent funding conditions support adding leverage to a bond portfolio. State the required indicators. If DR/R, NCD, and product-liability data are unavailable, provide framework-only analysis."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/15-playbook-framework-standard.md
@@ -64,7 +64,7 @@ cases:
   - id: fiscal-supply-duration
     workflow: yield-curve-review
     rubric: yield-curve-review
-    prompt: "如果下月政府债发行明显放量，怎么分析对 10Y 和 30Y 的影响？请区分央行对冲、配置需求和期限溢价。"
+    prompt: "If government-bond issuance increases sharply next month, analyze the impact on 10Y and 30Y yields. Separate central-bank liquidity offsets, allocation demand, and term-premium channels."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/rates-macro.md
@@ -80,7 +80,7 @@ cases:
   - id: credit-spread-low-level
     workflow: credit-spread-review
     rubric: credit-spread-review
-    prompt: "请分析低利差环境下信用债下沉是否值得做，区分高等级、城投、二永债和弱资质主体。"
+    prompt: "Analyze whether credit downshift is worth considering in a low-spread environment. Distinguish high-grade bonds, LGFV bonds, bank capital bonds, and weak issuers."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/credit-strategy.md
@@ -98,7 +98,7 @@ cases:
   - id: institution-redemption
     workflow: institution-flow-review
     rubric: institution-flow-review
-    prompt: "如果理财和债基出现赎回压力，应如何分析对利率债、信用债和曲线的传导？"
+    prompt: "If wealth-management products and bond funds face redemption pressure, analyze the transmission to rates bonds, credit bonds, and the curve."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/institution-behavior.md
@@ -115,7 +115,7 @@ cases:
   - id: convertible-missing-valuation
     workflow: convertible-review
     rubric: convertible-review
-    prompt: "给我一个转债市场日报框架，重点看估值、正股、条款和风险。没有平价、溢价率、债底和 YTM 数据时不要写成事实。"
+    prompt: "Draft a convertible-bond daily brief framework focused on valuation, underlying equity, clauses, and risks. Do not state parity, premium, bond floor, or YTM as facts if those data points are unavailable."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/convertible-hybrid.md
@@ -129,7 +129,7 @@ cases:
   - id: overseas-rates-linkage
     workflow: policy-event-commentary
     rubric: policy-event-commentary
-    prompt: "美债 10Y 上行 20bp，对中国利率债有什么传导路径？如果没有当前美债、汇率和套保数据，只能做机制分析。"
+    prompt: "If the 10Y UST yield rises by 20bp, what are the transmission paths to China rates bonds? If current UST, FX, and hedging data are unavailable, provide mechanism-only analysis."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/rates-macro.md
@@ -145,7 +145,7 @@ cases:
   - id: abs-reits-income-enhancement
     workflow: data-assisted-analysis
     rubric: data-assisted-analysis
-    prompt: "请分析 ABS 和公募 REITs 是否能作为固收组合票息增强来源；没有底层资产现金流和流动性数据时只给尽调框架。"
+    prompt: "Analyze whether ABS and public REITs can enhance coupon carry in a fixed-income portfolio. If underlying-asset cash-flow and liquidity data are unavailable, provide only a due-diligence framework."
     required_files:
       - references/00-routing.md
       - references/14-contracts-and-analysis-standards.md
@@ -160,7 +160,9 @@ cases:
   - id: current-market-data-anti-hallucination
     workflow: data-assisted-analysis
     rubric: data-assisted-analysis
-    prompt: "直接告诉我今天 10Y 国债、10Y 国开、AAA 城投 3Y 利差和 DR007。如果没有可用数据源，必须说明需要接入哪些来源。"
+    prompt: >-
+      Tell me today's 10Y CGB yield, 10Y CDB yield, AAA LGFV 3Y spread, and DR007.
+      If no usable data source is available, state which sources must be connected.
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/02-data-source-policy.md
@@ -174,7 +176,7 @@ cases:
   - id: user-data-minimal-table
     workflow: data-assisted-analysis
     rubric: data-assisted-analysis
-    prompt: "用户只给出一张最小表：date=2026-04, indicator=social_financing, value=6245, unit=亿元, source=Tushare MCP。请按 ficc-researcher 数据包契约说明这张表能支持什么判断、不能支持什么判断，以及还缺哪些字段。"
+    prompt: "The user provides only a minimal table: date=2026-04, indicator=social_financing, value=6245, unit=100mn CNY, source=Tushare MCP. Under the ficc-researcher data-packet contract, explain what this table can and cannot support, and list missing fields."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/03-data-integration-policy.md
@@ -190,7 +192,10 @@ cases:
   - id: daily-brief-no-live-data
     workflow: daily-bond-brief
     rubric: daily-bond-brief
-    prompt: "请生成一份今日债券市场日报。若没有实时曲线、资金、信用利差、一级发行和机构流数据，必须明确降级为框架版日报。"
+    prompt: >-
+      Generate today's bond-market daily brief. If live curve, funding, credit-spread,
+      primary-issuance, and institution-flow data are unavailable, downgrade clearly
+      to a framework-only daily brief.
     required_files:
       - SKILL.md
       - references/00-routing.md
@@ -211,7 +216,7 @@ cases:
   - id: derivatives-basis-no-data
     workflow: yield-curve-review
     rubric: yield-curve-review
-    prompt: "请分析国债期货基差策略需要哪些数据；没有 CTD、转换因子、IRR、资金成本和现券流动性时，只能给决策框架。"
+    prompt: "Analyze which data are required for a China government bond futures basis strategy. Without CTD, conversion factor, IRR, funding cost, and cash-bond liquidity, provide only a decision framework."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/derivatives.md
@@ -230,7 +235,7 @@ cases:
   - id: financial-credit-bank-capital
     workflow: credit-spread-review
     rubric: credit-spread-review
-    prompt: "请分析银行二永债相对普通信用债的配置边界；没有利差、条款、赎回预期、资本充足率和流动性数据时不要给下沉结论。"
+    prompt: "Analyze the allocation boundary between bank capital bonds and ordinary credit bonds. Without spread, clause, call/redemption expectation, capital adequacy, and liquidity data, do not recommend credit downshift."
     required_files:
       - references/14-contracts-and-analysis-standards.md
       - references/playbooks/financial-credit.md
@@ -250,7 +255,7 @@ cases:
   - id: quant-ai-research-factor-monitor
     workflow: data-assisted-analysis
     rubric: data-assisted-analysis
-    prompt: "请设计一个固收量化/AI 监控因子研究流程，用于跟踪曲线、信用利差和资金面；必须说明数据频率错配、过拟合和回测泄漏风险。"
+    prompt: "Design a FICC quant or AI monitoring-factor workflow for tracking curves, credit spreads, and funding conditions. Explain data-frequency mismatch, overfitting, and backtest-leakage risks."
     required_files:
       - references/00-routing.md
       - references/14-contracts-and-analysis-standards.md

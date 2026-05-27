@@ -6,7 +6,7 @@ Use this playbook for China government-bond futures, interest-rate swaps, basis,
 
 ## When To Use
 
-- The question mentions 国债期货, 利率互换, IRS, 基差, IRR, CTD, 套保, DV01, 期权, or 曲线对冲.
+- The question mentions China government bond futures, interest-rate swaps, IRS, basis, IRR, CTD, hedging, DV01, options, or curve hedging.
 - The answer needs to distinguish directional trading from hedging.
 - The user asks how derivatives connect with cash bonds and funding costs.
 
@@ -35,7 +35,7 @@ Derivatives can reduce or transform exposure, but they also add margin, basis, l
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `DER-01` | 衍生品决策必须同时看现券敞口、资金条件、期货/互换定价、基差/DV01、对冲目标、保证金和流动性。 | 衍生品改变风险形态，但会引入基差、换券、展期、保证金、资金和模型风险。 | 缺少 CTD、转换因子、IRR、repo、DV01、保证金或对冲目标。 |
+| `DER-01` | Derivatives decisions must review cash-bond exposure, funding conditions, futures/swap pricing, basis/DV01, hedging objective, margin, and liquidity together. | Derivatives change risk shape, but introduce basis, bond-switching, rollover, margin, funding, and model risk. | Missing CTD, conversion factor, IRR, repo, DV01, margin, or hedging objective. |
 
 ## Analysis Steps
 
@@ -50,14 +50,14 @@ Derivatives can reduce or transform exposure, but they also add margin, basis, l
 ## Output Overlay
 
 ```text
-使用 playbook: derivatives
-交易/套保目标:
-现券风险敞口:
-衍生品定价指标:
-基差或互换曲线判断:
-对冲比例/策略路径:
-缺失数据:
-风险与反例:
+Playbooks used: derivatives
+Trading or hedging objective:
+Cash-bond risk exposure:
+Derivative pricing metrics:
+Basis or swap-curve view:
+Hedge ratio or strategy path:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -79,4 +79,4 @@ Derivatives can reduce or transform exposure, but they also add margin, basis, l
 
 ## Search Keywords
 
-国债期货, 利率互换, IRS, 基差, IRR, CTD, 转换因子, DV01, 套保, 期权, repo, swap curve
+China government bond futures, interest-rate swaps, IRS, basis, IRR, CTD, conversion factor, DV01, hedging, options, repo, swap curve

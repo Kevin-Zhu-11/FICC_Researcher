@@ -6,7 +6,7 @@ Use this playbook for portfolio construction, duration, curve, leverage, carry, 
 
 ## When To Use
 
-- The user asks "债券怎么做收益", "久期怎么摆", "曲线怎么交易", "信用利差低位怎么做", or "组合如何构建".
+- The user asks "how to generate bond returns", "duration stance", "curve trade", "low credit-spread trade", or "how to build a portfolio".
 - The answer requires connecting macro, supply, investor demand, yield curve, credit spread, leverage, and portfolio constraints.
 - The question is about strategy implementation rather than only macro direction.
 
@@ -55,15 +55,15 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 ## Output Overlay
 
 ```text
-使用 playbook: bond-strategy
-投资者/组合约束:
-收益来源拆解:
-可用策略:
-缺失数据:
-当前只能确认的部分:
-组合动作:
-风险控制:
-跟踪指标:
+Playbooks used: bond-strategy
+Investor or portfolio constraints:
+Return-source decomposition:
+Available strategies:
+Missing data:
+Currently confirmable points:
+Portfolio actions:
+Risk control:
+Follow-up indicators:
 ```
 
 ## Risk Checks
@@ -92,4 +92,4 @@ Strategy should be stated as conditional scenarios, not as a single unconditiona
 
 ## Search Keywords
 
-债券策略, 组合构建, 久期, 曲线, 杠杆, 骑乘, 套息, 持有回报, 票息, 二级价差, 收益率曲线
+bond strategy, portfolio construction, Duration, Curve, Leverage, riding the curve, carry trade, holding return, coupon carry, secondary-market capital gains, yield curve

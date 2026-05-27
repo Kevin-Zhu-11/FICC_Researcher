@@ -6,7 +6,7 @@ Use this playbook for US Treasuries, global rates, Chinese USD bonds, dim sum bo
 
 ## When To Use
 
-- The question mentions 美债, 美国国债, UST, 美联储, 中资美元债, 点心债, 离岸人民币债, offshore, USD/CNH, or 套保成本.
+- The question mentions U.S. Treasuries, U.S. Treasuries, UST, Fed, ChineseUSD bonds, dim sum bonds, offshore RMB bonds, offshore, USD/CNH, or hedging cost.
 - The answer needs to separate global rates risk from issuer credit risk.
 - The user asks about cross-border relative value or offshore funding.
 
@@ -36,7 +36,7 @@ Do not transfer an onshore credit conclusion directly to offshore bonds. Offshor
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `OFF-01` | 离岸估值必须拆成全球无风险利率、Fed path、FX/套保、主体信用、法律条款、跨境政策和流动性。 | 离岸债券叠加币种、法律、评级、流动性和跨境融资约束，不能直接套用境内信用结论。 | 缺少 UST、汇率、套保成本、离岸利差、条款和流动性数据。 |
+| `OFF-01` | Offshore valuation must decompose global risk-free rates, Fed path, FX/hedging, issuer credit, legal terms, cross-border policy, and liquidity. | Offshore bonds add currency, legal, rating, liquidity, and cross-border financing constraints; do not directly reuse onshore credit conclusions. | Missing UST, FX, hedging cost, offshore spreads, terms, or liquidity data. |
 
 ## Analysis Steps
 
@@ -51,14 +51,14 @@ Do not transfer an onshore credit conclusion directly to offshore bonds. Offshor
 ## Output Overlay
 
 ```text
-使用 playbook: offshore-global-rates
-资产类型:
-全球利率因素:
-汇率和套保成本:
-主体信用与条款:
-境内外相对价值:
-缺失数据:
-风险与反例:
+Playbooks used: offshore-global-rates
+Asset type:
+Global rates factors:
+FX and hedging cost:
+Issuer credit and terms:
+Onshore-offshore relative value:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -81,4 +81,4 @@ Do not transfer an onshore credit conclusion directly to offshore bonds. Offshor
 
 ## Search Keywords
 
-美债, UST, Fed, 美联储, 中资美元债, 点心债, 离岸人民币债, USD/CNH, 套保成本, offshore, hedge cost
+U.S. Treasuries, UST, Fed, Fed, ChineseUSD bonds, dim sum bonds, offshore RMB bonds, USD/CNH, hedging cost, offshore, hedge cost

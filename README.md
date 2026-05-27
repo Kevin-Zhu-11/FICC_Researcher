@@ -1,5 +1,7 @@
 # FICC Researcher
 
+[English](README.md) | [Chinese](README.zh-CN.md)
+
 FICC Researcher is an agent-oriented fixed-income research skill.
 
 Think of it as a research desk in Markdown: a routing map at the door, a row of playbooks on the wall, evidence cards in the drawer, and a strict data policy that keeps every market conclusion tied to real data instead of imagination.
@@ -80,6 +82,89 @@ FICC_Researcher/
 └── scripts/                         # Validation and indexing helpers
 ```
 
+## Quick Start
+
+Use the GitHub release if you want a clean public package:
+
+- Release page: <https://github.com/Kevin-Zhu-11/FICC_Researcher/releases/tag/v0.1.0-public-preview>
+- Release asset: `ficc-researcher-v0.1.0-public-preview.zip`
+
+Or clone the repository directly:
+
+```bash
+git clone https://github.com/Kevin-Zhu-11/FICC_Researcher.git ficc-researcher
+cd ficc-researcher
+python scripts/validate_skill_links.py
+python scripts/validate_eval_cases.py
+```
+
+Then ask your agent to use the skill by name:
+
+```text
+Use the ficc-researcher skill to analyze how China social financing data for April 2026 affects the rates-bond curve.
+If current yields, credit spreads, funding rates, or expectation data are missing, list the missing fields and do not invent market levels.
+```
+
+Expected behavior:
+
+- The agent routes the question through `references/00-routing.md`.
+- It reads the relevant playbooks and the canonical contract in `references/14-contracts-and-analysis-standards.md`.
+- It separates framework facts, data facts, inferred judgments, confidence, missing data, and risks.
+- It refuses to invent current market levels when no verified source is available.
+
+## Installation
+
+### Codex
+
+Clone or copy the public repo into your Codex skills directory. The default location is usually `$CODEX_HOME/skills` or `~/.codex/skills`.
+
+Windows PowerShell example:
+
+```powershell
+$skillsRoot = if ($env:CODEX_HOME) { Join-Path $env:CODEX_HOME "skills" } else { Join-Path $HOME ".codex\skills" }
+New-Item -ItemType Directory -Force $skillsRoot | Out-Null
+git clone https://github.com/Kevin-Zhu-11/FICC_Researcher.git (Join-Path $skillsRoot "ficc-researcher")
+```
+
+If you use a release zip, extract it to:
+
+```text
+<codex-skills-root>/ficc-researcher/
+```
+
+The folder should contain `SKILL.md` at its root.
+
+### OpenClaw
+
+Install the skill into the active OpenClaw workspace:
+
+```bash
+mkdir -p ~/.openclaw/workspace/skills/ficc-researcher
+git clone https://github.com/Kevin-Zhu-11/FICC_Researcher.git /tmp/ficc-researcher
+cd /tmp/ficc-researcher
+git archive --format=tar HEAD | tar -xf - -C ~/.openclaw/workspace/skills/ficc-researcher
+cd ~/.openclaw/workspace/skills/ficc-researcher
+python3 scripts/validate_skill_links.py
+python3 scripts/validate_eval_cases.py
+```
+
+Keep only one active `ficc-researcher/` directory under `~/.openclaw/workspace/skills/`. Put backups outside the active skills folder, for example under `~/.openclaw/workspace/skills-backups/`.
+
+Do not sync ignored local material from `references/source-reports/**`. The public skill needs only `references/source-reports/.gitkeep`.
+
+### Claude-Style Or Other Agents
+
+Use the repo as a read-only skill folder. Point the agent to:
+
+```text
+SKILL.md
+references/00-routing.md
+references/14-contracts-and-analysis-standards.md
+references/10-workflow-entrypoints.md
+```
+
+Then let the router choose one to three playbooks under `references/playbooks/`.
+
 ## How Agents Should Use It
 
 For substantial fixed-income analysis, the agent should follow this path:
@@ -102,36 +187,77 @@ SKILL.md
 Minimum output structure:
 
 ```text
-问题归类:
-使用 playbook:
-数据输入:
-数据质量检查:
-框架事实:
-数据事实:
-推断判断:
-置信度:
-缺失数据:
-风险与反例:
-后续跟踪:
+Question type:
+Playbooks used:
+Data input:
+Data quality checks:
+Framework facts:
+Data facts:
+Inferred judgments:
+Confidence:
+Missing data:
+Risks and counterexamples:
+Follow-up indicators:
 ```
 
 ## Example Prompt For OpenClaw
 
 ```text
-请使用 ficc-researcher skill 分析 2026 年 4 月中国社会融资数据对债券市场的影响。
+Use the ficc-researcher skill to analyze how China social financing data for April 2026 affects the bond market.
 
-先通过 WebSearch 查找权威来源，优先使用中国人民银行数据。
-然后读取 SKILL.md、references/00-routing.md、references/playbooks/rates-macro.md 和 references/playbooks/bond-strategy.md。
+First use WebSearch to locate authoritative sources, prioritizing PBOC data.
+Then read SKILL.md, references/00-routing.md, references/playbooks/rates-macro.md, and references/playbooks/bond-strategy.md.
 
-输出时必须区分：
-- 搜索得到的数据事实
-- playbook 中的框架事实
-- 基于数据和框架的条件推断
-- 仍然缺少的数据
-- 风险与反例
+The output must separate:
+- Data facts found through search
+- Framework facts from the playbooks
+- Conditional inferences based on data and framework logic
+- Data that is still missing
+- Risks and counterexamples
 
-不要编造没有查到的当前市场数据，不要给个人投资建议。
+Do not fabricate current market data that was not found, and do not give personal investment advice.
 ```
+
+## Data Connector Setup
+
+FICC Researcher does not require a specific data provider. It works best when your agent can access at least one structured data path plus official public sources.
+
+Typical setup:
+
+1. Configure provider credentials outside this repository.
+2. Register MCP servers or local data bridges in your agent runtime.
+3. Ask the connector to return source metadata with every table.
+4. Convert connector output into the canonical data packet before analysis.
+
+The canonical data packet is:
+
+```text
+source:
+provider:
+interface_or_file:
+query:
+as_of:
+retrieved_at:
+time_range:
+frequency:
+universe:
+fields:
+row_count:
+units:
+schema_notes:
+missing_fields:
+limitations:
+```
+
+For OpenClaw, do not paste a top-level `mcpServers` block into `~/.openclaw/openclaw.json` unless your OpenClaw version explicitly supports it. Prefer the runtime's MCP command interface, for example:
+
+```bash
+openclaw mcp list
+openclaw mcp set <provider-name> '<json-config-with-env-placeholders>'
+openclaw mcp show <provider-name>
+```
+
+Use environment variables or your runtime's secret manager for credentials. Keep `.env`, tokens, private endpoints, account names, and paid raw data exports out of this repo.
 
 ## Data Boundary
 
@@ -163,6 +289,16 @@ The `evals/` folder now has two layers:
 - `quality-rubrics.yml`: hard gates and scoring dimensions for human or agent-assisted review.
 
 The `examples/data/` folder contains small sample packets. The `examples/golden-cases/` folder contains answer-shape examples that demonstrate missing-data discipline. Example data is synthetic, desensitized, or official-public only; it is not a licensed market-data export.
+
+To run smoke checks manually, pick one prompt from `evals/smoke-prompts.yml`, run it in your target agent, and review the answer against:
+
+```text
+evals/expected-output-contracts.yml
+evals/quality-rubrics.yml
+examples/golden-cases/
+```
+
+For current-market prompts, a good result may be a refusal to provide point estimates. If no verified connector or official source is available, the answer should list missing fields and preferred sources.
 
 ## OpenClaw Usage Hygiene
 

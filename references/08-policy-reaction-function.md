@@ -78,19 +78,19 @@ Policy can support growth and increase bond supply at the same time. Always spli
 ## Macro Data Reaction Checklist
 
 ```text
-数据结果:
-相对预期:
-相对前值:
-市场是否已定价:
-指标层级: 领先 / 同步 / 滞后
-影响循环: 就业收入消费 / 制造业投资 / 地产链 / 外需 / 财政金融
-触发的政策目标:
-可能的政策工具:
-政策约束:
-资金面含义:
-供给含义:
-曲线含义:
-风险与反例:
+Data result:
+Versus expectation:
+Versus previous value:
+Whether the market has priced it:
+Indicator tier: leading / coincident / lagging
+Transmission loop: employment, income, and consumption / manufacturinginvestment / property chain / external demand / fiscal and financial conditions
+Triggered policy objectives:
+Possible policy tools:
+Policy constraints:
+Funding implication:
+Supply implication:
+Curve implication:
+Risks and counterexamples:
 ```
 
 ## Scenario Rules
@@ -99,19 +99,19 @@ Policy can support growth and increase bond supply at the same time. Always spli
 
 Do not jump directly to "rates bullish". Check:
 
-- Is weakness from real private demand, government-bond timing, base effects, or data seasonality?
-- Does it trigger credible monetary easing, fiscal acceleration, or only verbal support?
-- Does fiscal acceleration create duration supply pressure?
-- Are short-end funding rates already low enough that marginal easing has limited effect?
+- Is weakness from real private demand, government-bond timing, base effects, or data seasonalitylow
+- Does it trigger credible monetary easing, fiscal acceleration, or only verbal supportlow
+- Does fiscal acceleration create duration supply pressurelow
+- Are short-end funding rates already low enough that marginal easing has limited effectlow
 
 ### Strong Data
 
 Do not jump directly to "rates bearish". Check:
 
-- Is strength from private demand or public-sector financing?
-- Does it reduce easing expectations or simply confirm policy effectiveness?
-- Are inflation and credit quality also improving?
-- Has the market already priced the improvement?
+- Is strength from private demand or public-sector financinglow
+- Does it reduce easing expectations or simply confirm policy effectivenesslow
+- Are inflation and credit quality also improvinglow
+- Has the market already priced the improvementlow
 
 ### Price Rebound
 

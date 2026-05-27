@@ -9,7 +9,7 @@ For framework consistency and source traceability, use `references/15-playbook-f
 
 When to use:
 
-- 社融、M1/M2、CPI/PPI、PMI、财政、地产、出口、GDP、工增、投资、消费等宏观数据点评。
+- Macro data commentary on social financing, M1/M2, CPI/PPI, PMI, fiscal policy, property, exports, GDP, industrial value added, investment, and consumption.
 
 Required playbooks:
 
@@ -34,11 +34,11 @@ Template:
 
 Output blocks:
 
-- 问题归类, 数据来源与时间, 数据事实, 预期差, 政策反应函数, 债市传导, 曲线含义, 信用与机构行为, 缺失数据, 风险与反例, 后续跟踪。
+- Question type, Data sources and time, Data facts, Expectation gap, Policy reaction function, Bond-market transmission, Curve implication, Credit and institution behavior, Missing data, Risks and counterexamples, Follow-up indicators.
 
 Forbidden shortcuts:
 
-- Do not call a release "超预期" without consensus or market-pricing evidence.
+- Do not call a release "above expectation" without consensus or market-pricing evidence.
 - Do not infer current yields or spreads from old reports.
 - Do not treat high social financing as private endogenous demand before decomposition.
 
@@ -54,7 +54,7 @@ Quality rubric:
 
 When to use:
 
-- 国债/国开曲线复盘、1Y/3Y/5Y/10Y/30Y 分段、牛平/牛陡/熊平/熊陡、久期和曲线策略。
+- CGB/CDB curve review, 1Y/3Y/5Y/10Y/30Y segmentation, bull flattening, bull steepening, bear flattening, bear steepening, duration, and curve strategy.
 
 Required playbooks:
 
@@ -78,7 +78,7 @@ Template:
 
 Output blocks:
 
-- 曲线数据来源, 期限分段, 短端驱动, 中端驱动, 长端驱动, 供需与机构行为, 可用策略, 缺失数据, 风险触发条件。
+- Curve data sources, Tenor segmentation, Short-end drivers, Belly drivers, Long-end drivers, Supply-demand and institution behavior, Available strategies, Missing data, Risk triggers.
 
 Forbidden shortcuts:
 
@@ -98,7 +98,7 @@ Quality rubric:
 
 When to use:
 
-- 信用利差、资产荒、信用下沉、票息策略、城投、二永债、评级/期限/行业利差比较。
+- credit spreads, asset shortage, credit downshift, coupon strategy, LGFV, Tier-2 capital bonds and perpetual bank bonds, rating/tenor and sector spread comparison.
 
 Required playbooks:
 
@@ -123,13 +123,13 @@ Template:
 
 Output blocks:
 
-- 利差数据来源, 分评级, 分期限, 分主体类型, 信用风险, 流动性补偿, 机构需求, 下沉边界, 风险与反例。
+- Spread data sources, By rating, By tenor, By issuer type, Credit risk, Liquidity compensation, Institution demand, Credit downshift boundary, Risks and counterexamples.
 
 Forbidden shortcuts:
 
 - Do not treat carry as risk-free.
 - Do not equate asset shortage with issuer safety.
-- Do not recommend credit下沉 without spread compensation and exit liquidity.
+- Do not recommend credit downshift without spread compensation and exit liquidity.
 
 Eval case:
 
@@ -143,7 +143,7 @@ Quality rubric:
 
 When to use:
 
-- 理财赎回、债基申赎、保险配置、银行表内行为、机构负债约束、净值化反馈。
+- wealth-management product redemptions, bond fund subscriptions and redemptions, insurance allocation, bank balance-sheet behavior, institution liability constraints, net-value transformation feedback.
 
 Required playbooks:
 
@@ -167,7 +167,7 @@ Template:
 
 Output blocks:
 
-- 机构类型, 负债稳定性, 资产配置, 久期/杠杆, 净值反馈, 对利率债/信用债/曲线影响, 缺失数据, 风险。
+- Institution type, Liability stability, Asset allocation, Duration/Leverage, NAV feedback, impact on rates bonds, credit bonds, and the curve, Missing data, Risk.
 
 Forbidden shortcuts:
 
@@ -186,7 +186,7 @@ Quality rubric:
 
 When to use:
 
-- 久期怎么摆、曲线怎么做、杠杆能不能加、信用仓位如何配、止盈止损、组合情景表。
+- Duration stance, curve trade, whether to add leverage, credit allocation, take-profit/stop-loss, and portfolio scenario table.
 
 Required playbooks:
 
@@ -210,7 +210,7 @@ Template:
 
 Output blocks:
 
-- 组合背景, 当前判断, 情景表, 持有期收益拆解, 主要亏损路径, 缺失数据, 后续跟踪。
+- Portfolio context, Current assessment, Scenario table, Holding-period return decomposition, Main loss paths, Missing data, Follow-up indicators.
 
 Forbidden shortcuts:
 
@@ -229,7 +229,7 @@ Quality rubric:
 
 When to use:
 
-- 央行、财政、地产、产业政策、化债、监管、汇率或资本市场稳定政策点评。
+- Commentary on central-bank, fiscal, property, industrial, debt-resolution, regulatory, FX, or capital-market stabilization policy.
 
 Required playbooks:
 
@@ -253,7 +253,7 @@ Template:
 
 Output blocks:
 
-- 政策事实, 目标, 工具, 约束, 预期差, 债市传导, 风险与反例, 后续跟踪。
+- Policy facts, objectives, tools, Constraints, Expectation gap, Bond-market transmission, Risks and counterexamples, Follow-up indicators.
 
 Forbidden shortcuts:
 
@@ -272,7 +272,7 @@ Quality rubric:
 
 When to use:
 
-- 可转债、可交债、平价、溢价率、债底、下修、赎回、条款博弈、混合资产。
+- convertible bonds, exchangeable bonds, parity, premium, bond floor, downward conversion-price revision, redemption, clause game, hybrid assets.
 
 Required playbooks:
 
@@ -293,7 +293,7 @@ Template:
 
 Output blocks:
 
-- 标的识别, 数据来源, 估值拆解, 正股弹性, 债底保护, 条款状态, 流动性, 风险与反例。
+- Instrument identification, Data source, Valuation decomposition, Underlying equity sensitivity, Bond-floor protection, Clause status, liquidity, Risks and counterexamples.
 
 Forbidden shortcuts:
 
@@ -311,7 +311,7 @@ Quality rubric:
 
 When to use:
 
-- 日报、周报、晨会材料、盘后复盘。
+- daily brief, weekly brief, morning-meeting notes, post-close review.
 
 Required playbooks:
 
@@ -336,7 +336,7 @@ Template:
 
 Output blocks:
 
-- 今日结论, 数据事实, 利率债, 信用债, 资金面, 供给与一级, 机构行为, 海外与汇率, 明日关注, 风险与反例。
+- Today's conclusion, Data facts, Rates bonds, Credit bonds, Funding conditions, Supply and primary market, Institution behavior, Offshore and FX, Next-day watchlist, Risks and counterexamples.
 
 Forbidden shortcuts:
 
@@ -354,7 +354,7 @@ Quality rubric:
 
 When to use:
 
-- 用户上传表格、粘贴终端输出、MCP 返回结构化数据、脚本输出 dataframe 或 JSON。
+- user-uploaded tables, pasted terminal output, MCP-returned structured data, script output dataframe or JSON.
 
 Required playbooks:
 
@@ -376,7 +376,7 @@ Template:
 
 Output blocks:
 
-- 数据输入, 数据质量检查, 可直接支持的判断, 不能支持的判断, 框架事实, 数据事实, 推断判断, 缺失数据。
+- Data input, Data quality checks, judgments directly supported, judgments not supported, Framework facts, Data facts, Inferred judgments, Missing data.
 
 Forbidden shortcuts:
 

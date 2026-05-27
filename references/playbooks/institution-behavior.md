@@ -6,7 +6,7 @@ Use this playbook for marginal demand and selling pressure from commercial banks
 
 ## When To Use
 
-- The question mentions 机构行为, 银行, 保险, 理财, 公募基金, 券商自营, 外资, 年金, 赎回, 配债, 欠配, 资产荒, or 负债端.
+- The question mentions Institution behavior, banks, insurers, wealth management products, mutual funds, broker proprietary desks, foreign investors, pension accounts, redemption, bond allocation, under-allocation, asset shortage, or liability side.
 - The market move cannot be explained by macro data alone.
 - The answer needs a demand-side explanation for rates, credit spreads, liquidity, or curve segments.
 
@@ -38,7 +38,7 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 
 | Claim id | Claim | Mechanism | Fails when |
 | --- | --- | --- | --- |
-| `IH-01` | 机构行为通过负债稳定性、会计、监管、杠杆能力和流动性需求传导到边际买盘和卖盘。 | 不同机构的负债和约束决定其久期、信用、杠杆、现金和流动性偏好。 | 缺少申赎、持仓、久期、杠杆、保费、存款或托管流数据。 |
+| `IH-01` | Institution behavior transmits to marginal buying and selling through liability stability, accounting, regulation, leverage capacity, and liquidity demand. | Different institutions have different liability constraints, duration preferences, credit preferences, leverage capacity, cash needs, and liquidity preferences. | Missing subscription/redemption, holdings, duration, leverage, insurance premium, deposit, or custody-flow data. |
 
 ## Analysis Steps
 
@@ -54,14 +54,14 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 ## Output Overlay
 
 ```text
-使用 playbook: institution-behavior
-涉及机构:
-负债端状态:
-约束条件:
-可能行为:
-对利率/信用/流动性的影响:
-缺失数据:
-风险与反例:
+Playbooks used: institution-behavior
+Institutions involved:
+Liability-side condition:
+Constraints:
+Likely behavior:
+Impact on rates, credit, and liquidity:
+Missing data:
+Risks and counterexamples:
 ```
 
 ## Risk Checks
@@ -87,4 +87,4 @@ Analyze institutions by liability stability, regulatory/accounting constraints, 
 
 ## Search Keywords
 
-机构行为, 商业银行, 保险, 银行理财, 公募基金, 券商自营, 外资, 年金, 负债端, 赎回, 配债, 欠配, 资产荒
+Institution behavior, commercial banks, insurers, bank wealth management products, mutual funds, broker proprietary desks, foreign investors, pension accounts, liability side, redemption, bond allocation, under-allocation, asset shortage

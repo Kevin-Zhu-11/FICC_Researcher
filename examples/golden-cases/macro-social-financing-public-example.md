@@ -2,7 +2,7 @@
 
 ## Prompt
 
-请使用 ficc-researcher 分析一组社融和货币数据对债市的影响。数据包位于 `examples/data/macro-social-financing-public-sample.yml`。如果缺少收益率、利差、资金利率或市场预期，只能给框架判断和缺口清单。
+Use ficc-researcher to analyze how a social-financing and money-supply dataset affects the bond market. The data packet is at `examples/data/macro-social-financing-public-sample.yml`. If yield, spread, funding-rate, or market-expectation data is missing, provide only framework-based judgment and a gap list.
 
 ## Files The Agent Should Read
 
@@ -29,19 +29,19 @@ The packet is synthetic and desensitized. A good answer must label it as example
 ## Expected Answer Shape
 
 ```text
-问题归类:
-使用 playbook:
-数据来源与时间:
-数据质量检查:
-数据事实:
-预期差:
-政策反应函数:
-债市传导:
-曲线含义:
-信用与机构行为:
-不能确认的部分:
-风险与反例:
-后续跟踪:
+Question type:
+Playbooks used:
+Data sources and time:
+Data quality checks:
+Data facts:
+Expectation gap:
+Policy reaction function:
+Bond-market transmission:
+Curve implication:
+Credit and institution behavior:
+Unconfirmed points:
+Risks and counterexamples:
+Follow-up indicators:
 ```
 
 ## Why This Is Good
@@ -53,7 +53,7 @@ The packet is synthetic and desensitized. A good answer must label it as example
 
 ## What Would Fail
 
-- Calls the release "低于预期" without consensus, survey, or market-pricing evidence.
+- Calls the release "below expectation" without consensus, survey, or market-pricing evidence.
 - Invents current 10Y CGB, 10Y CDB, DR007, NCD, or credit-spread levels.
 - Treats aggregate social financing as private demand without decomposition.
 - Presents synthetic example records as official PBOC or provider-returned data.

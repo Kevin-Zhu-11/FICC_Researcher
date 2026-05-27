@@ -28,7 +28,7 @@ Each playbook should preserve these sections:
 ## Search Keywords
 ```
 
-`Output Overlay` is not a replacement for the canonical answer contract. It only adds workflow-specific fields that may appear under `框架事实`, `数据事实`, `推断判断`, `缺失数据`, `风险与反例`, or `组合动作`.
+`Output Overlay` is not a replacement for the canonical answer contract. It only adds workflow-specific fields that may appear under `Framework facts`, `Data facts`, `Inferred judgments`, `Missing data`, `Risks and counterexamples`, or `Portfolio actions`.
 
 ## Required Inputs Standard
 
@@ -103,7 +103,7 @@ Resolution:
 
 Examples:
 
-- Fiscal expansion can support growth and increase bond supply; duration impact depends on issuance, payment,央行对冲, and allocation demand.
+- Fiscal expansion can support growth and increase bond supply; duration impact depends on issuance, payment,central-bank liquidity offset, and allocation demand.
 - Wide carry can improve expected return but increase drawdown risk if funding, product liability, or liquidity weakens.
 - Asset shortage can compress spreads but does not improve issuer fundamentals.
 

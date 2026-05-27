@@ -62,20 +62,20 @@ When using a connector, official page, WebSearch result, user file, or local dat
 Use this exact canonical block when data is required but unavailable:
 
 ```text
-缺失数据:
-- 字段:
-- 推荐来源:
-- 时间范围:
-- 频率:
-- 用途:
-在缺少以上数据前，只能给出框架判断，不能给出当前市场结论。
+Missing data:
+- Fields:
+- Recommended sources:
+- Time range:
+- Frequency:
+- Use:
+Until these fields are available, provide framework-only analysis and do not make current-market conclusions.
 ```
 
-`当前缺少数据` is a legacy alias. New outputs and templates should use `缺失数据`.
+`Currently missing data` is a legacy alias. New outputs and templates should use `Missing data`.
 
 ## Current Data Discipline
 
-- 不得伪造实时收益率、信用利差、估值、评级、成交、持仓、净值、发行规模、回购利率或政策事实。
+- Do not fabricate live yields, credit spreads, valuations, ratings, trades, holdings, NAV, issuance size, repo rates, or policy facts.
 - Do not infer "current market level" from old research reports.
 - When using historical examples, label them as examples and include their original report context.
 - When data has a timestamp, include it. When data has no timestamp, treat it as unverified.
